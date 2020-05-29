@@ -1,7 +1,23 @@
 @import './reset.scss';
 @import './header.scss';
 @import './topAdContainer.scss';
+@import './search.scss';
 
 html {
     // font-size: 62.5%;
+    
+}
+
+body {
+    line-height: 1.2;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+
+.container_lg {
+    width: 980px;
+    margin: 0 auto;
 }
