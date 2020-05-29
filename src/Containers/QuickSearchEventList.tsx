@@ -1,12 +1,7 @@
 import React, { useState, EventHandler, MouseEvent } from 'react';
+import { ILink } from '../Interfaces/ILink';
 
-interface IEventList {
-    id: string
-    displayName: string
-    href: string
-}
-
-const dummy:IEventList[] = [
+const dummy:ILink[] = [
     {
         id:'a',
         displayName: '프로그램 완전정복',
@@ -37,7 +32,7 @@ const dummy:IEventList[] = [
 const QuickSearchEventList = () => {
     const maxLength = 4;
 
-    const [list, setList] = useState<IEventList[]>(dummy);
+    const [list, setList] = useState<ILink[]>(dummy);
     const [nowNum, setNowNum]= useState<number>(0);
 
     const handlePrevClick = (event: MouseEvent<HTMLButtonElement, globalThis.MouseEvent>):void => {
