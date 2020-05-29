@@ -1,0 +1,24 @@
+.header__navbar {
+    height: 50px;
+    display: flex;
+    a {
+        display: flex;
+        padding: 0 10px;
+        height: 100%;
+        // display: block;
+        align-items: center;
+        span {
+
+        }
+    }
+    .all-category {
+        width: 50px;
+        button {
+    
+        }
+
+        &.on {
+            
+        }
+    }
+}
