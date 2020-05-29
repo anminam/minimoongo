@@ -5,7 +5,7 @@ const Logo = () => {
 
     return (
         <>
-            <img src={src} alt="미니문고 로고"/>
+            <img src={src} alt="미니문고 로고" className="header__logo__img"/>
         </>
     )
 }

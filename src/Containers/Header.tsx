@@ -5,10 +5,10 @@ import HeaderLogo from './HeaderLogo';
 
 const Header = () => {
     return (
-        <header>
+        <header id="container_header" className="container_lg">
             <HeaderLogo />
-            <HeaderForm />
             <HeaderBanner />
+            <HeaderForm />
         </header>
     )
 }
