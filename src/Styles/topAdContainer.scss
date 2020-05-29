@@ -1,0 +1,17 @@
+#container-top-ad  {
+    overflow: hidden;
+    display: none;
+
+    &.on {
+        display: block;
+    }
+    
+    .script {
+        float: left;
+        padding: 15px;
+    }
+    .close-button {
+        padding: 15px;
+        float: right;
+    }
+}

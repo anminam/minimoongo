@@ -1,0 +1,15 @@
+header {
+    .header {
+        &__logo {
+            float: left;
+        }
+        &__form {
+            color: red;
+        }
+        &__banner {
+            float: right;
+
+        }
+    }
+
+}
