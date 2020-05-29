@@ -2,6 +2,7 @@ import React from 'react';
 import HeaderBanner from './HeaderBanner';
 import HeaderForm from './HeaderForm';
 import HeaderLogo from './HeaderLogo';
+import HeaderNavBar from './HeaderNavBar';
 
 const Header = () => {
     return (
@@ -9,6 +10,7 @@ const Header = () => {
             <HeaderLogo />
             <HeaderBanner />
             <HeaderForm />
+            <HeaderNavBar />
         </header>
     )
 }
