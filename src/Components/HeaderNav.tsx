@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import AllCategory from './AllCategory';
 import { ILink } from '../Interfaces/ILink';
 import { INavItem } from '../Interfaces/INavItem';
+import { Link } from 'react-router-dom';
 
 
 interface IHeaderNav {
@@ -18,9 +19,9 @@ const HeaderNav = ({list}:IHeaderNav) => {
                 navlist.map((item => {
                     return (
                         <li>
-                            <a href={item.href}>
+                            <Link to={item.href}>
                                 <span>{item.displayName}</span>
-                            </a>
+                            </Link>
                         </li>
                     )
                 }))
