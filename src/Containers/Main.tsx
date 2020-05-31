@@ -4,7 +4,7 @@ import Routes from "Routes";
 
 const Main = () => {
     return (
-        <main className="container_lg">
+        <main className="">
             <Routes />
         </main>
     )
