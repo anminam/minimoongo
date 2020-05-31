@@ -12,17 +12,17 @@ export const navItemList:ILink[] = [
     {
         id:'ab',
         displayName: '외국도서',
-        href: 'http://www.naver.com'
+        href: '/otherbook'
     },
     {
         id:'ab',
         displayName: 'eBook',
-        href: 'http://www.naver.com'
+        href: '/ebook'
     },
     {
         id:'ab',
         displayName: '웹소설',
-        href: 'http://www.naver.com'
+        href: 'webnovel'
     },
     {
         id:'ab',
