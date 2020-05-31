@@ -1,6 +1,6 @@
 import React from "react";
 import { HashRouter as Router, Route, Redirect, Switch  } from "react-router-dom";
-import Home from "Pages/Home";
+import {Home} from "Pages";
 
 const Root:React.FC = () => (
     <Router>
