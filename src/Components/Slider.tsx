@@ -62,7 +62,7 @@ const Slider = ({list, onNextItem, onPrevItem}:ISlider) => {
 
     return (
         <div className="slider" onMouseOver={handleViewMouseOver} onMouseLeave={handleViewMouseLeave}>
-            <div className="view-container" style={{width:700*list.length}} >
+            <div className="view-container" style={{width: 700 * list.length}} >
                 <ul style={{'marginLeft': -(700 * viewIndex)}}>
                 {
                     list &&

@@ -2,7 +2,7 @@ import React from 'react';
 
 const EBook = () => {
     return (
-        <div>
+        <div className="container_lg">
             이북
         </div>
     )

@@ -1,3 +1,19 @@
+interface IObject {
+    id: string
+}
 export class Utils {
-    
+    public static findObject = <T extends IObject>(array: T[], id:string ) => {
+        return array?.find(pItem => pItem.id === id);
+    }
+    public static  findIndex = <T extends IObject>(array: T[], id:string ):number => {
+        return array?.findIndex(pItem => pItem.id === id);
+    }
+    public static nextIndex = <T extends IObject>(array: T[], index:number):number => {
+        const len = array.length;
+        return index >= len -1 ? 0 : index + 1;
+    }
+    public static prevIndex = <T extends IObject>(array: T[], index:number):number => {
+        const len = array.length;
+        return index === 0 ? len -1 : index -1;
+    }
 }

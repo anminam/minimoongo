@@ -2,7 +2,7 @@ import React from 'react';
 
 const WebnovelBook = () => {
     return (
-        <div>
+        <div className="container_lg">
             웹소설
         </div>
     )

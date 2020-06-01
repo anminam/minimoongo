@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { IEventListItem } from 'Interfaces/IEventList';
-import WelcomeMainEventViewer from './WelcomeMainEventViewer';
+import Slider from 'Components/Slider';
+import { Utils } from 'Core/Utils';
 
 interface IWelcomeMainEvent {
     list:IEventListItem[]
@@ -8,11 +9,11 @@ interface IWelcomeMainEvent {
 
 const WelcomeMainEvent = (props:IWelcomeMainEvent) => {
 
-    const [list, setList] = useState<IEventListItem[]>();
-    const [item, setItem] = useState<IEventListItem>();
+    const [list] = useState<IEventListItem[]>(props.list);
+    const [item, setItem] = useState<IEventListItem>(props.list[0]);
+    const [selectIndex, setSelectIndex] = useState<number>(0);
 
     useEffect(()=> {
-        setList(props.list);
         setItem(props.list[0]);
     }, [props.list] );
 
@@ -26,19 +27,39 @@ const WelcomeMainEvent = (props:IWelcomeMainEvent) => {
         }
     }
 
+    const handlePrevItem = () => {
+        prevItem();
+    }
+
+    const handleNextItem = () => {
+        nextItem();
+    }
+
+    const prevItem = () => {
+        const index = Utils.findIndex(list, item.id);
+        const nextIndex = Utils.prevIndex(list, index);
+        setItem(list[nextIndex]);
+    }
+
+    const nextItem = () => {
+        const index = Utils.findIndex(list, item.id);
+        const nextIndex = Utils.nextIndex(list, index);
+        setItem(list[nextIndex]);
+    }
+
     return(
         <div className="webcome_main_evnet_height">
-            <WelcomeMainEventViewer item={item}/>
+            <Slider list={item.list} onNextItem={handleNextItem} onPrevItem={handlePrevItem}/>
             <ul className="item-list">
             {
                 list &&
-                list.map(item => {
+                list.map((pItem) => {
                     return (
-                        <li key={item.id} >
-                            <button type='button' id={item.id} onMouseOver={
+                        <li key={pItem.id} >
+                            <button type='button' id={pItem.id} className={`${pItem.id === item.id ? 'on' : ''} `} onMouseOver={
                                 handleMouseOver
                             }>
-                                {item.displayName}
+                                {pItem.displayName}
                             </button>
                         </li>
                     );

@@ -66,7 +66,13 @@ export const mainEventList:IEventListItem[] = [
     {
         id:'a2',
         displayName: '핫이슈',
-        list: []
+        list: [
+            {
+                id:'123213',
+                displayName: '하니슈',
+                href: 'http://www.naver.com'
+            }
+        ]
     },
     {
         id:'a3',

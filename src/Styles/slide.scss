@@ -4,6 +4,26 @@
     overflow: hidden;
 
     $colors: #a8e6cf, #dcedc1, #ffd3b6, #ffaaa5;
+
+    height: 330px;
+    background-color: green;
+    position: relative;
+
+    .dots {
+        
+        position: absolute;
+        bottom: 10px;
+        width: 100%;
+        text-align: center;
+
+        .dots-wapper {
+            display: inline-block;
+        }
+        
+        ul {
+            margin: 0 auto;
+        }
+    }
     
     .view-container {
         height: 100%;
@@ -26,6 +46,8 @@
         }
 
     }
+
+    
 
 
 
@@ -55,11 +77,11 @@
         position: absolute;
         background-color: grey;
         opacity: 0.2;
-
         transition: all 0.3s;
         width: 40px;
         height: $button-height;
         top: calc(50% - (60px/2));
+        cursor: pointer;
 
         &.next {
             right: 0;
