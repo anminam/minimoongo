@@ -1,5 +1,5 @@
 import { ILink } from "../Interfaces/ILink";
-import { IEventList } from "Interfaces/IEventList";
+import { IEventListItem } from "Interfaces/IEventList";
 
 
 export const navItemList:ILink[] = [
@@ -15,57 +15,61 @@ export const navItemList:ILink[] = [
         href: '/otherbook'
     },
     {
-        id:'ab',
+        id:'abc',
         displayName: 'eBook',
         href: '/ebook'
     },
     {
-        id:'ab',
+        id:'abd',
         displayName: '웹소설',
         href: 'webnovel'
     },
     {
-        id:'ab',
+        id:'abe',
         displayName: '기프트',
         href: 'http://www.naver.com'
     },
     {
-        id:'ab',
+        id:'abf',
         displayName: '음반',
         href: 'http://www.naver.com'
     },
     {
-        id:'ab',
+        id:'abg',
         displayName: '중고장터',
         href: 'http://www.naver.com'
     },
 ];
 
-export const mainEventList:IEventList[] = [
+export const mainEventList:IEventListItem[] = [
     {
-        id:'asdf',
+        id:'a1',
         displayName: '요즘 이 책',
         list: [
             {
-                id:'123213',
-                displayName: '좋은책',
+                id:'a1',
+                displayName: '안녕',
                 href: 'http://www.naver.com'
-            }
-        ]
-    },
-    {
-        id:'asdf',
-        displayName: '핫이슈',
-        list: [
+            },
             {
-                id:'123213',
-                displayName: '좋은책',
+                id:'a2',
+                displayName: '나도안녕',
                 href: 'http://www.naver.com'
-            }
+            },
+            {
+                id:'a3',
+                displayName: '너도',
+                href: 'http://www.naver.com'
+            },
         ]
     },
     {
-        id:'asdf',
+        id:'a2',
+        displayName: '핫이슈',
+        list: []
+    },
+    {
+        id:'a3',
         displayName: '새로나온책',
         list: [
             {
@@ -76,7 +80,7 @@ export const mainEventList:IEventList[] = [
         ]
     },
     {
-        id:'asdf',
+        id:'a4',
         displayName: '기획/테마',
         list: [
             {
@@ -87,7 +91,7 @@ export const mainEventList:IEventList[] = [
         ]
     },
     {
-        id:'asdf',
+        id:'a5',
         displayName: 'ebook',
         list: [
             {
@@ -98,7 +102,7 @@ export const mainEventList:IEventList[] = [
         ]
     },
     {
-        id:'asdf',
+        id:'a6',
         displayName: 'sam',
         list: [
             {
@@ -109,7 +113,7 @@ export const mainEventList:IEventList[] = [
         ]
     },
     {
-        id:'asdf',
+        id:'a7',
         displayName: '한정특가',
         list: [
             {
