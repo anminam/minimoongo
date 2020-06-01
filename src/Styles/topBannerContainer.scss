@@ -1,10 +1,11 @@
-#container-top-banner  {
+#container-top-banner {
     $left: #ffe9eb;
     $right: #cbeffb;
 
     overflow: hidden;
     display: none;
     position: relative;
+    height: 65px;
     line-height: 0;
 
     .background {
@@ -25,8 +26,9 @@
         }
     }
 
-    &.__img {
-        // height: ;
+    img {
+        display: block;
+        margin: 0 auto;
     }
 
     &.on {
@@ -39,6 +41,9 @@
         padding: 15px;
     }
     .close-button {
+        position: absolute;
+        top: 0;
+        right: 0;
         padding: 15px;
         float: right;
     }

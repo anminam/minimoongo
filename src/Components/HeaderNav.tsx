@@ -19,7 +19,7 @@ const HeaderNav = ({list}:IHeaderNav) => {
                 navlist.map((item => {
                     return (
                         <li>
-                            <Link to={item.href}>
+                            <Link key={item.id} to={item.href}>
                                 <span>{item.displayName}</span>
                             </Link>
                         </li>
