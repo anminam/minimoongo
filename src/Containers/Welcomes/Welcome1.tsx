@@ -1,12 +1,12 @@
 import React from 'react';
 import WelcomeMainEvent from './WelcomeMainEvent';
+import { mainEventList } from 'Configs/StaticData';
 
 const Welcome1 = () => {
-
     return(
         <div>
             <div className="container_lg">
-                <WelcomeMainEvent />
+                <WelcomeMainEvent list={mainEventList}/>
             </div>
         </div>
     )
