@@ -1,6 +1,6 @@
 import { ILink } from "./ILink";
 
-export interface IEventList {
+export interface IEventListItem {
     id: string
     displayName: string
     list: ILink[]

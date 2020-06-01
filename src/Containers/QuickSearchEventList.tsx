@@ -69,7 +69,7 @@ const QuickSearchEventList = () => {
                             return false;
                         }
                         return (
-                            <li>
+                            <li key={item.id}>
                                 <a href={item.href}>
                                     {item.displayName}
                                 </a>
