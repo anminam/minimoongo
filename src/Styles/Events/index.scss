@@ -1,16 +1,40 @@
 .webcome_main_evnet_height {
+    $width: 700px;
     height: 370px;
-    width: 700px;
+    width: $width;
+
+    .welcome-main-event-viewer-container {
+        height: 330px;
+        background-color: green;
+        position: relative;
+
+        .dots {
+            
+            position: absolute;
+            bottom: 10px;
+            width: 100%;
+            text-align: center;
+
+            .dots-wapper {
+                display: inline-block;
+            }
+            
+            ul {
+                margin: 0 auto;
+            }
+        }
+    }
 
     .item-list {
         width: 100%;
+        height: 40px;
         display: flex;
 
         li {
             width:100px;
             button {
                 width: 100%;
-                height:38px;
+                height: 40px;
                 display: block;
                 border: 1px solid #000;
                 border-right: 0;
