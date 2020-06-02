@@ -8,12 +8,12 @@ interface ISlider {
 }
 const Slider = ({list, onNextItem, onPrevItem}:ISlider) => {
 
-    const [onItem, setOnItem] = useState<ILink | null>(null);
+    // const [onItem, setOnItem] = useState<ILink | null>(null);
     const [viewIndex, setViewIndex] = useState<number>(0);
     const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(false);
 
     useEffect(()=> {
-        setOnItem(list[0]);
+        // setOnItem(list[0]);
         setViewIndex(0);
     }, [list]);
 
@@ -29,7 +29,7 @@ const Slider = ({list, onNextItem, onPrevItem}:ISlider) => {
         });
 
         if (obj) {
-            setOnItem(obj);
+            // setOnItem(obj);
         }
     }
 

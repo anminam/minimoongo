@@ -11,7 +11,6 @@ const WelcomeMainEvent = (props:IWelcomeMainEvent) => {
 
     const [list] = useState<IEventListItem[]>(props.list);
     const [item, setItem] = useState<IEventListItem>(props.list[0]);
-    const [selectIndex, setSelectIndex] = useState<number>(0);
 
     useEffect(()=> {
         setItem(props.list[0]);
