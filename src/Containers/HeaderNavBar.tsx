@@ -1,7 +1,7 @@
 import React from 'react';
 import AllCategory from '../Components/AllCategory';
 import HeaderNav from '../Components/HeaderNav';
-import { navItemList } from 'Configs/StaticData';
+import { navItemList } from 'Core/StaticData';
 
 
 

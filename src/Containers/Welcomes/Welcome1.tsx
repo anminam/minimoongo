@@ -1,6 +1,6 @@
 import React from 'react';
 import WelcomeMainEvent from './WelcomeMainEvent';
-import { mainEventList } from 'Configs/StaticData';
+import { mainEventList } from 'Core/StaticData';
 
 const Welcome1 = () => {
     return(
