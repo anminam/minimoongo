@@ -2,7 +2,7 @@ import React from 'react';
 import WelcomeMainEvent from 'Containers/Welcomes/WelcomeMainEvent';
 import "Styles/index.scss";
 
-import { mainEventList } from 'Configs/StaticData';
+import { mainEventList } from 'Core/StaticData';
 
 export default {
   title: 'WelcomeMainEvent',

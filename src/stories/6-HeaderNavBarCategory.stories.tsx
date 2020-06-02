@@ -1,6 +1,6 @@
 import React from 'react';
 import AllCategoryMenu from 'Components/AllCategoryMenu';
-import { navItemList } from 'Configs/StaticData';
+import { navItemList } from 'Core/StaticData';
 export default {
   title: 'AllCategoryMenu',
   component: AllCategoryMenu,
