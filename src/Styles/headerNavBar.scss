@@ -1,20 +1,37 @@
+@import './icons.scss';
+
 .header__navbar {
     height: 50px;
     display: flex;
+    $color1: #606d9a;
+    background-color: $color1;
+    
     a {
         display: flex;
         padding: 0 10px;
         height: 100%;
-        // display: block;
         align-items: center;
-        span {
-
-        }
+        color: white;
+        font-weight: 600;
     }
     .all-category {
         width: 50px;
+        background-color: #373f64;
         button {
-    
+            background-image: url('/assets/icons/menu.svg');
+            background-size: 50px 50px;
+            height: 100%;
+            width: 100%;
+        }
+        .menu {
+            background-color: white;
+            height: 50px;
+            @include menu_main;
+        }
+        .menu.on {
+            background-color: white;
+            height: 50px;
+            @include menu_x;
         }
 
         &.on {

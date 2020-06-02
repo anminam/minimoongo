@@ -1,0 +1,10 @@
+@mixin menu_main {
+    -webkit-mask: url('/assets/icons/menu_main.svg') no-repeat center;
+    mask: url('/assets/icons/menu_main.svg') no-repeat center;
+}
+@mixin menu_x {
+    -webkit-mask: url('/assets/icons/menu_x.svg') no-repeat center;
+    mask: url('/assets/icons/menu_x.svg') no-repeat center;
+    -webkit-mask-size: 30px;
+    mask-size: 30px;
+}
