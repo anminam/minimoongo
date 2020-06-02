@@ -7,10 +7,10 @@ import { navItemList } from 'Configs/StaticData';
 
 const HeaderNavBar = () => {
     const list = navItemList;
-    
+
     return (
         <div className="header__navbar">
-            <AllCategory />
+            <AllCategory list={list} />
             <HeaderNav list={list} />
         </div>
     )

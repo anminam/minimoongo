@@ -1,9 +1,13 @@
 import React, { useState } from 'react';
+import { INavItem } from 'Interfaces/INavItem';
+import AllCategoryMenu from './AllCategoryMenu';
 
 
-const AllCategory = () => {
-
-    const [isOn, setIsOn] = useState<Boolean>(true);
+interface IAllcategory {
+    list:INavItem[]
+}
+const AllCategory = ({list}:IAllcategory) => {
+    const [isOn, setIsOn] = useState<Boolean>(false);
 
     const handleMouseOver = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
         setIsOn(true);
@@ -14,9 +18,9 @@ const AllCategory = () => {
 
 
     return (
-        <div className="all-category">
-            {/* <button type="button" /> */}
-            <div className={`menu ${isOn ? 'on' : ''}`} onMouseOver={handleMouseOver} onMouseLeave={handleMouseLeave}/>
+        <div className="all-category" onMouseLeave={handleMouseLeave}>
+            <div className={`menu ${isOn ? 'on' : ''}`} onMouseOver={handleMouseOver} />
+            <AllCategoryMenu list={list} visible={isOn}/>
         </div>
     )
 }

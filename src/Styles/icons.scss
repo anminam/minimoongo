@@ -8,3 +8,11 @@
     -webkit-mask-size: 30px;
     mask-size: 30px;
 }
+
+@mixin chevron-right($color) {
+    -webkit-mask: url('/assets/icons/chevron-right.svg') no-repeat center;
+    mask: url('/assets/icons/chevron-right.svg') no-repeat center;
+    background-color: $color;
+    -webkit-mask-size: contain;
+    mask-size: contain;
+}

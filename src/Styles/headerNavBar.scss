@@ -39,3 +39,58 @@
         }
     }
 }
+
+.all-category-menu {
+    $color1: #1e326e;
+    $color2: #dadada;
+    position: absolute;
+    border: 1px solid $color1;
+    z-index: 1;
+
+    &__list {
+        color:red;
+
+        li {
+            border-top: 1px solid $color2;
+            border-bottom: 0;
+            width: 150px;
+            height: 50px;
+            &:first-child {
+                border-top: 0;
+            }
+            &:last-child {
+                border-bottom: 0;
+            }
+
+            button {
+                position: relative;
+                cursor: pointer;
+                font-size: 14px;
+                font-weight: 600;
+                display: block;
+                text-align: left;
+                padding-left: 10px;
+                width: 100%;
+                height: 100%;
+                &.on {
+                    background-color: $color1;
+                    color: #fff;
+                    &::after{
+                        content: ' ';
+                        right: 4px;
+                        display: inline-block;
+                        position: absolute;
+                        width: 14px;
+                        height: 14px;
+                        height: 100%;
+                        top: 0;
+                        @include chevron-right(#fff);
+                        
+                    }
+
+                    
+                }
+            }
+        }
+    }
+}
