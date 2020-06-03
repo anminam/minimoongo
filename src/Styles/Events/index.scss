@@ -1,3 +1,5 @@
+@import './colors.scss';
+
 .webcome_main_evnet_height {
     $width: 700px;
     height: 370px;
@@ -26,7 +28,7 @@
 
                 cursor: pointer;
                 &.on {
-                    background-color: blue;
+                    background-color: $color-moongo;
                     color: white;
                 }
             }

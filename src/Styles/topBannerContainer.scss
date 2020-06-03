@@ -1,3 +1,5 @@
+@import './icons.scss';
+
 #container-top-banner {
     $left: #ffe9eb;
     $right: #cbeffb;
@@ -41,10 +43,13 @@
         padding: 15px;
     }
     .close-button {
+        content: ' ';
+        cursor: pointer;
         position: absolute;
         top: 0;
         right: 0;
         padding: 15px;
         float: right;
+        @include menu_x;
     }
 }
