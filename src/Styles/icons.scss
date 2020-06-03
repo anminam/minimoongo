@@ -16,3 +16,7 @@
     -webkit-mask-size: contain;
     mask-size: contain;
 }
+
+.chevron-right {
+    @include chevron-right(#fff);
+}
