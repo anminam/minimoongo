@@ -3,27 +3,27 @@ import { ILink } from '../Interfaces/ILink';
 
 const dummy:ILink[] = [
     {
-        id:'a',
+        id:'abc1',
         displayName: '프로그램 완전정복',
         href: 'http://www.naver.com'
     },
     {
-        id:'ab',
+        id:'abc2',
         displayName: 'js 완전 잘하기',
         href: 'http://www.naver.com'
     },
     {
-        id:'ab',
+        id:'abc3',
         displayName: '김재성 신작',
         href: 'http://www.naver.com'
     },
     {
-        id:'ab',
+        id:'abc4',
         displayName: '삼성화재 이대로괜찮은가',
         href: 'http://www.naver.com'
     },
     {
-        id:'ab',
+        id:'abc5',
         displayName: '똑똑한사람의 선택',
         href: 'http://www.naver.com'
     },
