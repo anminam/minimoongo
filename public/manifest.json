@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "MiniMongo",
+  "name": "미니문고입니다.",
   "icons": [
     {
       "src": "favicon.ico",
