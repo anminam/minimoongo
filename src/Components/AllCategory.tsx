@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
-import { INavItem } from 'Interfaces/INavItem';
 import AllCategoryMenu from './AllCategoryMenu';
+import { IMainCategory } from 'Interfaces/IMainCategory';
 
 
 interface IAllcategory {
-    list:INavItem[]
+    list:IMainCategory[]
 }
 const AllCategory = ({list}:IAllcategory) => {
     const [isOn, setIsOn] = useState<Boolean>(false);

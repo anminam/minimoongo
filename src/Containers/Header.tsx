@@ -7,9 +7,11 @@ import HeaderNavBar from './HeaderNavBar';
 const Header = () => {
     return (
         <header id="container_header" className="container_lg">
-            <HeaderLogo />
-            <HeaderBanner />
-            <HeaderForm />
+            <div className="first_line">
+                <HeaderLogo />
+                <HeaderBanner />
+                <HeaderForm />
+            </div>
             <HeaderNavBar />
         </header>
     )

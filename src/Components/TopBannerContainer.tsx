@@ -16,7 +16,7 @@ const TopBannerContainer = () => {
                 <div className="right"></div>
             </div>
             <img className="container-top-banner__img" src={src} alt="광고맨" style={{height: '65px'}}/>
-            <button type="button" className="close-button" onClick={handleCloseClick}>닫기</button>
+            <button type="button" className="close-button" onClick={handleCloseClick}></button>
         </div>
     )
 }
