@@ -1,13 +1,14 @@
 import React from 'react';
 import AllCategory from '../Components/AllCategory';
 import HeaderNav from '../Components/HeaderNav';
-import { navItemList } from 'Core/StaticData';
+import { IMainCategory } from "Interfaces/IMainCategory";
+import { connect } from 'react-redux';
 
+interface IHaderNavBar {
+    list: IMainCategory[]
+}
 
-
-const HeaderNavBar = () => {
-    const list = navItemList;
-
+const HeaderNavBar = ({list}:IHaderNavBar) => {
     return (
         <div className="header__navbar">
             <AllCategory list={list} />
@@ -16,4 +17,12 @@ const HeaderNavBar = () => {
     )
 }
 
-export default HeaderNavBar;
+const mapStateToProps = (state: any, props: any) => {
+    const {list} = state.nav;
+
+    return {
+        list
+    }
+}
+
+export default connect(mapStateToProps)(HeaderNavBar);

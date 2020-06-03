@@ -43,24 +43,25 @@
 .all-category-menu {
     $color1: #1e326e;
     $color2: #dadada;
+
+    background-color: white;
     position: absolute;
+    display: flex;
     border: 1px solid $color1;
     z-index: 1;
 
     &__list {
-        float: left;
 
         li {
             border-right: 1px solid $color2;
             border-top: 1px solid $color2;
-            border-bottom: 0;
             width: 150px;
             height: 50px;
             &:first-child {
                 border-top: 0;
             }
             &:last-child {
-                border-bottom: 0;
+                border-bottom: 1px solid $color2;
             }
 
             button {
@@ -96,7 +97,6 @@
     }
 
     &__sub-list {
-        float: left;
 
     }
 }
