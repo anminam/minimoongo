@@ -1,0 +1,71 @@
+@mixin box-title() {
+    font-size: 16px;
+    font-weight: bold;
+    line-height: 18px;
+    height: 35px;
+    color: #000;
+    font-family: 'Malgun Gothic','Apple SD Neo Gothic','Dotum','Sans-Serif';
+    
+    &:hover {
+        color: #3c5fdf;
+        text-decoration: underline;
+    }
+}
+
+@mixin section-title() {
+    display: block;
+    // padding: 1px 5px 0;
+    font-weight: bold;
+    height: 22px;
+    font-size: 14px;
+    line-height: 18px;
+    color: #555;
+    padding: 2px 4px;
+    font-family: 'Malgun Gothic','Apple SD Neo Gothic','Dotum','Sans-Serif';
+    &:hover,
+    &.on {
+        background-color: #9cafe9;
+        color: #fff;
+    }
+    
+}
+
+.box  {
+
+    $padding-height: 10px;
+
+    position: relative;
+    height: 346px;
+    overflow: hidden;
+
+    h3 {
+        padding-top: $padding-height;
+        margin-right: 10px;
+        float: left;
+    }
+
+    &.left-title {
+        .title a {
+            @include box-title();
+        }
+    }
+    .contents-container {
+        position: relative;
+        h3 a {
+            @include section-title();
+        }
+
+        .list-container {
+            position: absolute;
+            top: 40px;
+            li {
+                float: left;
+            }
+
+        }
+
+    }
+}
+
+.box-welcome1 {
+}
