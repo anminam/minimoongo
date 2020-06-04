@@ -1,5 +1,5 @@
 import React, { useState, EventHandler, MouseEvent } from 'react';
-import { ILink } from '../Interfaces/ILink';
+import { ILink } from '../../Interfaces/ILink';
 
 const dummy:ILink[] = [
     {

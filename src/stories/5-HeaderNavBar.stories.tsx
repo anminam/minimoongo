@@ -1,5 +1,5 @@
 import React from 'react';
-import HeaderNavBar from 'Containers/HeaderNavBar';
+import HeaderNavBar from 'View/Containers/HeaderNavBar';
 import { HashRouter as Router } from "react-router-dom";
 
 export default {

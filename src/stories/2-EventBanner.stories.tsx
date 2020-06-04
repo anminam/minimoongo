@@ -1,5 +1,5 @@
 import React from 'react';
-import WelcomeMainEvent from 'Containers/Welcomes/WelcomeMainEvent';
+import WelcomeMainEvent from 'View/Containers/Welcomes/WelcomeMainEvent';
 import "Styles/index.scss";
 
 import { mainEventList } from 'Core/StaticData';

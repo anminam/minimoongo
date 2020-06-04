@@ -1,6 +1,6 @@
 import React from 'react';
-import AllCategory from '../Components/AllCategory';
-import HeaderNav from '../Components/HeaderNav';
+import AllCategory from '../../Components/AllCategory';
+import HeaderNav from '../../Components/HeaderNav';
 import { IMainCategory } from "Interfaces/IMainCategory";
 import { connect } from 'react-redux';
 

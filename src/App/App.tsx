@@ -1,11 +1,12 @@
 import React from 'react';
 import '../Styles/index.scss'
 
-import Main from '../Containers/Main';
+import Main from '../View/Containers/Main';
 
-import Header from '../Containers/Header';
+import Header from '../View/Containers/Header';
 import { HashRouter as Router } from "react-router-dom";
 import TopBannerContainer from 'Components/TopBannerContainer';
+import Footer from 'View/Containers/Footer';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
       <Router>
         <Header />
         <Main />
+        <Footer />
       </Router>
     </div>
   );

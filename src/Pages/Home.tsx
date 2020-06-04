@@ -1,5 +1,5 @@
 import React from 'react';
-import Welcome1 from 'Containers/Welcomes/Welcome1';
+import Welcome1 from 'View/Containers/Welcomes/Welcome1';
 import BoxWelcome1 from 'View/Containers/Boxes/BoxWelcome1';
 import { connect } from 'react-redux';
 import { IGoods } from 'Interfaces/IGoods';
