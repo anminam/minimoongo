@@ -1,0 +1,55 @@
+.card {
+
+    $border-size-normal: 1px;
+    $border-size-on: 5px;
+
+    float: left;
+    width: 200px;
+    height: 274px;
+    padding: 25px 10px 12px;
+    position: relative;
+    border: $border-size-normal solid #dadada;
+    margin-right: 22px;
+    background-color: #fff;
+    transition: border-color 0.2s linear;
+
+    &:hover,
+    &.on {
+        border: $border-size-on solid #5e6b9e;
+        padding: calc(25px - #{$border-size-on} + #{$border-size-normal}) 10px 12px;
+        height: 269px;
+    }
+
+    &__cover {
+        text-align: center;
+        left: 0;
+        width: 100%;
+
+        img {
+            width: 125px;
+            min-width: 125px;
+            max-height: 185px;
+            _height: 185px;
+            border: 1px solid #888;
+            
+        }
+    }
+    &__contents {
+        padding-top: 10px;
+        &__category {
+            text-align: center;
+            color: #333;
+            font-size: 11px;
+            color: #3e74ab;
+            padding: 4px 0;
+        }
+        &__title {
+            height: 32px;
+            line-height: 16px;
+            text-align: center;
+            color: #333;
+            font-size: 12px;
+            font-weight: bold;
+        }
+    }
+}

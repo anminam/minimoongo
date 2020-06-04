@@ -45,11 +45,14 @@
     .close-button {
         content: ' ';
         cursor: pointer;
+        background: none;
+
         position: absolute;
         top: 0;
-        right: 0;
-        padding: 15px;
-        float: right;
-        @include menu_x;
+        right: 10px;
+        width: 20px;
+        height: 100%;
+        
+        @include menu-x-after(#fff, 40px);
     }
 }

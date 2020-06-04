@@ -31,7 +31,7 @@
         .menu.on {
             background-color: white;
             height: 50px;
-            @include menu_x;
+            @include menu_x(white);
         }
 
         &.on {
