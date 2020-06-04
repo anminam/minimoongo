@@ -9,17 +9,22 @@ footer {
 
         &__list {
             width: 1000px;
+            height: 100%;
+            display: flex;
             margin: 0 auto;
+            align-items: center;
         }
 
         li {
+            position: relative;
             float: left;
             padding: 0 13px 0 14px;
-            height: 28px;
             text-align: center;
         }
         a {
             cursor: pointer;
+            
+            line-height: 1.6;
             font-size: 12px;
             text-decoration: none;
             color: #f1f0f0;
