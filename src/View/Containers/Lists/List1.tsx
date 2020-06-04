@@ -18,20 +18,20 @@ const List1 = ({ goods }:IList1) => {
 
     const handlePrevClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>):void => {
         event.preventDefault();
-
+        
         if (viewIndex > 0) {
             setViewIndex(viewIndex - 1);
         } else {
             const max = Math.floor(goods.length / maxLength);
-            setViewIndex(max);
+            setViewIndex(max - 1);
         }
         
     }
     const handleNextClick = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>):void => {
         event.preventDefault();
-
+        
         const max = Math.floor(goods.length / maxLength);
-        if (viewIndex < max) {
+        if (viewIndex < max-1) {
             setViewIndex(viewIndex + 1);
         } else {
             setViewIndex(0);
