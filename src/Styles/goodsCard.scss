@@ -4,8 +4,8 @@
     $border-size-on: 5px;
 
     float: left;
-    width: 200px;
-    height: 274px;
+    width: 220px;
+    height: 300px;
     padding: 25px 10px 12px;
     position: relative;
     border: $border-size-normal solid #dadada;
@@ -17,7 +17,6 @@
     &.on {
         border: $border-size-on solid #5e6b9e;
         padding: calc(25px - #{$border-size-on} + #{$border-size-normal}) 10px 12px;
-        height: 269px;
     }
 
     &__cover {
