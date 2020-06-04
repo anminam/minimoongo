@@ -34,6 +34,7 @@
 
     $padding-height: 10px;
 
+    margin-top: 40px;
     position: relative;
     height: 346px;
     overflow: hidden;
@@ -59,7 +60,12 @@
             position: absolute;
             top: 40px;
             li {
+                margin-right: 22px;
                 float: left;
+
+                &:last-child {
+                    margin-right: 0;
+                }
             }
 
             button {
@@ -73,8 +79,10 @@
                 height: $button-height;
                 top: calc(50% - (#{$button-height}/2));
                 cursor: pointer;
-                left: 0;
-        
+                
+                &.prev {
+                    left: 0;
+                }
                 &.next {
                     right: 0;
                 }

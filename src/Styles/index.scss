@@ -7,6 +7,7 @@
 @import './box.scss';
 @import './goodsCard.scss';
 @import './imageButton.scss';
+@import './const.scss';
 
 @import './Events/index.scss';
 
@@ -38,8 +39,9 @@ body {
 
 
 .container_lg {
-    width: 980px;
-    margin: 0 auto;
+    width: $main-width;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .none {

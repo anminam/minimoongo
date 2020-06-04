@@ -9,9 +9,12 @@
     padding: 25px 10px 12px;
     position: relative;
     border: $border-size-normal solid #dadada;
-    margin-right: 22px;
     background-color: #fff;
     transition: border-color 0.2s linear;
+
+    &:nth-child(3) {
+        margin-right: 0;
+    }
 
     &:hover,
     &.on {

@@ -10,6 +10,7 @@ const List1 = ({ goods }:IList1) => {
 
     const maxLength = 4;
     const [viewIndex, setViewIndex] = useState<number>(0);
+    const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(false);
 
     useEffect(()=> {
         setViewIndex(0);
@@ -36,9 +37,16 @@ const List1 = ({ goods }:IList1) => {
             setViewIndex(0);
         }
     }
+
+    const handleViewMouseOver = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        setIsVisibleButton(true);
+    }
+    const handleViewMouseLeave = (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+        setIsVisibleButton(false);
+    }
     
     return (
-        <div className="list-container">
+        <div className="list-container" onMouseOver={handleViewMouseOver} onMouseLeave={handleViewMouseLeave}>
             <ul>
                 {
                     goods &&
@@ -57,10 +65,8 @@ const List1 = ({ goods }:IList1) => {
                     })
                 }
             </ul>
-            {/* <div className="list-container__buttons"> */}
-                <button className="prev" onClick={handlePrevClick}>-</button>
-                <button className="next" onClick={handleNextClick}>+</button>
-            {/* </div> */}
+            <button className={`prev ${!isVisibleButton ? 'invisible': ''} img-button-chevron-left`} onClick={handlePrevClick}></button>
+            <button className={`next ${!isVisibleButton ? 'invisible': ''} img-button-chevron-right`} onClick={handleNextClick}></button>
         </div>
     )
 }
