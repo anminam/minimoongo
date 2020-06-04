@@ -27,6 +27,16 @@ const dummy:ILink[] = [
         displayName: '똑똑한사람의 선택',
         href: 'http://www.naver.com'
     },
+    {
+        id:'abc6',
+        displayName: '나는 시키는대로 살것이다',
+        href: 'http://www.naver.com'
+    },
+    {
+        id:'abc7',
+        displayName: '보여주기 위한 삶',
+        href: 'http://www.naver.com'
+    },
 ]
 
 const QuickSearchEventList = () => {

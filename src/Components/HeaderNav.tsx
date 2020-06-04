@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { INavItem } from '../Interfaces/INavItem';
-import { Link } from 'react-router-dom';
+import { Link, NavLink } from 'react-router-dom';
 
 
 interface IHeaderNav {
@@ -10,6 +10,10 @@ interface IHeaderNav {
 const HeaderNav = ({list}:IHeaderNav) => {
     const [navlist] = useState<INavItem[]>(list);
 
+    const activeStyle = {
+        'background': '#373f64'
+    }
+
     return (
         <ul className="header__navbar">
             {
@@ -17,9 +21,9 @@ const HeaderNav = ({list}:IHeaderNav) => {
                 navlist.map((item => {
                     return (
                         <li key={item.id}>
-                            <Link to={item.href}>
+                            <NavLink to={item.href} activeStyle={activeStyle}>
                                 <span>{item.displayName}</span>
-                            </Link>
+                            </NavLink>
                         </li>
                     )
                 }))
