@@ -2,9 +2,10 @@
     -webkit-mask: url('/assets/icons/menu_main.svg') no-repeat center;
     mask: url('/assets/icons/menu_main.svg') no-repeat center;
 }
-@mixin menu_x {
+@mixin menu_x($color) {
     -webkit-mask: url('/assets/icons/menu_x.svg') no-repeat center;
     mask: url('/assets/icons/menu_x.svg') no-repeat center;
+    background-color: $color;
     -webkit-mask-size: 30px;
     mask-size: 30px;
 }
@@ -19,4 +20,35 @@
 
 .chevron-right {
     @include chevron-right(#fff);
+}
+
+@mixin chevron-right-after($color, $size) {
+    &::after {
+        content: ' ';
+        right: 4px;
+        display: inline-block;
+        position: absolute;
+        width: $size;
+        height: $size;
+        height: 100%;
+        top: 0;
+        @include chevron-right(#fff);
+    }
+}
+@mixin chevron-left-after($color, $size) {
+    @include chevron-right-after($color, $size);
+    transform: rotate(180deg);
+}
+@mixin menu-x-after($color, $size) {
+    &::after {
+        content: ' ';
+        right: 4px;
+        display: inline-block;
+        position: absolute;
+        width: $size;
+        height: $size;
+        height: 100%;
+        top: 0;
+        @include menu_x($color)
+    }
 }

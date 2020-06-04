@@ -89,8 +89,8 @@ const Slider = ({list, onNextItem, onPrevItem}:ISlider) => {
                 </div>
 
             </div>
-            <button className={`prev ${!isVisibleButton ? 'invisible': ''}`} onClick={handlePrevClick}></button>
-            <button className={`next ${!isVisibleButton ? 'invisible': ''}`} onClick={handleNextClick}></button>
+            <button className={`prev ${!isVisibleButton ? 'invisible': ''} img-button-chevron-left`} onClick={handlePrevClick}></button>
+            <button className={`next ${!isVisibleButton ? 'invisible': ''} img-button-chevron-right`} onClick={handleNextClick}></button>
         </div>
     )
 }

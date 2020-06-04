@@ -73,14 +73,15 @@
     }
 
     button {
-        $button-height: 60px;
+        $button-height: 50px;
+
         position: absolute;
         background-color: grey;
         opacity: 0.2;
         transition: all 0.3s;
-        width: 40px;
+        width: 36px;
         height: $button-height;
-        top: calc(50% - (60px/2));
+        top: calc(50% - (#{$button-height}/2));
         cursor: pointer;
 
         &.next {
