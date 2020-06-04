@@ -1,0 +1,33 @@
+footer {
+    margin-top: 70px;
+
+    .sitemap-area {
+        
+        $sitemap-area-height: 44px;
+        height: $sitemap-area-height;
+        background-color: #8B8B8B;
+
+        &__list {
+            width: 1000px;
+            margin: 0 auto;
+        }
+
+        li {
+            float: left;
+            padding: 0 13px 0 14px;
+            height: 28px;
+            text-align: center;
+        }
+        a {
+            cursor: pointer;
+            font-size: 12px;
+            text-decoration: none;
+            color: #f1f0f0;
+            &:hover {
+                text-decoration: underline;
+                color: #fff;
+            }
+        }
+
+    }
+}
