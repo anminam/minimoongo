@@ -1,0 +1,8 @@
+@import './icons.scss';
+
+.img-button-chevron-right {
+    @include chevron-right-after(#fff, 24px);
+}
+.img-button-chevron-left {
+    @include chevron-left-after(#fff, 24px);
+}
