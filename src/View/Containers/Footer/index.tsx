@@ -6,9 +6,6 @@ const Footer = () => {
             <div className="sitemap-area">
                 <ul className="sitemap-area__list">
                     <li>
-                        <a>이용약관</a>
-                    </li>
-                    <li>
                         <a>회사소개</a>
                     </li>
                     <li>

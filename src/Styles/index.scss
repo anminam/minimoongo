@@ -9,6 +9,7 @@
 @import './imageButton.scss';
 @import './const.scss';
 @import './footer.scss';
+@import './banners.scss';
 
 @import './Events/index.scss';
 
@@ -43,6 +44,10 @@ body {
     width: $main-width;
     margin-left: auto;
     margin-right: auto;
+
+    &.flex { 
+        display: flex;
+    }
 }
 
 .none {
