@@ -43,7 +43,7 @@ const AllCategoryMenuSub = ({ categoryData, navCategoryId }:IAllCategoryMenuSub)
             } else {
                 newCategories.push({
                     id: item.categoryIndex,
-                    list: [item]
+                    list: [item],
                 });
             }
         });
@@ -63,7 +63,9 @@ const AllCategoryMenuSub = ({ categoryData, navCategoryId }:IAllCategoryMenuSub)
                             <ul key={i} className="category">
                                 {
                                     item.list.map((iitem, ii ) => {
-                                        return <li key={ii}><a href={iitem.id}>{iitem.displayName}</a></li>
+                                        return <li key={ii}>
+                                            <a href={iitem.id} className={`${iitem.isBig ? 'bold' : ''}`}>{iitem.displayName}</a>
+                                        </li>
                                     })
                                 }
                             </ul>

@@ -152,6 +152,10 @@
                     color: $color-gray-text;
                     padding: 4px 5px;
                     display: block;
+                    
+                    &.bold {
+                        color: red;
+                    }
                 }
                 &:hover {
                     background-color: $color-select-gray-block;

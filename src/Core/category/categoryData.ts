@@ -13,11 +13,12 @@ export const CategoryData:ICategoryReducer = {
         {
             id: "korbook",
             list: [
-                { categoryIndex: '1',       id: "daa",      displayName: "소설",                          },
-                { categoryIndex: '1',       id: "dab",      displayName: "시/에세이",                     },
+                { categoryIndex: '1',       id: "daa",      displayName: "소설",                          isBig: true, },
+                { categoryIndex: '1',       id: "dab",      displayName: "시/에세이",                     isBig: true, },
                 { categoryIndex: '1',       id: "dag",      displayName: "경제/경영",                     },
-                { categoryIndex: '1',       id: "dah",      displayName: "자기계발",                      },
-                { categoryIndex: '2',       id: "dac",      displayName: "인문",                          },
+                { categoryIndex: '1',       id: "dah",      displayName: "자기계발",                      isBig: true, },
+
+                { categoryIndex: '2',       id: "dac",      displayName: "인문",                          isBig: true, },
                 { categoryIndex: '2',       id: "dad",      displayName: "역사/문화",                     },
                 { categoryIndex: '2',       id: "dae",      displayName: "종교",                          },
                 { categoryIndex: '2',       id: "daf",      displayName: "정치/사회",                     },
@@ -25,17 +26,20 @@ export const CategoryData:ICategoryReducer = {
                 { categoryIndex: '2',       id: "daz",      displayName: "과학",                          },
                 { categoryIndex: '2',       id: "da1",      displayName: "기술/공학",                     },
                 { categoryIndex: '2',       id: "da2",      displayName: "컴퓨터/IT",                     },
+
                 { categoryIndex: '3',       id: "dai",      displayName: "유아(0~7세)",                   },
-                { categoryIndex: '3',       id: "daj",      displayName: "어린이(초등)",                  },
+                { categoryIndex: '3',       id: "daj",      displayName: "어린이(초등)",                  isBig: true, },
                 { categoryIndex: '3',       id: "dal",      displayName: "어린이전집",                    },
                 { categoryIndex: '3',       id: "dak",      displayName: "어린이영어",                    },
                 { categoryIndex: '3',       id: "dao",      displayName: "청소년",                        },
+
                 { categoryIndex: '4',       id: "dam",      displayName: "초등참고서",                    },
-                { categoryIndex: '4',       id: "dan",      displayName: "중/고등참고서",                 },
+                { categoryIndex: '4',       id: "dan",      displayName: "중/고등참고서",                 isBig: true, },
                 { categoryIndex: '4',       id: "da5",      displayName: "대학교재",                      },
-                { categoryIndex: '4',       id: "da8",      displayName: "방송통신대교재",                },
-                { categoryIndex: '4',       id: "da3",      displayName: "취업/수험서",                   },
+                { categoryIndex: '4',       id: "da8",      displayName: "방송통신대교재",                isBig: true, },
+                { categoryIndex: '4',       id: "da3",      displayName: "취업/수험서",                   isBig: true, },
                 { categoryIndex: '4',       id: "dax",      displayName: "외국어",                        },
+
                 { categoryIndex: '5',       id: "das",      displayName: "가정/육아",                     },
                 { categoryIndex: '5',       id: "dav",      displayName: "건강",                          },
                 { categoryIndex: '5',       id: "daq",      displayName: "여행",                          },
@@ -85,10 +89,10 @@ export const CategoryData:ICategoryReducer = {
         {
             id: 'ebook',
             list: [
-                { categoryIndex: "1",       id: "c3h",          displayName: "소설",                    },
-                { categoryIndex: "1",       id: "c3n",          displayName: "경제/경영",               },
-                { categoryIndex: "1",       id: "c3k",          displayName: "자기계발",                },
-                { categoryIndex: "1",       id: "c3l",          displayName: "시/에세이",               },
+                { categoryIndex: "1",       id: "c3h",          displayName: "소설",                    isBig: true, },
+                { categoryIndex: "1",       id: "c3n",          displayName: "경제/경영",               isBig: true, },
+                { categoryIndex: "1",       id: "c3k",          displayName: "자기계발",                isBig: true, },
+                { categoryIndex: "1",       id: "c3l",          displayName: "시/에세이",               isBig: true, },
                 { categoryIndex: "1",       id: "c3m",          displayName: "인문",                    },
                 { categoryIndex: "1",       id: "c3n",          displayName: "국어/외국어",             },
                 { categoryIndex: "1",       id: "c3o",          displayName: "역사/풍속/신화",          },
@@ -100,7 +104,7 @@ export const CategoryData:ICategoryReducer = {
                 
                 { categoryIndex: "2",       id: "c3i",          displayName: "장르소설",                },
                 { categoryIndex: "2",       id: "c45",          displayName: "외국도서",                },
-                { categoryIndex: "2",       id: "c3u",          displayName: "코믹스",                  },
+                { categoryIndex: "2",       id: "c3u",          displayName: "코믹스",                  isBig: true, },
                 { categoryIndex: "2",       id: "c3v",          displayName: "아동",                    },
                 { categoryIndex: "2",       id: "c8e",          displayName: "유아",                    },
                 { categoryIndex: "2",       id: "c3w",          displayName: "예술/대중문화",           },
