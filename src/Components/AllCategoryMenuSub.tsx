@@ -1,30 +1,37 @@
 import React, { useState, useEffect } from 'react';
-import { ICategory, ICategories } from 'Interfaces/ICategory';
+import { ICategory, IMainCategoryId } from 'Interfaces/ICategory';
+import { connect } from 'react-redux';
+import { ICategoryReducer } from 'Core/category/categoryData';
 import { Utils } from 'Core/Utils';
+import {NavUtils} from 'Core/nav/utils';
+
 
 interface IAllCategoryMenuSub {
-    title?: string;
-    categories?: ICategories;
+    // title?: string;
+    navCategoryId?: IMainCategoryId;
+    categoryData: ICategoryReducer
 }
 
 interface IDisplayCategory {
     id: string;
     list: ICategory[];
 }
-const AllCategoryMenuSub = ({title, categories}:IAllCategoryMenuSub) => {
+const AllCategoryMenuSub = ({ categoryData, navCategoryId }:IAllCategoryMenuSub) => {
 
     const [displayCategoryList, setDisplayCategoryList] = useState<IDisplayCategory[]>();
+    const [title, setTitle]  = useState<string>('');
 
-    // const handleMouseOver = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
-    //     const id = event.currentTarget.id;
-    //     setSeletedId(id);
-    // }
+    useEffect(()=> {
+        if( navCategoryId ) {
+            setTitle(NavUtils.getCategoryName(navCategoryId));
 
-    useEffect(() => {
-        if (categories) {
-            makeCategoryList(categories.list);
+            const categoryObj = Utils.findObject(categoryData.categoryList, navCategoryId);
+            if (categoryObj) {
+                makeCategoryList(categoryObj.list);
+            }
         }
-    }, [categories]);
+
+    },[categoryData, navCategoryId]);
 
     const makeCategoryList = (categories:ICategory[]) => {
         const newCategories:IDisplayCategory[] = [];
@@ -39,7 +46,6 @@ const AllCategoryMenuSub = ({title, categories}:IAllCategoryMenuSub) => {
                     list: [item]
                 });
             }
-
         });
         setDisplayCategoryList(newCategories);
     }
@@ -69,4 +75,13 @@ const AllCategoryMenuSub = ({title, categories}:IAllCategoryMenuSub) => {
     )
 }
 
-export default AllCategoryMenuSub;
+
+const mapStateToProps = (state:any) => {
+
+    const {category} = state;
+    return {
+        categoryData: category
+    }
+}
+
+export default connect(mapStateToProps)(AllCategoryMenuSub);

@@ -7,7 +7,8 @@ export default {
 };
 
 export const Main = () => {
+  const title = 'x';
   return (
-      <AllCategoryMenuSub title={"국내도서"} categories={bookCategories[0]}/>
+      <AllCategoryMenuSub />
   )
 }

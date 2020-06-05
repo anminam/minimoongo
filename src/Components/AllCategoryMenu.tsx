@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
 import AllCategoryMenuSub from './AllCategoryMenuSub';
 import { Utils } from 'Core/Utils';
-import { ICategories } from 'Interfaces/ICategory';
-import {bookCategories } from 'Core/StaticData';
+import { IMainCategoryId } from 'Interfaces/ICategory';
 import { IMainCategory } from 'Interfaces/IMainCategory';
 
 interface IAllCategoryMenu {
@@ -13,7 +12,7 @@ const AllCategoryMenu = ({list, visible}:IAllCategoryMenu) => {
 
     const [seletedId, setSeletedId] = useState<string>('');
     const [seletedItem, setSeletedItem] = useState<IMainCategory>();
-    const [categories, setCategories] = useState<ICategories>();
+    const [categoryId, setCategoryId] = useState<IMainCategoryId>();
     const [navlist] = useState<IMainCategory[]>(list);
 
     const handleMouseOver = (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -22,9 +21,10 @@ const AllCategoryMenu = ({list, visible}:IAllCategoryMenu) => {
         const item = Utils.findObject(navlist, id);
         setSeletedItem(item);
         if(item?.categoryId) {
-            setCategories(Utils.findObject(bookCategories, item.categoryId));
+            setCategoryId(item.categoryId);
         }
     }
+    
 
     return (
         <div className={`all-category-menu ${visible ? '': 'none'}`}>
@@ -44,7 +44,7 @@ const AllCategoryMenu = ({list, visible}:IAllCategoryMenu) => {
             </ul>
             <div className='all-category-menu__sub-list'>
                 {
-                    categories && <AllCategoryMenuSub title={seletedItem?.displayName} categories={categories}/>
+                    categoryId && <AllCategoryMenuSub navCategoryId={categoryId} />
                 }
             </div>
         </div>

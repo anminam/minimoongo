@@ -114,13 +114,14 @@
 
 
     .title {
-        font-weight: bold;
         position: relative;
         margin-bottom: 10px;
 
         a {
-            color: $color-gray-text;
+            // color: $color-gray-text;
+            font-weight: bold;
             padding: 4px 12px;
+            color: #333;
             display: block;
         }
         
@@ -130,7 +131,6 @@
             width: 4px;
             background-color: $color-moongo;
             position: absolute;
-
         }
     }
     &__list_container {
