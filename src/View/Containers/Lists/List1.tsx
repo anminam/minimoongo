@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { IGoods, TGoods } from 'Interfaces/IGoods';
+import { TGoods } from 'Interfaces/IGoods';
 import GoodsCard1 from '../Cards/GoodsCard1';
 
 interface IList1 {

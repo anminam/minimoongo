@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { INavItem } from '../Interfaces/INavItem';
-import { Link, NavLink } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 
 interface IHeaderNav {
