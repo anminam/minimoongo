@@ -1,57 +1,55 @@
-@import './reset.scss';
-@import './header.scss';
-@import './topBannerContainer.scss';
-@import './search.scss';
-@import './slide.scss';
-@import './icons.scss';
-@import './box.scss';
-@import './goodsCard.scss';
-@import './imageButton.scss';
-@import './const.scss';
-@import './footer.scss';
-@import './banners.scss';
-@import './page.scss';
-@import './navCategory.scss';
+@import "./reset.scss";
+@import "./header.scss";
+@import "./topBannerContainer.scss";
+@import "./search.scss";
+@import "./slide.scss";
+@import "./icons.scss";
+@import "./box.scss";
+@import "./goodsCard.scss";
+@import "./imageButton.scss";
+@import "./const.scss";
+@import "./footer.scss";
+@import "./banners.scss";
+@import "./page.scss";
+@import "./navCategory.scss";
 
-@import './Events/index.scss';
+@import "./Events/index.scss";
 
 html {
-    // font-size: 62.5%;
-    
+  font-size: 16px;
 }
 body {
-    margin: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
 }
 
 body {
-    line-height: 1.2;
+  line-height: 1.2;
 }
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-
 .container_lg {
-    width: $main-width;
-    margin-left: auto;
-    margin-right: auto;
+  width: $main-width;
+  margin-left: auto;
+  margin-right: auto;
 
-    &.flex { 
-        display: flex;
-    }
+  &.flex {
+    display: flex;
+  }
 }
 
 .none {
-    display: none;
+  display: none;
 }
