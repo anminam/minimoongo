@@ -1,14 +1,19 @@
-import React from 'react';
+import React, { useState } from 'react';
+import NavCategory from 'Components/NavCategory';
+import { IMainCategoryId } from 'Interfaces/ICategory';
 
 const KorBook = () => {
+
+    const [categoryId, setCategoryId] = useState<IMainCategoryId>('korbook');
+    
     return (
         <div className="container_lg page">
             <div className="category-page">
                 <div className="category-page__category">
-                    여긴 카테고리
+                    <NavCategory navCategoryId={categoryId} />
                 </div>
                 <div className="category-page__contents">
-                    여긴....
+                    컨텐츠
                 </div>
 
             </div>
