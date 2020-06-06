@@ -54,11 +54,13 @@
             width: 15px;
             height: 15px;
             border: 1px solid gray;
+            border-right: 0;
         }
         .prev {
         }
 
         .next {
+            border-right: 1px solid gray;
 
         }
     }
