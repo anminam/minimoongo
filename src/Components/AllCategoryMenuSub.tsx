@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from 'react';
-import { ICategory, IMainCategoryId } from 'Interfaces/ICategory';
+import { ICategory, IMainCategoryId, ICategories } from 'Interfaces/ICategory';
 import { connect } from 'react-redux';
 import { ICategoryReducer } from 'Core/category/categoryData';
 import { Utils } from 'Core/Utils';
 import {NavUtils} from 'Core/nav/utils';
+import { categoryUtils } from 'Core/category/utils';
 
 
 interface IAllCategoryMenuSub {
@@ -12,13 +13,10 @@ interface IAllCategoryMenuSub {
     categoryData: ICategoryReducer
 }
 
-interface IDisplayCategory {
-    id: string;
-    list: ICategory[];
-}
+
 const AllCategoryMenuSub = ({ categoryData, navCategoryId }:IAllCategoryMenuSub) => {
 
-    const [displayCategoryList, setDisplayCategoryList] = useState<IDisplayCategory[]>();
+    const [displayCategoryList, setDisplayCategoryList] = useState<ICategories[]>();
     const [title, setTitle]  = useState<string>('');
 
     useEffect(()=> {
@@ -27,28 +25,11 @@ const AllCategoryMenuSub = ({ categoryData, navCategoryId }:IAllCategoryMenuSub)
 
             const categoryObj = Utils.findObject(categoryData.categoryList, navCategoryId);
             if (categoryObj) {
-                makeCategoryList(categoryObj.list);
+                setDisplayCategoryList(categoryUtils.getDisplayCategoryList(categoryObj.list));
             }
         }
 
     },[categoryData, navCategoryId]);
-
-    const makeCategoryList = (categories:ICategory[]) => {
-        const newCategories:IDisplayCategory[] = [];
-
-        categories.forEach((item, i) => {
-            const saveArray = Utils.findObject(newCategories, item.categoryIndex);
-            if(saveArray) {
-                saveArray.list.push(item);
-            } else {
-                newCategories.push({
-                    id: item.categoryIndex,
-                    list: [item],
-                });
-            }
-        });
-        setDisplayCategoryList(newCategories);
-    }
     
     return (
         <div className={`sub-category`}>
