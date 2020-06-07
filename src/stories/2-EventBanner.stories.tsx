@@ -1,14 +1,12 @@
-import React from 'react';
-import WelcomeMainEvent from 'View/Containers/Welcomes/WelcomeMainEvent';
+import React from "react";
+import WelcomeMainEvent from "View/Containers/Welcomes/WelcomeMainEvent";
 import "Styles/index.scss";
 
-import { mainEventList } from 'Core/StaticData';
+import { mainEventList } from "Core/data";
 
 export default {
-  title: 'WelcomeMainEvent',
+  title: "WelcomeMainEvent",
   component: WelcomeMainEvent,
 };
 
-export const Main = () => (
-  <WelcomeMainEvent list={mainEventList}/>
-);
+export const Main = () => <WelcomeMainEvent list={mainEventList} />;

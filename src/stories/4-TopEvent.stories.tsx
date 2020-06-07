@@ -1,9 +1,9 @@
-import React from 'react';
-import TopBannerContainer from 'Components/TopBannerContainer';
+import React from "react";
+import TopBannerContainer from "Components/TopBannerContainer";
 
 export default {
-  title: 'TopEvent',
+  title: "TopEvent",
   component: TopBannerContainer,
 };
 
-export const Text = () => <TopBannerContainer />;
+export const main = () => <TopBannerContainer />;

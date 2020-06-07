@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { IMainCategoryId, ICategories } from "Interfaces/ICategory";
 import { connect } from "react-redux";
-import { ICategoryReducer } from "Core/category/categoryData";
+import { ICategoryReducer } from "Core/category/data";
 import { Utils } from "Core/Utils";
 import { NavUtils } from "Core/nav/utils";
 import { categoryUtils } from "Core/category/utils";
