@@ -1,6 +1,75 @@
-@import './colors.scss';
+@import "./colors.scss";
 
 .banner {
-    border: 1px solid $color-border-main;
-    width: 100%;
+  border: 1px solid $color-border-main;
+  width: 100%;
+
+  &.book-cast-banner {
+    width: 250px;
+
+    .title-container {
+      margin: 10px;
+      text-align: center;
+
+      h2 {
+        font-size: 18px;
+        padding: 8px 0;
+        font-weight: bold;
+      }
+      p {
+        font-size: 12px;
+        font-weight: bold;
+      }
+    }
+
+    .title-and-img-container {
+      line-height: 1.4;
+      font-size: 12px;
+      .title {
+        color: #333;
+        font-weight: bold;
+        text-align: center;
+      }
+      .sub-title {
+        margin: 5px 0 0 0;
+        text-align: center;
+      }
+      .cover {
+        margin: 10px 0;
+        height: 110px;
+        overflow: hidden;
+        background-color: #eee;
+        border: 1px solid $color-border-main;
+        transition: all 0.3s linear;
+        img {
+          padding: 2px 0 2px 17px;
+          //   background: url(http://image.kyobobook.co.kr/ink/images/common/bul_square_small.gif)
+          //     no-repeat 8px 6px;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          width: 205px;
+          margin-top: -47px;
+          transition: transform 0.3s linear;
+        }
+      }
+    }
+
+    .other-list {
+      margin: 10px;
+      padding: 10px;
+      margin-bottom: 0;
+      padding-bottom: 0;
+      border-top: 1px solid $color-border-main;
+
+      li {
+        margin: 5px 0;
+      }
+      a {
+        color: #333;
+        line-height: 1.4;
+        font-size: 12px;
+      }
+    }
+  }
 }
