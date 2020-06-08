@@ -1,0 +1,29 @@
+.top-info-bar {
+  height: 30px;
+  background-color: #fbfbfb;
+  border: 1px solid #dfe4e8;
+  overflow: hidden;
+
+  font-size: 11px;
+
+  .company-info {
+    float: left;
+  }
+
+  .my-info {
+    float: right;
+  }
+  ul {
+    line-height: 30px;
+    // display: flex;
+    // align-items: center;
+  }
+
+  li {
+    float: left;
+    padding: 0 6px;
+    a {
+      color: #333;
+    }
+  }
+}
