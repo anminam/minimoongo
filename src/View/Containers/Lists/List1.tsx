@@ -5,15 +5,21 @@ import GoodsCard1 from "../Cards/GoodsCard1";
 
 interface IList1 {
   goods: TGoods[];
+  itemLength?: number;
 }
 
-const List1 = ({ goods }: IList1) => {
-  const itemLength = 4;
+const List1 = ({ goods, itemLength }: IList1) => {
+  const itemLen = itemLength || 4;
   const [viewIndex, setViewIndex] = useState<number>(0);
   const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(false);
+  const [isViewButton, setIsViewButton] = useState<Boolean>(false);
 
   useEffect(() => {
     setViewIndex(0);
+    const max = Utils.getListMaxLength(goods.length, itemLen);
+    if (max > 0) {
+      setIsViewButton(true);
+    }
   }, [goods]);
 
   const handlePrevClick = (
@@ -24,7 +30,7 @@ const List1 = ({ goods }: IList1) => {
     if (viewIndex > 0) {
       setViewIndex(viewIndex - 1);
     } else {
-      const max = Utils.getListMaxLength(goods.length, itemLength);
+      const max = Utils.getListMaxLength(goods.length, itemLen);
       setViewIndex(max);
     }
   };
@@ -33,7 +39,7 @@ const List1 = ({ goods }: IList1) => {
   ): void => {
     event.preventDefault();
 
-    const max = Utils.getListMaxLength(goods.length, itemLength);
+    const max = Utils.getListMaxLength(goods.length, itemLen);
 
     if (viewIndex < max) {
       setViewIndex(viewIndex + 1);
@@ -62,8 +68,8 @@ const List1 = ({ goods }: IList1) => {
       <ul>
         {goods &&
           goods.map((item, i) => {
-            const min = viewIndex * itemLength;
-            const max = min + itemLength;
+            const min = viewIndex * itemLen;
+            const max = min + itemLen;
 
             if (!(min <= i && i < max)) {
               return false;
@@ -75,18 +81,22 @@ const List1 = ({ goods }: IList1) => {
             );
           })}
       </ul>
-      <button
-        className={`prev ${
-          !isVisibleButton ? "invisible" : ""
-        } img-button-chevron-left`}
-        onClick={handlePrevClick}
-      ></button>
-      <button
-        className={`next ${
-          !isVisibleButton ? "invisible" : ""
-        } img-button-chevron-right`}
-        onClick={handleNextClick}
-      ></button>
+      {isViewButton && (
+        <>
+          <button
+            className={`prev ${
+              !isVisibleButton ? "invisible" : ""
+            } img-button-chevron-left`}
+            onClick={handlePrevClick}
+          ></button>
+          <button
+            className={`next ${
+              !isVisibleButton ? "invisible" : ""
+            } img-button-chevron-right`}
+            onClick={handleNextClick}
+          ></button>
+        </>
+      )}
     </div>
   );
 };
