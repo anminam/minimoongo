@@ -32,7 +32,7 @@
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build",
     "homepage": "https://anminam.github.io/minimoongo/",
-    "storybook": "start-storybook -p 9009 -s public",
+    "storybook": "NODE_PATH=src/ start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public"
   },
   "eslintConfig": {
