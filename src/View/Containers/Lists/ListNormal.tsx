@@ -3,12 +3,12 @@ import { TGoods } from "Interfaces/IGoods";
 import { Utils } from "Core/Utils";
 import GoodsCard1 from "../Cards/GoodsCard1";
 
-interface IList1 {
+interface IListNormal {
   goods: TGoods[];
   itemLength?: number;
 }
 
-const List1 = ({ goods, itemLength }: IList1) => {
+const ListNormal = ({ goods, itemLength }: IListNormal) => {
   const itemLen = itemLength || 4;
   const [viewIndex, setViewIndex] = useState<number>(0);
   const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(false);
@@ -101,4 +101,4 @@ const List1 = ({ goods, itemLength }: IList1) => {
   );
 };
 
-export default List1;
+export default ListNormal;

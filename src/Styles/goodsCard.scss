@@ -2,6 +2,7 @@
   $border-size-normal: 1px;
   $border-size-on: 5px;
 
+  cursor: pointer;
   float: left;
   width: 220px;
   height: 300px;
@@ -59,6 +60,7 @@
   &.picks {
     font-size: 12px;
     background-color: #f5f5f5;
+
     .card__title {
       font-weight: bold;
       text-align: center;
@@ -72,8 +74,10 @@
       margin: 0 auto;
       display: block;
     }
+
     .card__contents {
       margin-top: 8px;
+
       li {
         line-height: 20px;
         color: #4d4d4d;

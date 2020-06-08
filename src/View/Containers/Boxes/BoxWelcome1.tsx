@@ -4,7 +4,7 @@ import { TGoods } from "Interfaces/IGoods";
 import { IEvent1 } from "Interfaces/IEventList";
 import { Utils } from "Core/Utils";
 import { NavUtils } from "Core/nav/utils";
-import List1 from "../Lists/List1";
+import ListNormal from "../Lists/ListNormal";
 
 interface IBoxWelcome1 {
   eventObj: IEvent1;
@@ -73,7 +73,7 @@ const BoxWelcome1 = ({ eventObj }: IBoxWelcome1) => {
                     {item.title}
                   </a>
                 </h3>
-                {i === index && <List1 goods={item.list} />}
+                {i === index && <ListNormal goods={item.list} />}
               </div>
             );
           })}
