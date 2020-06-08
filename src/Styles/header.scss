@@ -1,28 +1,46 @@
-@import './headerNavBar.scss';
+@import "./headerNavBar.scss";
 
 header {
+    $padding-size: 20px;
+
     overflow: hidden;
+
     .header {
         &__logo {
             float: left;
+            position: absolute;
+            bottom: $padding-size;
+
             &__img {
                 width: 175px;
                 height: 50px;
             }
         }
+
         &__form {
             width: 500px;
             margin: 0 auto;
         }
-        &__banner {
-            float: right;
 
+        &__banner {
+            // 아래 두개는 임시
+            color: #ccc;
+            font-size: 12px;
+
+
+            border: 1px solid #ddd;
+            float: right;
+            position: absolute;
+            bottom: $padding-size;
+            right: 0;
+            width: 180px;
+            height: 64px;
+            overflow: hidden;
         }
     }
 
     .first_line {
-        padding: 20px 0;
+        position: relative;
+        padding: $padding-size 0;
     }
-
-
 }
