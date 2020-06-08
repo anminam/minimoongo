@@ -25,7 +25,12 @@ module.exports = {
       test: /\.(ts|tsx)$/,
       loader: require.resolve("babel-loader"),
       options: {
-        presets: [["react-app", { flow: false, typescript: true }]],
+        presets: [
+          ["react-app", {
+            flow: false,
+            typescript: true
+          }]
+        ],
       },
     });
     config.resolve.extensions.push(".ts", ".tsx");
@@ -33,7 +38,7 @@ module.exports = {
   },
   addons: [
     "@storybook/addon-actions/register",
-    // "@storybook/preset-create-react-app",
+    "@storybook/preset-create-react-app",
     "@storybook/addon-actions",
     "@storybook/addon-links",
   ],

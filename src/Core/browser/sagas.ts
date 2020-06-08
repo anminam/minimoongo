@@ -1,9 +1,7 @@
 import { fork } from "redux-saga/effects";
 
 export function* helloSaga() {
-    yield console.log('Heeeeee saga');
+  yield console.log("call saga");
 }
 
-export const browserSagas = [
-    fork(helloSaga)
-]
+export const browserSagas = [fork(helloSaga)];
