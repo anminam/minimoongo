@@ -1,4 +1,4 @@
-import { IEvent1 } from "Interfaces/IEventList";
+import { IEvent1, IEventPicks } from "Interfaces/IEventList";
 
 /**
  * 화재의 신간
@@ -27,4 +27,18 @@ export const event1: IEvent1 = {
     "9780882848181",
     "9780674980822",
   ],
+};
+/**
+ * ○○○님을 위한 Picks 추천 샘플
+ * ○○○님을 위한 Picks 추천 샘플 [로그인 하고 나만의 AI 맞춤추천 받아보세요] Picks 이용 가이드
+ */
+export const eventPicks: IEventPicks = {
+  title: "님을 위한 Picks 추천 샘플",
+  className: "감수성이 예민한 신중형", // 추후 아이디로..
+  likeCategory: "시/에세이/인문",
+  likeAuthor: "김영하",
+  cicleOfReading: 1,
+  rankOfReading: 7,
+  list: ["9791190299060", "9791158740757", "9791197016806"],
+  href: "/",
 };

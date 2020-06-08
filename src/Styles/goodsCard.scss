@@ -1,57 +1,87 @@
 .card {
+  $border-size-normal: 1px;
+  $border-size-on: 5px;
 
-    $border-size-normal: 1px;
-    $border-size-on: 5px;
+  float: left;
+  width: 220px;
+  height: 300px;
+  padding: 25px 10px 12px;
+  position: relative;
+  border: $border-size-normal solid #dadada;
+  background-color: #fff;
+  transition: border-color 0.2s linear;
 
-    float: left;
-    width: 220px;
-    height: 300px;
-    padding: 25px 10px 12px;
-    position: relative;
-    border: $border-size-normal solid #dadada;
-    background-color: #fff;
-    transition: border-color 0.2s linear;
+  &:nth-child(3) {
+    margin-right: 0;
+  }
 
-    &:nth-child(3) {
-        margin-right: 0;
+  &:hover,
+  &.on {
+    border: $border-size-on solid #5e6b9e;
+    padding: calc(25px - #{$border-size-on} + #{$border-size-normal}) 6px 12px;
+  }
+
+  &__cover {
+    text-align: center;
+    left: 0;
+    width: 100%;
+
+    img {
+      width: 125px;
+      min-width: 125px;
+      max-height: 185px;
+      _height: 185px;
+      border: 1px solid #888;
+    }
+  }
+
+  &__contents {
+    padding-top: 10px;
+
+    &__category {
+      text-align: center;
+      color: #333;
+      font-size: 11px;
+      color: #3e74ab;
+      padding: 4px 0;
     }
 
-    &:hover,
-    &.on {
-        border: $border-size-on solid #5e6b9e;
-        padding: calc(25px - #{$border-size-on} + #{$border-size-normal}) 10px 12px;
+    &__title {
+      height: 32px;
+      line-height: 16px;
+      text-align: center;
+      color: #333;
+      font-size: 12px;
+      font-weight: bold;
+    }
+  }
+
+  &.picks {
+    font-size: 12px;
+    background-color: #f5f5f5;
+    .card__title {
+      font-weight: bold;
+      text-align: center;
+      color: #363636;
+      padding: 0 0 20px 0;
     }
 
-    &__cover {
-        text-align: center;
-        left: 0;
-        width: 100%;
-
-        img {
-            width: 125px;
-            min-width: 125px;
-            max-height: 185px;
-            _height: 185px;
-            border: 1px solid #888;
-            
-        }
+    .card__img {
+      width: 120px;
+      height: 120px;
+      margin: 0 auto;
+      display: block;
     }
-    &__contents {
-        padding-top: 10px;
-        &__category {
-            text-align: center;
-            color: #333;
-            font-size: 11px;
-            color: #3e74ab;
-            padding: 4px 0;
-        }
-        &__title {
-            height: 32px;
-            line-height: 16px;
-            text-align: center;
-            color: #333;
-            font-size: 12px;
-            font-weight: bold;
-        }
+    .card__contents {
+      margin-top: 8px;
+      li {
+        line-height: 20px;
+        color: #4d4d4d;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+        font-size: 12px;
+      }
     }
+  }
 }
