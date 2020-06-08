@@ -3,6 +3,11 @@ export interface ICategory {
   id: string;
   displayName: string;
   isBig?: boolean;
+  subList?: ISubCategories[];
+}
+export interface ISubCategories {
+  id: string;
+  displayName: string;
 }
 
 export interface ICategories {
