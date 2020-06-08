@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { TGoods } from "Interfaces/IGoods";
+import { Utils } from "Core/Utils";
 import GoodsCard1 from "../Cards/GoodsCard1";
 
 interface IList1 {
@@ -7,7 +8,7 @@ interface IList1 {
 }
 
 const List1 = ({ goods }: IList1) => {
-  const maxLength = 4;
+  const itemLength = 4;
   const [viewIndex, setViewIndex] = useState<number>(0);
   const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(false);
 
@@ -23,8 +24,8 @@ const List1 = ({ goods }: IList1) => {
     if (viewIndex > 0) {
       setViewIndex(viewIndex - 1);
     } else {
-      const max = Math.floor(goods.length / maxLength);
-      setViewIndex(max - 1);
+      const max = Utils.getListMaxLength(goods.length, itemLength);
+      setViewIndex(max);
     }
   };
   const handleNextClick = (
@@ -32,8 +33,9 @@ const List1 = ({ goods }: IList1) => {
   ): void => {
     event.preventDefault();
 
-    const max = Math.floor(goods.length / maxLength);
-    if (viewIndex < max - 1) {
+    const max = Utils.getListMaxLength(goods.length, itemLength);
+
+    if (viewIndex < max) {
       setViewIndex(viewIndex + 1);
     } else {
       setViewIndex(0);
@@ -60,8 +62,8 @@ const List1 = ({ goods }: IList1) => {
       <ul>
         {goods &&
           goods.map((item, i) => {
-            const min = viewIndex * maxLength;
-            const max = min + maxLength;
+            const min = viewIndex * itemLength;
+            const max = min + itemLength;
 
             if (!(min <= i && i < max)) {
               return false;

@@ -33,4 +33,16 @@ export class Utils {
     const obj = Utils.findObject(bookList, id);
     return obj;
   };
+
+  public static getListMaxLength = (
+    listLength: number,
+    maxLength: number
+  ): number => {
+    let max = Math.floor(listLength / maxLength) - 1;
+    if (listLength % maxLength > 0) {
+      max = max + 1;
+    }
+
+    return max;
+  };
 }
