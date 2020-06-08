@@ -10,7 +10,7 @@ interface IAllCategoryMenu {
 }
 const AllCategoryMenu = ({ list, visible }: IAllCategoryMenu) => {
   const [seletedId, setSeletedId] = useState<string>("");
-  const [seletedItem, setSeletedItem] = useState<IMainCategory>();
+  // const [seletedItem, setSeletedItem] = useState<IMainCategory>();
   const [categoryId, setCategoryId] = useState<IMainCategoryId>();
   const [navlist] = useState<IMainCategory[]>(list);
 
@@ -20,7 +20,7 @@ const AllCategoryMenu = ({ list, visible }: IAllCategoryMenu) => {
     const id = event.currentTarget.id;
     setSeletedId(id);
     const item = Utils.findObject(navlist, id);
-    setSeletedItem(item);
+    // setSeletedItem(item);
     if (item?.categoryId) {
       setCategoryId(item.categoryId);
     }

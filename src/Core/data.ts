@@ -1,5 +1,4 @@
 import { IEventListItem } from "Interfaces/IEventList";
-import { IMainCategory } from "Interfaces/IMainCategory";
 import { ICategories } from "Interfaces/ICategory";
 
 export const mainEventList: IEventListItem[] = [
