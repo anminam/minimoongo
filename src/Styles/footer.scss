@@ -1,38 +1,55 @@
 footer {
-    margin-top: 70px;
+  margin-top: 70px;
+  $margin-size: 30px;
 
-    .sitemap-area {
-        
-        $sitemap-area-height: 44px;
-        height: $sitemap-area-height;
-        background-color: #8B8B8B;
+  .sitemap-container {
+    $sitemap-container-height: 44px;
+    height: $sitemap-container-height;
+    background-color: #8b8b8b;
 
-        &__list {
-            width: 1000px;
-            height: 100%;
-            display: flex;
-            margin: 0 auto;
-            align-items: center;
-        }
-
-        li {
-            position: relative;
-            float: left;
-            padding: 0 13px 0 14px;
-            text-align: center;
-        }
-        a {
-            cursor: pointer;
-            
-            line-height: 1.6;
-            font-size: 12px;
-            text-decoration: none;
-            color: #f1f0f0;
-            &:hover {
-                text-decoration: underline;
-                color: #fff;
-            }
-        }
-
+    &__list {
+      width: 1000px;
+      height: 100%;
+      display: flex;
+      margin: 0 auto;
+      align-items: center;
     }
+
+    li {
+      position: relative;
+      float: left;
+      padding: 0 13px 0 14px;
+      text-align: center;
+    }
+
+    a {
+      cursor: pointer;
+
+      line-height: 1.6;
+      font-size: 12px;
+      text-decoration: none;
+      color: #f1f0f0;
+
+      &:hover {
+        text-decoration: underline;
+        color: #fff;
+      }
+    }
+  }
+
+  .logo-container {
+    img {
+      width: 200px;
+    }
+  }
+  .content-container {
+    margin: $margin-size;
+    font-size: 11px;
+    line-height: 18px;
+
+    a {
+      font-size: 11px;
+      line-height: 18px;
+    }
+  }
 }
