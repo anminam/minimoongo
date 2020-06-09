@@ -19,10 +19,10 @@ interface IEventItem {
 }
 
 const BoxWelcomePicks = ({ eventObj }: IBoxWelcomePicks) => {
-  const [title, setTitle] = useState<string>(eventObj.title);
+  const [title] = useState<string>(eventObj.title);
   const [href] = useState<string>(eventObj.href);
-  const [index, setIndex] = useState<number>(0);
-  const [isLogin, setIsLogin] = useState<boolean>(false);
+  const [index] = useState<number>(0);
+  const [isLogin] = useState<boolean>(false);
   const [personName, setPersonName] = useState<string>("○○○");
 
   const [eventItemList, setEventItemList] = useState<IEventItem[]>();
@@ -61,11 +61,11 @@ const BoxWelcomePicks = ({ eventObj }: IBoxWelcomePicks) => {
       newTitle = "○○○";
     }
     setPersonName(newTitle);
-  }, [isLogin]);
+  }, [eventObj.title, isLogin]);
 
-  const handleMouseOver = (index: number) => {
-    setIndex(index);
-  };
+  // const handleMouseOver = (index: number) => {
+  //   setIndex(index);
+  // };
 
   return (
     <div className="box box-welcome-picks left-title container_lg">
