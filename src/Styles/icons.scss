@@ -2,6 +2,7 @@
     -webkit-mask: url('/assets/icons/menu_main.svg') no-repeat center;
     mask: url('/assets/icons/menu_main.svg') no-repeat center;
 }
+
 @mixin menu_x($color) {
     -webkit-mask: url('/assets/icons/menu_x.svg') no-repeat center;
     mask: url('/assets/icons/menu_x.svg') no-repeat center;
@@ -32,13 +33,15 @@
         height: $size;
         height: 100%;
         top: 0;
-        @include chevron-right(#fff);
+        @include chevron-right($color);
     }
 }
+
 @mixin chevron-left-after($color, $size) {
     @include chevron-right-after($color, $size);
     transform: rotate(180deg);
 }
+
 @mixin menu-x-after($color, $size) {
     &::after {
         content: ' ';

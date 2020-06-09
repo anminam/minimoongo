@@ -1,0 +1,29 @@
+@import './icons.scss';
+
+button.mini {
+    border: 1px solid black;
+    position: relative;
+
+    &.small {
+        padding: 3px 4px 2px;
+        font-size: 11px;
+    }
+
+    &.verysmall {
+        font-size: 11px;
+        padding: 1px;
+        margin-right: 2px;
+    }
+
+    &.full {
+        width: 100%;
+    }
+
+    &.rightChevron {
+        @include chevron-right-after(#3d3d3d, 12px);
+    }
+
+    &.leftChevron {
+        @include chevron-left-after(#000, 12px);
+    }
+}
