@@ -1,10 +1,10 @@
 import React from "react";
 import "Styles/index.scss";
-import GoodsCard1 from "View/Containers/Cards/GoodsCard1";
+import Card1 from "View/Containers/Cards/GoodsCardNormal";
 
 export default {
   title: "containers/GoodsCard",
-  component: GoodsCard1,
+  component: Card1,
 };
 
 const obj = {
@@ -16,6 +16,6 @@ const obj = {
   subCategoryId: "ad",
 };
 
-export const goodsCard1 = () => {
-  return <GoodsCard1 {...obj} />;
+export const GoodsCardNormal = () => {
+  return <Card1 {...obj} />;
 };

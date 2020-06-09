@@ -1,9 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { TGoods } from "Interfaces/IGoods";
 import { Utils } from "Core/Utils";
-import GoodsCard1 from "../Cards/GoodsCard1";
-import GoodsCardPicks from "../Cards/GoodsCardPicks";
+
 import { IEventPicks } from "Interfaces/IEventList";
+import GoodsCardPicks from "../Cards/GoodsCardPicks";
+import GoodsCardNormal from "../Cards/GoodsCardNormal";
 
 interface IListPicks {
   goods: TGoods[];
@@ -82,7 +83,7 @@ const ListPicks = ({ goods, itemLength, pickItem }: IListPicks) => {
             }
             return (
               <li key={i}>
-                <GoodsCard1 {...item} />
+                <GoodsCardNormal {...item} />
               </li>
             );
           })}
