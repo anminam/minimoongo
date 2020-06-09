@@ -3,7 +3,6 @@ import { TGoods } from "Interfaces/IGoods";
 import { Utils } from "Core/Utils";
 import GoodsCard1 from "../Cards/GoodsCard1";
 import GoodsCardPicks from "../Cards/GoodsCardPicks";
-import { eventPicks } from "Core/events/data";
 import { IEventPicks } from "Interfaces/IEventList";
 
 interface IListPicks {
@@ -24,7 +23,7 @@ const ListPicks = ({ goods, itemLength, pickItem }: IListPicks) => {
     if (max > 0) {
       setIsViewButton(true);
     }
-  }, [goods]);
+  }, [goods, itemLen]);
 
   const handlePrevClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
