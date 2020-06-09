@@ -36,7 +36,7 @@ const BookTop = ({ id }: IBookTop) => {
         </div>
         <div className="book-keyword">
           <h2>키워드 Pick</h2>
-          <Button size="small" text="안내" />
+          <Button type="small" text="안내" />
 
           <div className="book-keyword__list">
             <ul>
@@ -78,12 +78,12 @@ const BookTop = ({ id }: IBookTop) => {
       <div className="product-info">
         <div className="wapper-contianer">
           <div className="flex">
-            <Button text="오늘의 책" size="verysmall" />
-            <Button text="무로배송" size="verysmall" />
-            <Button text="이밴트" size="verysmall" />
-            <Button text="사은품" size="verysmall" />
-            <Button text="경품" size="verysmall" />
-            <Button text="소득공제" size="verysmall" />
+            <Button text="오늘의 책" type="verysmall" />
+            <Button text="무료배송" type="verysmall" />
+            <Button text="이밴트" type="verysmall" />
+            <Button text="사은품" type="verysmall" />
+            <Button text="경품" type="verysmall" />
+            <Button text="소득공제" type="verysmall" />
           </div>
           <div className="title-container">
             <h1 className="title">{categoryName?.name}</h1>
@@ -97,7 +97,7 @@ const BookTop = ({ id }: IBookTop) => {
                 <p>{categoryName?.publisher}</p>
               </li>
               <li>
-                <p>{categoryName?.productDate}</p>
+                <p>{categoryName?.productDate} 출판</p>
               </li>
             </ul>
           </div>

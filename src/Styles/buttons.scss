@@ -1,29 +1,47 @@
-@import './icons.scss';
+@import "./icons.scss";
 
 button.mini {
-    border: 1px solid black;
-    position: relative;
+  border: 1px solid black;
+  position: relative;
 
-    &.small {
-        padding: 3px 4px 2px;
-        font-size: 11px;
-    }
+  &.small {
+    padding: 3px 4px 2px;
+    font-size: 11px;
+  }
 
-    &.verysmall {
-        font-size: 11px;
-        padding: 1px;
-        margin-right: 2px;
-    }
+  &.verysmall {
+    font-size: 11px;
+    padding: 1px;
+    margin-right: 2px;
+  }
 
-    &.full {
-        width: 100%;
-    }
+  &.full {
+    width: 100%;
+  }
 
-    &.rightChevron {
-        @include chevron-right-after(#3d3d3d, 12px);
-    }
+  &.rightChevron {
+    @include chevron-right-after(#3d3d3d, 12px);
+  }
 
-    &.leftChevron {
-        @include chevron-left-after(#000, 12px);
-    }
+  &.leftChevron {
+    @include chevron-left-after(#000, 12px);
+  }
+  &.bannerNext {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border: 1px solid gray;
+    @include arrow_sans_right-after(#888, 10px, 0);
+  }
+  &.bannerPrev {
+    background-color: white;
+    width: 15px;
+    height: 15px;
+    border: 1px solid gray;
+    @include arrow_sans_left-after(#888, 10px);
+  }
+
+  &.bannerPrev + .bannerNext {
+    border-left: 0;
+  }
 }
