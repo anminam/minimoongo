@@ -9,7 +9,7 @@ const Root: React.FC = () => (
     <Route path="/otherbook" component={OtherBook} />
     <Route path="/ebook" component={EBook} />
     <Route path="/webnovel" component={WebnovelBook} />
-    <Route path="/goods/:id" component={ProductPage} />
+    <Route path="/product/:id" component={ProductPage} />
     <Route path="/" component={Home} />
     <Redirect path="*" to="/" />
   </Switch>

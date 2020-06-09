@@ -3,6 +3,7 @@ export type TGoods = IGoods | IBook;
 export interface IGoods {
   id: string;
   name: string;
+  subName?: string;
   subscript?: string;
   img: string;
   categoryId: string;

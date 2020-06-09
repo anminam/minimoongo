@@ -1,4 +1,5 @@
 import React from "react";
+import BookTop from "View/Containers/Products/Book/BookTop";
 
 interface IProductPage {
   id: string;
@@ -7,7 +8,7 @@ interface IProductPage {
 const ProductPage = ({ id }: IProductPage) => {
   return (
     <div className="container_lg">
-      <div>굿즈맨</div>
+      <BookTop id={id} />
     </div>
   );
 };
