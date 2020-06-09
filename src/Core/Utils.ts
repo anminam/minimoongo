@@ -45,4 +45,8 @@ export class Utils {
 
     return max;
   };
+
+  public static getLinkOfProduct = (id: string): string => {
+    return `#/product/${id}`;
+  };
 }
