@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { TGoods } from "Interfaces/IGoods";
 import { Utils } from "Core/Utils";
-import GoodsCard1 from "../Cards/GoodsCard1";
+import GoodsCardNormal from "../Cards/GoodsCardNormal";
 
 interface IListNormal {
   goods: TGoods[];
@@ -76,7 +76,7 @@ const ListNormal = ({ goods, itemLength }: IListNormal) => {
             }
             return (
               <li key={i}>
-                <GoodsCard1 {...item} />
+                <GoodsCardNormal {...item} />
               </li>
             );
           })}
