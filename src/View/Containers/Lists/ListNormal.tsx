@@ -20,7 +20,7 @@ const ListNormal = ({ goods, itemLength }: IListNormal) => {
     if (max > 0) {
       setIsViewButton(true);
     }
-  }, [goods]);
+  }, [goods, itemLen]);
 
   const handlePrevClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>

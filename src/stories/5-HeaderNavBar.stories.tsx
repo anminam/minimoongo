@@ -1,6 +1,6 @@
 import React from "react";
 import HeaderNavBar from "View/Containers/HeaderNavBar";
-import { HashRouter as Router } from "react-router-dom";
+import { CustomProvider } from "CustomProvider";
 
 export default {
   title: "HeaderNavBar",
@@ -8,9 +8,7 @@ export default {
 };
 
 export const Main = () => {
-  return (
-    <Router>
-      <HeaderNavBar />
-    </Router>
-  );
+  return CustomProvider(() => {
+    return <HeaderNavBar />;
+  });
 };
