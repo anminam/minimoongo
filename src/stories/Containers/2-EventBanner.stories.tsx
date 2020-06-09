@@ -5,7 +5,7 @@ import "Styles/index.scss";
 import { mainEventList } from "Core/data";
 
 export default {
-  title: "WelcomeMainEvent",
+  title: "containers/WelcomeMainEvent",
   component: WelcomeMainEvent,
 };
 

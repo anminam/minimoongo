@@ -3,7 +3,7 @@ import HeaderNavBar from "View/Containers/HeaderNavBar";
 import { CustomProvider } from "CustomProvider";
 
 export default {
-  title: "HeaderNavBar",
+  title: "containers/HeaderNavBar",
   component: HeaderNavBar,
 };
 

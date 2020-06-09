@@ -5,7 +5,7 @@ import { event1, eventPicks } from "Core/events/data";
 import BoxWelcomePicks from "View/Containers/Boxes/BoxWelcomePicks";
 
 export default {
-  title: "Box",
+  title: "containers/Box",
   component: BoxWelcome1,
 };
 

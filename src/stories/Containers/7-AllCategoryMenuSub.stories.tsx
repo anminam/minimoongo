@@ -3,7 +3,7 @@ import AllCategoryMenuSub from "Components/AllCategoryMenuSub";
 import { CustomProvider } from "CustomProvider";
 
 export default {
-  title: "AllCategoryMenuSub",
+  title: "containers/AllCategoryMenuSub",
   component: AllCategoryMenuSub,
 };
 

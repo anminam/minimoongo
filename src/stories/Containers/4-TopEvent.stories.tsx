@@ -2,7 +2,7 @@ import React from "react";
 import TopBannerContainer from "Components/TopBannerContainer";
 
 export default {
-  title: "TopEvent",
+  title: "containers/TopEvent",
   component: TopBannerContainer,
 };
 

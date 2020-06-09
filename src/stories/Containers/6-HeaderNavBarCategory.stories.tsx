@@ -4,7 +4,7 @@ import { configureStore } from "Core/Store";
 import { HashRouter as Router } from "react-router-dom";
 
 export default {
-  title: "AllCategoryMenu",
+  title: "containers/AllCategoryMenu",
   component: AllCategoryMenu,
 };
 

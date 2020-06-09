@@ -3,7 +3,7 @@ import "Styles/index.scss";
 import GoodsCard1 from "View/Containers/Cards/GoodsCard1";
 
 export default {
-  title: "GoodsCard",
+  title: "containers/GoodsCard",
   component: GoodsCard1,
 };
 
@@ -16,6 +16,6 @@ const obj = {
   subCategoryId: "ad",
 };
 
-export const Card1 = () => {
+export const goodsCard1 = () => {
   return <GoodsCard1 {...obj} />;
 };
