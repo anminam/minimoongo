@@ -2,7 +2,6 @@ import React, { useState, useEffect } from "react";
 import { Utils } from "Core/Utils";
 import Button from "Components/Button";
 import { IDate } from "Interfaces/IDate";
-import Input from "Components/Input";
 import InputAndButton from "View/Containers/InputAndButton";
 
 interface IBookTop {
