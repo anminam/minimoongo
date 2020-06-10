@@ -58,3 +58,39 @@ body {
 .none {
   display: none;
 }
+
+dl {
+  overflow: hidden;
+  line-height: 20px;
+
+  dt {
+    float: left;
+  }
+
+  dd {
+    float: left;
+  }
+}
+
+dl {
+  dd+dd {
+    display: block;
+  }
+}
+
+.multi-dl {
+  >dt {
+    float: left;
+  }
+
+  >dd {
+    display: inline-block;
+  }
+}
+
+input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+
+}

@@ -3,6 +3,7 @@
 button.mini {
   border: 1px solid black;
   position: relative;
+  cursor: pointer;
 
   &.small {
     padding: 3px 4px 2px;
@@ -26,14 +27,26 @@ button.mini {
   &.leftChevron {
     @include chevron-left-after(#000, 12px);
   }
+
+  &.add {
+    @include add-after(#000, 12px);
+  }
+
+  &.remove {
+    @include remove-after(#000, 12px);
+  }
+
   &.bannerNext {
+    cursor: pointer;
     background-color: white;
     width: 15px;
     height: 15px;
     border: 1px solid gray;
     @include arrow_sans_right-after(#888, 10px, 0);
   }
+
   &.bannerPrev {
+    cursor: pointer;
     background-color: white;
     width: 15px;
     height: 15px;
@@ -41,7 +54,7 @@ button.mini {
     @include arrow_sans_left-after(#888, 10px);
   }
 
-  &.bannerPrev + .bannerNext {
+  &.bannerPrev+.bannerNext {
     border-left: 0;
   }
 }

@@ -11,6 +11,43 @@
   mask-size: 30px;
 }
 
+@mixin add($color) {
+  -webkit-mask: url("/assets/icons/add.svg") no-repeat center;
+  mask: url("/assets/icons/add.svg") no-repeat center;
+  background-color: $color;
+  -webkit-mask-size: 30px;
+  mask-size: 30px;
+}
+
+@mixin add-after($color, $size) {
+  &::after {
+    content: " ";
+    display: inline-block;
+    width: $size;
+    height: $size;
+    @include add($color);
+  }
+}
+
+@mixin remove($color) {
+  -webkit-mask: url("/assets/icons/remove.svg") no-repeat center;
+  mask: url("/assets/icons/remove.svg") no-repeat center;
+  background-color: $color;
+  -webkit-mask-size: 30px;
+  mask-size: 30px;
+}
+
+
+@mixin remove-after($color, $size) {
+  &::after {
+    content: " ";
+    display: inline-block;
+    width: $size;
+    height: $size;
+    @include remove($color);
+  }
+}
+
 @mixin chevron-right($color) {
   -webkit-mask: url("/assets/icons/chevron-right.svg") no-repeat center;
   mask: url("/assets/icons/chevron-right.svg") no-repeat center;
@@ -18,6 +55,7 @@
   -webkit-mask-size: contain;
   mask-size: contain;
 }
+
 @mixin arrow_sans_right($color) {
   -webkit-mask: url("/assets/icons/arrow_sans_right.svg") no-repeat center;
   mask: url("/assets/icons/arrow_sans_right.svg") no-repeat center;
@@ -25,6 +63,7 @@
   -webkit-mask-size: contain;
   mask-size: contain;
 }
+
 @mixin arrow_sans_right-after($color, $size, $top) {
   &::after {
     content: " ";
@@ -39,6 +78,7 @@
     @include arrow_sans_right($color);
   }
 }
+
 @mixin arrow_sans_left-after($color, $size) {
   @include arrow_sans_right-after($color, $size, -1px);
   transform: rotate(180deg);
