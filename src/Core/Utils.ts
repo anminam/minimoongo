@@ -1,5 +1,6 @@
 import { configureStore } from "Core/Store";
 import { IBook } from "Interfaces/IGoods";
+import { IDate } from "Interfaces/IDate";
 interface IObject {
   id: string;
 }
@@ -48,5 +49,28 @@ export class Utils {
 
   public static getLinkOfProduct = (id: string): string => {
     return `#/product/${id}`;
+  };
+
+  public static numComma = (num: number): string => {
+    return num.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ",");
+  };
+
+  private static korDayList = ["일", "월", "화", "수", "목", "금", "토", "일"];
+
+  public static today = (): IDate => {
+    const d = new Date();
+    const year = d.getFullYear().toString();
+    const month = (d.getMonth() + 1).toString();
+    const date = d.getDate().toString();
+    const day = d.getDay().toString();
+    const korDay = Utils.korDayList[Number(day)];
+
+    return {
+      year,
+      month,
+      date,
+      day,
+      korDay,
+    };
   };
 }
