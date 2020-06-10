@@ -3,6 +3,7 @@ import { Utils } from "Core/Utils";
 import Button from "Components/Button";
 import { IDate } from "Interfaces/IDate";
 import Input from "Components/Input";
+import InputAndButton from "View/Containers/InputAndButton";
 
 interface IBookTop {
   id: string;
@@ -226,14 +227,7 @@ const BookTop = ({ id }: IBookTop) => {
           <dl>
             <dt>주문수량</dt>
             <dd>
-              <Input floatLeft={true} />
-              <Button type="add" width="30px" height="30px" floatLeft={true} />
-              <Button
-                type="remove"
-                width="30px"
-                height="30px"
-                floatLeft={true}
-              />
+              <InputAndButton />
             </dd>
           </dl>
         </div>
