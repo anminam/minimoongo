@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useEffect } from "react";
+import useInputs from "Core/Hooks/useInput";
 
 type TInputType = "number" | "text";
 type TInputStyleType = "none";
@@ -7,7 +8,7 @@ interface iii {
   value: number;
 }
 
-interface IInput<T> {
+interface IInputDirect<T> {
   value?: T;
   type?: TInputType;
   styleType?: TInputStyleType;
@@ -25,7 +26,7 @@ interface IInput<T> {
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
-function Input<T extends number>({
+function InputDirect<T extends number>({
   value,
   type = "number",
   styleType = "none",
@@ -41,7 +42,7 @@ function Input<T extends number>({
   readonly,
   onClick,
   onChange,
-}: IInput<T>) {
+}: IInputDirect<T>) {
   const style = {
     color: color || "#000",
     borderColor: borderColor || "#ddd",
@@ -59,16 +60,24 @@ function Input<T extends number>({
   ${floatLeft ? "floatLeft" : ""}
   `;
 
+  const [inputState, onInputChange, setValue] = useInputs<T>(value as T);
+
+  useEffect(() => {
+    if (value) {
+      // setValue(value);
+    }
+  }, [setValue, value]);
+
   return (
     <input
       type={type}
       style={style}
       className={classNames}
       onClick={onClick}
-      value={value}
-      onChange={onChange}
+      value={inputState}
+      onChange={onInputChange}
     />
   );
 }
 
-export default Input;
+export default InputDirect;

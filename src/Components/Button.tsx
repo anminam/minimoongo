@@ -23,7 +23,7 @@ interface IButton {
   width?: string;
   height?: string;
   onClick?: (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => void;
-  floatLeft?: string;
+  floatLeft?: boolean;
 }
 
 const Button = ({

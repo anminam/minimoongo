@@ -73,17 +73,17 @@ dl {
 }
 
 dl {
-  dd+dd {
+  dd + dd {
     display: block;
   }
 }
 
 .multi-dl {
-  >dt {
+  > dt {
     float: left;
   }
 
-  >dd {
+  > dd {
     display: inline-block;
   }
 }
@@ -92,5 +92,12 @@ input {
   -webkit-appearance: none;
   -moz-appearance: none;
   appearance: none;
+}
 
+/* input type number 에서 화살표 제거 */
+input[type="number"]::-webkit-inner-spin-button,
+input[type="number"]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
