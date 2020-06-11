@@ -1,19 +1,27 @@
+$G-path: '/';
+$G-path-icons: $G-path+'assets/icons/';
+
+@mixin icon($fileName) {
+  $url: $G-path-icons + $fileName;
+  -webkit-mask: url($url) no-repeat center;
+  mask: url($url) no-repeat center;
+}
+
 @mixin menu_main {
-  -webkit-mask: url("/assets/icons/menu_main.svg") no-repeat center;
-  mask: url("/assets/icons/menu_main.svg") no-repeat center;
+  @include icon("menu_main.svg");
 }
 
 @mixin menu_x($color) {
-  -webkit-mask: url("/assets/icons/menu_x.svg") no-repeat center;
-  mask: url("/assets/icons/menu_x.svg") no-repeat center;
+  @include icon("menu_x.svg");
+
   background-color: $color;
   -webkit-mask-size: 30px;
   mask-size: 30px;
 }
 
 @mixin add($color) {
-  -webkit-mask: url("/assets/icons/add.svg") no-repeat center;
-  mask: url("/assets/icons/add.svg") no-repeat center;
+  @include icon("add.svg");
+
   background-color: $color;
   -webkit-mask-size: 30px;
   mask-size: 30px;
@@ -30,8 +38,8 @@
 }
 
 @mixin remove($color) {
-  -webkit-mask: url("/assets/icons/remove.svg") no-repeat center;
-  mask: url("/assets/icons/remove.svg") no-repeat center;
+  @include icon("remove.svg");
+
   background-color: $color;
   -webkit-mask-size: 30px;
   mask-size: 30px;
@@ -49,16 +57,16 @@
 }
 
 @mixin chevron-right($color) {
-  -webkit-mask: url("/assets/icons/chevron-right.svg") no-repeat center;
-  mask: url("/assets/icons/chevron-right.svg") no-repeat center;
+  @include icon("chevron-right.svg");
+
   background-color: $color;
   -webkit-mask-size: contain;
   mask-size: contain;
 }
 
 @mixin arrow_sans_right($color) {
-  -webkit-mask: url("/assets/icons/arrow_sans_right.svg") no-repeat center;
-  mask: url("/assets/icons/arrow_sans_right.svg") no-repeat center;
+  @include icon("arrow_sans_right.svg");
+
   background-color: $color;
   -webkit-mask-size: contain;
   mask-size: contain;
