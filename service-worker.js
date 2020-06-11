@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/minimoongo/precache-manifest.d8cd5d450282f651d1c3b005af4b1765.js"
+  "/minimoongo/precache-manifest.728628aef4d0d09f5b3ecc6a9e0281e2.js"
 );
 
 self.addEventListener('message', (event) => {
