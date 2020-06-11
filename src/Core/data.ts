@@ -40,7 +40,7 @@ export const mainEventList: IEventListItem[] = [
     list: [
       {
         id: "b2",
-        displayName: "좋은책",
+        displayName: "새로나온책",
         href: "http://www.naver.com",
       },
     ],
@@ -51,7 +51,7 @@ export const mainEventList: IEventListItem[] = [
     list: [
       {
         id: "b3",
-        displayName: "좋은책",
+        displayName: "기획/테마",
         href: "http://www.naver.com",
       },
     ],
@@ -62,7 +62,7 @@ export const mainEventList: IEventListItem[] = [
     list: [
       {
         id: "b4",
-        displayName: "좋은책",
+        displayName: "ebook",
         href: "http://www.naver.com",
       },
     ],
@@ -73,7 +73,7 @@ export const mainEventList: IEventListItem[] = [
     list: [
       {
         id: "b5",
-        displayName: "좋은책",
+        displayName: "sam",
         href: "http://www.naver.com",
       },
     ],
