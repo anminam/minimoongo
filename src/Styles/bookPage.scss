@@ -1,171 +1,201 @@
 @import "./icons.scss";
 
 .product-page {
-    margin-top: 20px;
-    font-size: 12px;
-    color: #666;
+  margin-top: 20px;
+  font-size: 12px;
+  color: #666;
 }
 
 dl {
-    dt {
-        display: inline;
+  dt {
+    display: inline;
 
-        &:first-child {
-            &::after {
-                content: " : ";
-                margin: 0 3px 0 0;
-            }
-
-        }
+    &:first-child {
+      &::after {
+        content: " : ";
+        margin: 0 3px 0 0;
+      }
     }
+  }
 
-    dd {
-        display: inline;
-    }
+  dd {
+    display: inline;
+  }
 }
 
 .book-top {
-    font-size: 12px;
-    display: flex;
+  font-size: 12px;
+  display: flex;
 
-    .detail-info {
-        width: 200px;
+  .detail-info {
+    width: 200px;
+  }
+
+  .product-info {
+    width: 100%;
+    padding-left: 30px;
+  }
+
+  .book-location {
+    margin-top: 10px;
+
+    button {
+      display: block;
+      text-align: center;
+      padding: 5px 0;
+      border: 1px solid #aaa;
+      color: #f84450;
+      font-weight: bold;
+      position: relative;
+      width: 100%;
+      font-size: 12px;
+
+      @include chevron-right-after(#aaa, 12px);
+    }
+  }
+
+  .wapper-contianer {
+    padding: 20px 0;
+    border-bottom: 1px solid #ddd;
+
+    &:first-child {
+      padding-top: 0;
     }
 
-    .product-info {
-        width: 100%;
-        padding-left: 30px;
+    > div {
+      margin: 10px 0;
+    }
+  }
+
+  .title-container {
+    h1 {
+      font-weight: bold;
+      font-size: 24px;
+      line-height: 27px;
+      color: #3a60df;
+    }
+  }
+
+  .author-container {
+    margin: 10px 0;
+    color: #777;
+  }
+
+  .review-container {
+    margin: 10px 0;
+  }
+
+  .rank-container {
+    .item {
+    }
+  }
+
+  .book-cover {
+    &__image-container {
     }
 
-    .book-location {
-        margin-top: 10px;
+    &__btn-container {
+      &__list {
+        display: flex;
+        justify-content: center;
+        padding: 4px;
+        font-size: 11px;
+        line-height: 15px;
 
-        button {
-            display: block;
-            text-align: center;
-            padding: 5px 0;
-            border: 1px solid #aaa;
-            color: #f84450;
-            font-weight: bold;
-            position: relative;
-            width: 100%;
-            font-size: 12px;
-
-            @include chevron-right-after(#aaa, 12px);
+        a {
+          color: #666;
         }
+
+        li {
+          margin: 0 8px;
+        }
+      }
+    }
+  }
+
+  .book-keyword {
+    position: relative;
+    margin-top: 20px;
+    padding: 10px;
+    border: 1px solid #ddd;
+
+    h2 {
+      display: inline;
+      font-weight: bold;
+      font-size: 12px;
+      color: #000;
+      padding: 15px 0 0 15px;
+      height: 27px;
     }
 
-    .wapper-contianer {
-        padding: 20px 0;
-        border-bottom: 1px solid #ddd;
-
-        &:first-child {
-            padding-top: 0;
-        }
-
-        >div {
-            margin: 10px 0;
-        }
+    h2 + button {
+      position: absolute;
+      right: 10px;
     }
 
-    .title-container {
-        h1 {
-            font-weight: bold;
-            font-size: 24px;
-            line-height: 27px;
-            color: #3a60df;
-        }
+    &__list {
+      margin-top: 10px;
+
+      li {
+        display: inline-block;
+        padding: 4px 12px;
+        margin: 0 5px 6px 0;
+        color: #000;
+        border: 1px solid #d6d6d6;
+        border-radius: 20px;
+        background-color: #fff;
+        font-size: 12px;
+        line-height: 16px;
+      }
+    }
+  }
+
+  .sell-price-container {
+    .price {
+      dt {
+        line-height: 30px;
+      }
+
+      strong {
+        padding-left: 5px;
+        font-weight: bold;
+        line-height: 30px;
+        font-size: 27px;
+        color: #f84450;
+      }
+    }
+  }
+}
+
+ul.stick-list {
+  li {
+    position: relative;
+    display: inline-block;
+    > * {
+      display: inline-block;
+      padding: 0 10px;
+    }
+    > button {
+      margin-left: 10px;
     }
 
-    .author-container {
-        margin: 10px 0;
-        color: #777;
-
-        ul li {
-            padding: 0 5px;
-
-            &:first-child {
-                padding-left: 0;
-            }
-        }
+    &::after {
+      content: " | ";
+      position: absolute;
+      //   right: -8px;
+      top: -1px;
     }
 
-    .review-container {
-        margin: 10px 0;
+    &:first-child {
+      > * {
+        padding: 0 9px 0 0;
+      }
     }
 
-    .book-cover {
-        &__image-container {}
-
-        &__btn-container {
-            &__list {
-                display: flex;
-                justify-content: center;
-                padding: 4px;
-                font-size: 11px;
-                line-height: 15px;
-
-                a {
-                    color: #666;
-                }
-
-                li {
-                    margin: 0 8px;
-                }
-            }
-        }
+    &:last-child {
+      &::after {
+        content: "";
+      }
     }
-
-    .book-keyword {
-        position: relative;
-        margin-top: 20px;
-        padding: 10px;
-        border: 1px solid #ddd;
-
-        h2 {
-            display: inline;
-            font-weight: bold;
-            font-size: 12px;
-            color: #000;
-            padding: 15px 0 0 15px;
-            height: 27px;
-        }
-
-        h2+button {
-            position: absolute;
-            right: 10px;
-        }
-
-        &__list {
-            margin-top: 10px;
-
-            li {
-                display: inline-block;
-                padding: 4px 12px;
-                margin: 0 5px 6px 0;
-                color: #000;
-                border: 1px solid #d6d6d6;
-                border-radius: 20px;
-                background-color: #fff;
-                font-size: 12px;
-                line-height: 16px;
-            }
-        }
-    }
-
-    .sell-price-container {
-        .price {
-            dt {
-                line-height: 30px;
-            }
-
-            strong {
-                padding-left: 5px;
-                font-weight: bold;
-                line-height: 30px;
-                font-size: 27px;
-                color: #f84450;
-            }
-        }
-    }
+  }
 }

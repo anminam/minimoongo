@@ -115,7 +115,7 @@ const BookTop = ({ id }: IBookTop) => {
             <h1 className="title">{name}</h1>
           </div>
           <div className="author-container">
-            <ul className="flex">
+            <ul className="stick-list">
               <li>
                 <p>{author} 지음</p>
               </li>
@@ -128,12 +128,31 @@ const BookTop = ({ id }: IBookTop) => {
             </ul>
           </div>
           <div className="review-container">
-            <div>{rate}</div>
-            <div>리뷰 56개</div>
+            <ul className="stick-list">
+              <li>
+                <span>{rate}</span>
+              </li>
+              <li>
+                <span>리뷰 56개</span>
+              </li>
+              <li>
+                <Button type="small" text="리뷰쓰기" />
+              </li>
+            </ul>
           </div>
           <div className="rank-container">
-            <div>국내도서 주간베스트 1위</div>
-            <div>자기계발 주간베스트 1위</div>
+            <ul className="stick-list">
+              <li>
+                <a href="/bestSellerNew/bestseller.laf?mallGb=KOR&amp;range=0&amp;kind=0&amp;orderClick=JAT">
+                  국내도서 주간베스트 <em>130</em>위
+                </a>
+              </li>
+              <li>
+                <a href="/bestSellerNew/bestseller.laf?mallGb=KOR&amp;range=0&amp;kind=0&amp;orderClick=JAT">
+                  자기계발 주간베스트 <em>130</em>위
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
         <div className="wapper-contianer">
@@ -158,7 +177,7 @@ const BookTop = ({ id }: IBookTop) => {
                 <dl>
                   <dt>[기본적립]</dt>
                   <dd>
-                    {Utils.numComma(sellPrice ? sellPrice * 0.1 : 100)} 원
+                    {Utils.numComma(sellPrice ? sellPrice * 0.1 : 100)} 원 적립
                   </dd>
                 </dl>
                 <dl>
@@ -212,8 +231,8 @@ const BookTop = ({ id }: IBookTop) => {
                   <Button type="small" text="지역변경" />
                 </div>
                 <div>
-                  <Button type="verysmall" text="당일배송" />
-                  지금 주문하면
+                  <Button type="verysmall" text="당일배송" marginRight="4px" />
+                  지금 주문하면{" "}
                   <em>
                     오늘({`${dateObj.date}일, ${dateObj.korDay}`}) 도착 예정
                   </em>
