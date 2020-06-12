@@ -1,12 +1,12 @@
-import React from 'react';
-import SearchContainer from './SearchContainer';
+import React from "react";
+import SearchContainer from "./SearchContainer";
 
 const HeaderForm = () => {
-    return (
-        <div className="header__form">
-            <SearchContainer />
-        </div>
-    )
-}
+  return (
+    <div className="header__form">
+      <SearchContainer />
+    </div>
+  );
+};
 
 export default HeaderForm;
