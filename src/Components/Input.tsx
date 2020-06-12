@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 type TInputType = "number" | "text";
 type TInputStyleType = "none";
@@ -59,13 +59,19 @@ function Input<T extends number>({
   ${floatLeft ? "floatLeft" : ""}
   `;
 
+  const [inputValue, setInputValue] = useState<T>();
+
+  useEffect(() => {
+    setInputValue(value);
+  }, [value]);
+
   return (
     <input
       type={type}
       style={style}
       className={classNames}
       onClick={onClick}
-      value={value}
+      value={inputValue}
       onChange={onChange}
     />
   );
