@@ -1,110 +1,110 @@
 @mixin box-title() {
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 18px;
-    height: 35px;
-    color: #000;
-    font-family: 'Malgun Gothic', 'Apple SD Neo Gothic', 'Dotum', 'Sans-Serif';
+  font-size: 16px;
+  font-weight: bold;
+  line-height: 18px;
+  height: 35px;
+  color: #000;
+  font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
 
-    &:hover {
-        color: #3c5fdf;
-        text-decoration: underline;
-    }
+  &:hover {
+    color: #3c5fdf;
+    text-decoration: underline;
+  }
 }
 
 @mixin section-title() {
-    display: block;
-    // padding: 1px 5px 0;
-    font-weight: bold;
-    height: 22px;
-    font-size: 14px;
-    line-height: 18px;
-    color: #555;
-    padding: 2px 4px;
-    font-family: 'Malgun Gothic', 'Apple SD Neo Gothic', 'Dotum', 'Sans-Serif';
+  display: block;
+  // padding: 1px 5px 0;
+  font-weight: bold;
+  height: 22px;
+  font-size: 14px;
+  line-height: 18px;
+  color: #555;
+  padding: 2px 4px;
+  font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
 
-    &:hover,
-    &.on {
-        background-color: #9cafe9;
-        color: #fff;
-    }
-
+  &:hover,
+  &.on {
+    background-color: #9cafe9;
+    color: #fff;
+  }
 }
 
 .box {
+  $padding-height: 10px;
 
-    $padding-height: 10px;
+  margin-top: 40px;
+  position: relative;
+  height: 346px;
+  overflow: hidden;
 
-    margin-top: 40px;
+  h3 {
+    padding-top: $padding-height;
+    margin-right: 10px;
+    float: left;
+  }
+
+  &.left-title {
+    .title a {
+      @include box-title();
+    }
+  }
+
+  .contents-container {
     position: relative;
-    height: 346px;
-    overflow: hidden;
 
-    h3 {
-        padding-top: $padding-height;
-        margin-right: 10px;
+    h3 a {
+      @include section-title();
+    }
+
+    .list-container {
+      position: absolute;
+      top: 40px;
+      width: 100%;
+
+      li {
+        margin-right: 23px;
         float: left;
-    }
 
-    &.left-title {
-        .title a {
-            @include box-title();
+        &:last-child {
+          margin-right: 0;
         }
-    }
+      }
 
-    .contents-container {
-        position: relative;
+      button {
+        $button-height: 50px;
 
-        h3 a {
-            @include section-title();
+        position: absolute;
+        background-color: grey;
+        opacity: 0.2;
+        transition: all 0.3s;
+        width: 36px;
+        height: $button-height;
+        top: calc(50% - (#{$button-height}/ 2));
+        cursor: pointer;
+
+        &.prev {
+          left: 0;
         }
 
-        .list-container {
-            position: absolute;
-            top: 40px;
-
-            li {
-                margin-right: 22px;
-                float: left;
-
-                &:last-child {
-                    margin-right: 0;
-                }
-            }
-
-            button {
-                $button-height: 50px;
-
-                position: absolute;
-                background-color: grey;
-                opacity: 0.2;
-                transition: all 0.3s;
-                width: 36px;
-                height: $button-height;
-                top: calc(50% - (#{$button-height}/2));
-                cursor: pointer;
-
-                &.prev {
-                    left: 0;
-                }
-
-                &.next {
-                    right: 0;
-                }
-
-                &.invisible {
-                    opacity: 0;
-                }
-            }
+        &.next {
+          right: 0;
         }
+
+        &.invisible {
+          opacity: 0;
+        }
+      }
     }
+  }
 }
 
-.box-welcome1 {}
+.box-welcome1 {
+}
 
 .box-welcome-picks {
-    .title a p {
-        color: #2ac557;
-        display: inline-block;
-    }
+  .title a p {
+    color: #2ac557;
+    display: inline-block;
+  }
 }

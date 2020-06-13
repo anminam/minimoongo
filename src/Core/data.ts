@@ -9,17 +9,17 @@ export const mainEventList: IEventListItem[] = [
       {
         id: "b1",
         displayName: "안녕",
-        href: "http://www.naver.com",
+        href: "/",
       },
       {
         id: "b2",
         displayName: "나도안녕",
-        href: "http://www.naver.com",
+        href: "/",
       },
       {
         id: "b3",
         displayName: "너도",
-        href: "http://www.naver.com",
+        href: "/",
       },
     ],
   },
@@ -30,7 +30,7 @@ export const mainEventList: IEventListItem[] = [
       {
         id: "b1",
         displayName: "하니슈",
-        href: "http://www.naver.com",
+        href: "/",
       },
     ],
   },
@@ -41,7 +41,7 @@ export const mainEventList: IEventListItem[] = [
       {
         id: "b2",
         displayName: "새로나온책",
-        href: "http://www.naver.com",
+        href: "/",
       },
     ],
   },
@@ -52,7 +52,7 @@ export const mainEventList: IEventListItem[] = [
       {
         id: "b3",
         displayName: "기획/테마",
-        href: "http://www.naver.com",
+        href: "/",
       },
     ],
   },
@@ -63,7 +63,7 @@ export const mainEventList: IEventListItem[] = [
       {
         id: "b4",
         displayName: "ebook",
-        href: "http://www.naver.com",
+        href: "/",
       },
     ],
   },
@@ -74,7 +74,7 @@ export const mainEventList: IEventListItem[] = [
       {
         id: "b5",
         displayName: "sam",
-        href: "http://www.naver.com",
+        href: "/",
       },
     ],
   },
@@ -85,7 +85,7 @@ export const mainEventList: IEventListItem[] = [
       {
         id: "b6",
         displayName: "한정특가",
-        href: "http://www.naver.com",
+        href: "/",
       },
     ],
   },
