@@ -3,6 +3,7 @@ import { Utils } from "Core/Utils";
 import Button from "Components/Button";
 import { IDate } from "Interfaces/IDate";
 import InputAndButton from "View/Containers/InputAndButton";
+import BookBuyButtons from "View/Containers/BookBuyButtons";
 
 interface IBookTop {
   id: string;
@@ -242,12 +243,17 @@ const BookTop = ({ id }: IBookTop) => {
           </div>
         </div>
         <div className="wapper-contianer">
-          <dl>
-            <dt>주문수량</dt>
-            <dd>
-              <InputAndButton />
-            </dd>
-          </dl>
+          <div className="container">
+            <dl>
+              <dt>주문수량</dt>
+              <dd>
+                <InputAndButton />
+              </dd>
+            </dl>
+          </div>
+          <div className="container">
+            <BookBuyButtons />
+          </div>
         </div>
       </div>
     </div>

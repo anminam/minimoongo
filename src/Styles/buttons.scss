@@ -5,6 +5,9 @@ button.mini {
   position: relative;
   cursor: pointer;
 
+  //////////////////////
+  // types
+  //////////////////////
   &.small {
     padding: 3px 4px 2px;
     font-size: 11px;
@@ -18,6 +21,11 @@ button.mini {
 
   &.full {
     width: 100%;
+  }
+
+  &.buy {
+    padding: 14px 20px;
+    font-size: 11px;
   }
 
   &.rightChevron {
@@ -54,7 +62,7 @@ button.mini {
     @include arrow_sans_left-after(#888, 10px);
   }
 
-  &.bannerPrev+.bannerNext {
+  &.bannerPrev + .bannerNext {
     border-left: 0;
   }
 }

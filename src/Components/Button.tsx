@@ -8,6 +8,7 @@ type TButtonType =
   | "verysmall"
   | "add"
   | "remove"
+  | "buy"
   | "bannerPrev"
   | "bannerNext";
 
