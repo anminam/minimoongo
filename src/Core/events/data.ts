@@ -1,4 +1,4 @@
-import { IEvent1, IEventPicks } from "Interfaces/IEventList";
+import { IEvent1, IEventPicks, IEventListItem } from "Interfaces/IEventList";
 
 /**
  * 화재의 신간
@@ -41,4 +41,23 @@ export const eventPicks: IEventPicks = {
   rankOfReading: 7,
   list: ["9791190299060", "9791158740757", "9791197016806"],
   href: "/",
+};
+
+export const bannerTop: IEventListItem = {
+  id: "bannerTop",
+  displayName: "bannerTop",
+  list: [
+    {
+      id: "topbanner1",
+      displayName: "topbanner1",
+      href: "/",
+      src: "topbanner1.png",
+    },
+    {
+      id: "topbanner2",
+      displayName: "topbanner2",
+      href: "/",
+      src: "topbanner2.png",
+    },
+  ],
 };

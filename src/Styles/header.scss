@@ -27,19 +27,44 @@ header {
       color: #ccc;
       font-size: 12px;
 
-      border: 1px solid #ddd;
       float: right;
       position: absolute;
       bottom: $padding-size;
       right: 0;
-      width: 220px;
-      height: 64px;
-      overflow: hidden;
     }
   }
 
   .first_line {
     position: relative;
     padding: $padding-size 0;
+  }
+}
+
+.header-top-banner {
+  position: relative;
+  // border: 1px solid #ddd;
+  width: 220px;
+  height: 64px;
+  overflow: hidden;
+
+  img {
+    width: 100%;
+  }
+
+  &__buttons {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+
+  &__label {
+    color: black;
+    position: absolute;
+    bottom: 1px;
+    right: 33px;
+
+    .first {
+      font-weight: bold;
+    }
   }
 }
