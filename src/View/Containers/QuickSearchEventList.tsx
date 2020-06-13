@@ -73,7 +73,7 @@ const QuickSearchEventList = () => {
 
   return (
     <div className="container-quick-search">
-      <ul className="container-quick-search__list">
+      <ul className="stick-list">
         {list &&
           list.map((item, i) => {
             const min = nowNum * maxLength;

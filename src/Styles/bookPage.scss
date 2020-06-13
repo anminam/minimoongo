@@ -175,26 +175,29 @@ ul.stick-list {
       display: inline-block;
       padding: 0 10px;
     }
+
     > button {
       margin-left: 10px;
     }
 
-    &::after {
-      content: " | ";
+    &::before {
+      display: block;
+      content: "";
       position: absolute;
-      //   right: -8px;
-      top: -1px;
+      left: 0;
+      top: 50%;
+      width: 1px;
+      height: 10px;
+      margin-top: -5px;
+      background-color: #727373;
     }
 
     &:first-child {
       > * {
-        padding: 0 9px 0 0;
+        padding-left: 0;
       }
-    }
-
-    &:last-child {
-      &::after {
-        content: "";
+      &::before {
+        display: none;
       }
     }
   }
