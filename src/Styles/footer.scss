@@ -52,4 +52,9 @@ footer {
       line-height: 18px;
     }
   }
+
+  ul.stick-list li::before {
+    background-color: #ddd;
+    margin-top: -4px;
+  }
 }

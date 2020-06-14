@@ -30,7 +30,7 @@
 
 .container-quick-search {
   position: relative;
-  font-size: 12px;
+  font-size: 11px;
   display: flex;
   padding: 4px 0 8px;
 
@@ -50,5 +50,9 @@
     .next {
       border-right: 1px solid gray;
     }
+  }
+
+  ul.stick-list li::before {
+    background-color: #ddd;
   }
 }
