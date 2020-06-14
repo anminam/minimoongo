@@ -6,15 +6,17 @@ import HeaderTopBanner from "View/Components/Events/TopBanner";
 
 const Header = () => {
   return (
-    <header id="container_header" className="container_lg">
-      <div className="first_line">
+    <header id="container_header">
+      <div className="first_line container_lg">
         <HeaderLogo />
         <div className="header__banner">
           <HeaderTopBanner />
         </div>
         <HeaderForm />
       </div>
-      <HeaderNavBar />
+      <div className="wapper-header__navbar">
+        <HeaderNavBar />
+      </div>
     </header>
   );
 };

@@ -1,6 +1,5 @@
 import { ILink } from "./ILink";
 import { IMainCategoryId } from "./ICategory";
-import { IGoods } from "./IGoods";
 
 export interface IEventListItem {
   id: string;

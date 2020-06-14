@@ -10,7 +10,7 @@ interface IHaderNavBar {
 
 const HeaderNavBar = ({ list }: IHaderNavBar) => {
   return (
-    <div className="header__navbar">
+    <div className="header__navbar container_lg">
       <AllCategory list={list} />
       <HeaderNav list={list} />
     </div>
