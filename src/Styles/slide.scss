@@ -1,95 +1,92 @@
 .slider {
-    $width: 700px;
+  $width: 690px;
+  height: 100%;
+  overflow: hidden;
+
+  height: 330px;
+  position: relative;
+
+  .dots {
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+
+    .dots-wapper {
+      display: inline-block;
+    }
+
+    ul {
+      margin: 0 auto;
+    }
+  }
+
+  .view-container {
     height: 100%;
-    overflow: hidden;
 
-    $colors: #a8e6cf, #dcedc1, #ffd3b6, #ffaaa5;
+    ul {
+      transition: 0.6s;
+      height: 100%;
+      display: flex;
+    }
 
-    height: 330px;
-    background-color: green;
-    position: relative;
+    // $colors: #a8e6cf, #dcedc1, #ffd3b6, #ffaaa5;
+    // @for $i from 1 through length($colors) {
+    //   li:nth-child(#{$i}) {
+    //     background: nth($colors, $i);
+    //   }
+    // }
 
-    .dots {
-        
-        position: absolute;
-        bottom: 10px;
+    li {
+      width: $width;
+      height: 100%;
+
+      img {
         width: 100%;
-        text-align: center;
-
-        .dots-wapper {
-            display: inline-block;
-        }
-        
-        ul {
-            margin: 0 auto;
-        }
-    }
-    
-    .view-container {
         height: 100%;
+      }
+    }
+  }
 
-        ul {
-            transition: 0.6s;
-            height: 100%;
-            display: flex;
-        }
+  ul.bullet {
+    $dot-size: 12px;
+    $dot-color: gray;
+    display: flex;
+    li {
+      margin: 0 3px;
+      content: "";
+      font-size: 0;
+      width: $dot-size;
+      height: $dot-size;
+      border: 2px solid $dot-color;
+      border-radius: 50%;
+      cursor: pointer;
 
-        @for $i from 1 through length($colors) {
-            li:nth-child(#{$i}) {
-                background: nth($colors, $i);
-            }
-        }
+      &:hover,
+      &.on {
+        background-color: $dot-color;
+      }
+    }
+  }
 
-        li {
-            width: 700px;
-            height: 100%;
-        }
+  button {
+    $button-height: 50px;
 
+    position: absolute;
+    background-color: grey;
+    opacity: 0.2;
+    transition: all 0.3s;
+    width: 36px;
+    height: $button-height;
+    top: calc(50% - (#{$button-height}/ 2));
+    cursor: pointer;
+
+    &.next {
+      right: 0;
     }
 
-    
-
-
-
-    ul.bullet {
-        $dot-size: 12px;
-        $dot-color: gray;
-        display: flex;
-        li {
-            margin: 0 3px;
-            content: '';
-            font-size: 0;
-            width: $dot-size;
-            height: $dot-size;
-            border: 2px solid $dot-color;
-            border-radius: 50%;
-            cursor: pointer;
-
-            &:hover,
-            &.on {
-                background-color: $dot-color;
-            }
-        }
+    &.invisible {
+      opacity: 0;
     }
-
-    button {
-        $button-height: 50px;
-
-        position: absolute;
-        background-color: grey;
-        opacity: 0.2;
-        transition: all 0.3s;
-        width: 36px;
-        height: $button-height;
-        top: calc(50% - (#{$button-height}/2));
-        cursor: pointer;
-
-        &.next {
-            right: 0;
-        }
-
-        &.invisible {
-            opacity: 0;
-        }
-    }
+  }
 }
