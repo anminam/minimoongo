@@ -4,7 +4,7 @@ import Button from "Components/Button";
 import { ILink } from "Interfaces/ILink";
 
 const HeaderTopBanner = () => {
-  const path = "assets/events/topbanners/images/";
+  const imgPath = "assets/events/topbanners/images/";
 
   const [list] = useState<ILink[]>(bannerTop.list);
   const [nowNum, setNowNum] = useState<number>(0);
@@ -43,7 +43,7 @@ const HeaderTopBanner = () => {
           return (
             <li>
               <a href={item.href}>
-                <img src={path + item.src} alt={item.displayName} />
+                <img src={imgPath + item.src} alt={item.displayName} />
               </a>
             </li>
           );
