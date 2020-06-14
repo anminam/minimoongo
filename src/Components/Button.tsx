@@ -1,4 +1,5 @@
 import React from "react";
+import { type } from "os";
 
 type TButtonType =
   | "none"
@@ -12,9 +13,12 @@ type TButtonType =
   | "bannerPrev"
   | "bannerNext";
 
+type TButtonColorType = "normal" | "blue1" | "blue2";
+
 interface IButton {
   text?: string;
   type?: TButtonType;
+  colorType?: TButtonColorType;
   full?: boolean;
   rightChevron?: boolean;
   leftChevron?: boolean;
@@ -30,6 +34,7 @@ interface IButton {
 const Button = ({
   text,
   type = "normal",
+  colorType = "normal",
   full = false,
   rightChevron = false,
   leftChevron = false,
@@ -54,6 +59,7 @@ const Button = ({
     style.height = height;
   }
 
+  // const classList = []
   const classNames = `
   mini 
   ${type} 
@@ -61,6 +67,7 @@ const Button = ({
   ${rightChevron ? "rightChevron" : ""}
   ${leftChevron ? "leftChevron" : ""}
   ${floatLeft ? "floatLeft" : ""}
+  ${colorType ? colorType : ""}
   `;
 
   return (

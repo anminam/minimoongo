@@ -41,7 +41,7 @@ const HeaderTopBanner = () => {
             return false;
           }
           return (
-            <li>
+            <li key={i}>
               <a href={item.href}>
                 <img src={imgPath + item.src} alt={item.displayName} />
               </a>

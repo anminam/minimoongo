@@ -62,7 +62,7 @@ dl {
       padding-top: 0;
     }
 
-    > div {
+    >div {
       margin: 10px 0;
     }
   }
@@ -86,13 +86,21 @@ dl {
   }
 
   .rank-container {
-    .item {
+    .item {}
+
+    em {
+      color: #f84450;
+    }
+  }
+
+  .delivery-container {
+    em {
+      color: #3a60df;
     }
   }
 
   .book-cover {
-    &__image-container {
-    }
+    &__image-container {}
 
     &__btn-container {
       &__list {
@@ -128,7 +136,7 @@ dl {
       height: 27px;
     }
 
-    h2 + button {
+    h2+button {
       position: absolute;
       right: 10px;
     }
@@ -171,12 +179,13 @@ ul.stick-list {
   li {
     position: relative;
     display: inline-block;
-    > * {
+
+    >* {
       display: inline-block;
       padding: 0 10px;
     }
 
-    > button {
+    >button {
       margin-left: 10px;
     }
 
@@ -193,9 +202,10 @@ ul.stick-list {
     }
 
     &:first-child {
-      > * {
+      >* {
         padding-left: 0;
       }
+
       &::before {
         display: none;
       }

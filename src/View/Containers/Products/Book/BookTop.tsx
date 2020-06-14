@@ -223,7 +223,7 @@ const BookTop = ({ id }: IBookTop) => {
               </dd>
             </dl>
           </div>
-          <div className="container">
+          <div className="delivery-container">
             <dl>
               <dt>배송비일정</dt>
               <dd>
