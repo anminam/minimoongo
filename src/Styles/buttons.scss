@@ -24,8 +24,16 @@ button.mini {
   }
 
   &.buy {
-    padding: 14px 20px;
-    font-size: 11px;
+    // padding: 14px 20px;
+    width: 136px;
+    height: 46px;
+    margin-left: 6px;
+    font-size: 14px;
+    font-weight: bold;
+
+    &:first-child {
+      margin-left: 0;
+    }
   }
 
   &.rightChevron {
