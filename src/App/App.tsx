@@ -12,8 +12,8 @@ import TopInfoBar from "View/Containers/TopInfoBar";
 function App() {
   return (
     <div className="App">
-      <TopInfoBar />
       <TopBannerContainer />
+      <TopInfoBar />
       <Router>
         <Header />
         <Main />
