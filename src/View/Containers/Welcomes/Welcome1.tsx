@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import WelcomeMainEvent from "./WelcomeMainEvent";
 import { mainEventList } from "Core/data";
 import BookCastBanner from "../Banners/BookCastBanner";

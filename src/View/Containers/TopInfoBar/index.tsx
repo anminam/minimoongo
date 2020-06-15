@@ -18,7 +18,7 @@ const TopInfoBar = () => {
           </ul>
         </div>
         <div className="my-info">
-          <ul>
+          <ul className="stick-list">
             <li>
               <a href="/">로그인</a>
             </li>
