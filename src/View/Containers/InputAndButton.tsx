@@ -25,9 +25,6 @@ const InputAndButton = () => {
     },
     [dispatch]
   );
-
-  debugger;
-
   return (
     <>
       <Input
