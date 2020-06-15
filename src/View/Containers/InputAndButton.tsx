@@ -1,29 +1,33 @@
-import React from "react";
+import React, { useCallback } from "react";
 import Input from "Components/Input";
 import Button from "Components/Button";
 import { useSelector, useDispatch } from "react-redux";
 import { TRootState } from "Core/reducers";
 import { ProductActions } from "Core/product/actions";
 
-const lineHeight = "30px";
-
 const InputAndButton = () => {
+  const lineHeight = "30px";
+  const dispatch = useDispatch();
+
   const count = useSelector((state: TRootState) => {
     return state.product.count;
   });
 
-  const dispatch = useDispatch();
+  const handleOnAdd = useCallback(
+    (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+      dispatch(ProductActions.add());
+    },
+    [dispatch]
+  );
+  const handleOnRemove = useCallback(
+    (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
+      dispatch(ProductActions.remove());
+    },
+    [dispatch]
+  );
 
-  const handleOnAdd = (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
-    dispatch(ProductActions.add());
-  };
-  const handleOnremove = (
-    event: React.MouseEvent<HTMLButtonElement, MouseEvent>
-  ) => {
-    dispatch(ProductActions.remove());
-  };
+  debugger;
+
   return (
     <>
       <Input
@@ -44,7 +48,7 @@ const InputAndButton = () => {
         width={lineHeight}
         height={lineHeight}
         floatLeft={true}
-        onClick={handleOnremove}
+        onClick={handleOnRemove}
       />
     </>
   );

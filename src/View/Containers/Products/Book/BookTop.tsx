@@ -63,7 +63,7 @@ const BookTop = ({ id }: IBookTop) => {
         </div>
         <div className="book-keyword">
           <h2>키워드 Pick</h2>
-          <Button type="small" text="안내" />
+          <Button type="small">안내</Button>
 
           <div className="book-keyword__list">
             <ul>
@@ -105,12 +105,24 @@ const BookTop = ({ id }: IBookTop) => {
       <div className="product-info">
         <div className="wapper-contianer">
           <div className="flex">
-            <Button text="오늘의 책" type="verysmall" marginRight="2px" />
-            <Button text="무료배송" type="verysmall" marginRight="2px" />
-            <Button text="이밴트" type="verysmall" marginRight="2px" />
-            <Button text="사은품" type="verysmall" marginRight="2px" />
-            <Button text="경품" type="verysmall" marginRight="2px" />
-            <Button text="소득공제" type="verysmall" marginRight="2px" />
+            <Button type="verysmall" marginRight="2px">
+              오늘의 책
+            </Button>
+            <Button type="verysmall" marginRight="2px">
+              무료배송
+            </Button>
+            <Button type="verysmall" marginRight="2px">
+              이밴트
+            </Button>
+            <Button type="verysmall" marginRight="2px">
+              사은품
+            </Button>
+            <Button type="verysmall" marginRight="2px">
+              경품
+            </Button>
+            <Button type="verysmall" marginRight="2px">
+              소득공제
+            </Button>
           </div>
           <div className="title-container">
             <h1 className="title">{name}</h1>
@@ -137,7 +149,7 @@ const BookTop = ({ id }: IBookTop) => {
                 <span>리뷰 56개</span>
               </li>
               <li>
-                <Button type="small" text="리뷰쓰기" />
+                <Button type="small">리뷰쓰기</Button>
               </li>
             </ul>
           </div>
@@ -185,14 +197,14 @@ const BookTop = ({ id }: IBookTop) => {
                   <dt>[추가적립]</dt>
                   <dd>
                     5만원 이상 구매 시 2천원 추가적립{" "}
-                    <Button type="small" text="안내" />
+                    <Button type="small">안내</Button>
                   </dd>
                 </dl>
                 <dl>
                   <dt>[회원혜택]</dt>
                   <dd>
                     실버등급 이상, 3만원 이상 구매 시 2~4% 추가적립{" "}
-                    <Button type="small" text="안내" />
+                    <Button type="small">안내</Button>
                   </dd>
                 </dl>
               </dd>
@@ -203,12 +215,24 @@ const BookTop = ({ id }: IBookTop) => {
               <dt>추가혜택</dt>
               <dd className="inline-block">
                 <div className="flex">
-                  <Button text="오늘의 책" type="small" marginRight="2px" />
-                  <Button text="무료배송" type="small" marginRight="2px" />
-                  <Button text="이밴트" type="small" marginRight="2px" />
-                  <Button text="사은품" type="small" marginRight="2px" />
-                  <Button text="경품" type="small" marginRight="2px" />
-                  <Button text="소득공제" type="small" marginRight="2px" />
+                  <Button type="small" marginRight="2px">
+                    오늘의 책
+                  </Button>
+                  <Button type="small" marginRight="2px">
+                    무료배송
+                  </Button>
+                  <Button type="small" marginRight="2px">
+                    이밴트
+                  </Button>
+                  <Button type="small" marginRight="2px">
+                    사은품
+                  </Button>
+                  <Button type="small" marginRight="2px">
+                    경품
+                  </Button>
+                  <Button type="small" marginRight="2px">
+                    소득공제
+                  </Button>
                 </div>
               </dd>
             </dl>
@@ -219,7 +243,7 @@ const BookTop = ({ id }: IBookTop) => {
             <dl>
               <dt>배송비</dt>
               <dd>
-                무료 <Button type="small" text="배송비 안내" />
+                무료 <Button type="small">배송비 안내</Button>
               </dd>
             </dl>
           </div>
@@ -229,10 +253,12 @@ const BookTop = ({ id }: IBookTop) => {
               <dd>
                 <div>
                   서울특별시 종로구 세종대로 기준{" "}
-                  <Button type="small" text="지역변경" />
+                  <Button type="small">지역변경</Button>
                 </div>
                 <div>
-                  <Button type="verysmall" text="당일배송" marginRight="4px" />
+                  <Button type="verysmall" marginRight="4px">
+                    당일배송
+                  </Button>
                   지금 주문하면{" "}
                   <em>
                     오늘({`${dateObj.date}일, ${dateObj.korDay}`}) 도착 예정

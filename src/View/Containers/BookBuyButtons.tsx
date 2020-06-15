@@ -4,11 +4,15 @@ import Button from "Components/Button";
 const BookBuyButtons = () => {
   return (
     <div>
-      <Button type="buy" text="장바구니 담기" colorType="blue1" />
-      <Button type="buy" text="바로구매" colorType="blue2" />
-      <Button type="buy" text="바로드림 주문" />
-      <Button type="buy" text="선물하기" />
-      <Button type="buy" text="보관함 담기" />
+      <Button type="buy" colorType="blue1">
+        장바구니 담기
+      </Button>
+      <Button type="buy" colorType="blue2">
+        바로구매
+      </Button>
+      <Button type="buy">바로드림 주문</Button>
+      <Button type="buy">선물하기</Button>
+      <Button type="buy">보관함 담기</Button>
     </div>
   );
 };
