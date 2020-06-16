@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useCallback } from "react";
 import { ILink } from "Interfaces/ILink";
 
 interface ISlider {
@@ -13,17 +13,20 @@ const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
   const [viewIndex, setViewIndex] = useState<number>(0);
   const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(false);
 
+  const changeItem = useCallback(
+    (index: number) => {
+      setViewIndex(index);
+      if (onHandleColor) {
+        onHandleColor(list[index]?.color);
+      }
+    },
+    [list, onHandleColor]
+  );
+
   useEffect(() => {
     // setOnItem(list[0]);
     changeItem(0);
   }, [list]);
-
-  const changeItem = (index: number) => {
-    setViewIndex(index);
-    if (onHandleColor) {
-      onHandleColor(list[index]?.color);
-    }
-  };
 
   const handleMouseOver = (
     event: React.MouseEvent<HTMLLIElement, MouseEvent>
@@ -43,7 +46,7 @@ const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
     }
   };
 
-  const handlePrevClick = () => {
+  const handlePrevClick = useCallback(() => {
     if (viewIndex === 0) {
       if (onPrevItem) {
         onPrevItem();
@@ -51,8 +54,9 @@ const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
       return;
     }
     changeItem(viewIndex - 1);
-  };
-  const handleNextClick = () => {
+  }, [changeItem, onPrevItem, viewIndex]);
+
+  const handleNextClick = useCallback(() => {
     if (viewIndex >= list.length - 1) {
       if (onNextItem) {
         onNextItem();
@@ -60,18 +64,21 @@ const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
       return;
     }
     changeItem(viewIndex + 1);
-  };
+  }, [changeItem, list.length, onNextItem, viewIndex]);
 
-  const handleViewMouseOver = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    setIsVisibleButton(true);
-  };
-  const handleViewMouseLeave = (
-    event: React.MouseEvent<HTMLDivElement, MouseEvent>
-  ) => {
-    setIsVisibleButton(false);
-  };
+  const handleViewMouseOver = useCallback(
+    (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+      setIsVisibleButton(true);
+    },
+    []
+  );
+
+  const handleViewMouseLeave = useCallback(
+    (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
+      setIsVisibleButton(false);
+    },
+    []
+  );
 
   return (
     <div
