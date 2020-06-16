@@ -13,7 +13,7 @@ const Login = () => {
           <span className="icon">
             <FontAwesomeIcon icon={faCoffee} />
           </span>
-          <input type="search" id="search" placeholder="Search..." />
+          <input type="search" placeholder="Search..." />
         </div>
       </div>
       <div className="box">
@@ -21,7 +21,7 @@ const Login = () => {
           <span className="icon">
             <FontAwesomeIcon icon={faCoffee} />
           </span>
-          <input type="search" id="search" placeholder="Search..." />
+          <input type="search" placeholder="Search..." />
         </div>
       </div>
     </div>

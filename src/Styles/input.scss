@@ -129,3 +129,58 @@
 
 
 }
+
+
+.wapper-input.mini {
+  $active-color: #1976d2;
+
+  position: relative;
+  margin: 5px;
+  font-size: 16px;
+
+  .wapper-label {
+    height: 14px;
+  }
+
+  label {
+    position: absolute;
+    top: 20px;
+
+    transition: all .2s;
+  }
+
+  .onvalue {
+    label {
+      font-size: 12px;
+      top: 0;
+    }
+  }
+
+  .on {
+    label {
+      color: $active-color;
+      font-size: 12px;
+      top: 0;
+    }
+  }
+
+  .wapper-input-button {
+    border-bottom: 1px solid #000;
+
+    &.on {
+      border-bottom: 2px solid $active-color;
+
+      input {
+        height: 29px;
+      }
+    }
+  }
+
+  input {
+    outline: none;
+    border: 0;
+    width: 100%;
+    height: 30px;
+    padding: 0;
+  }
+}
