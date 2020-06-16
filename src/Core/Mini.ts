@@ -1,8 +1,11 @@
 import "./faicon";
+import { Utils } from "./Utils";
 
 class Mini {
   private static _instance: Mini;
   private age: number = 4;
+
+  public utils = Utils;
 
   constructor() {}
 
@@ -19,4 +22,4 @@ class Mini {
   };
 }
 
-export default Mini.getInstance();
+export const mini = Mini.getInstance();

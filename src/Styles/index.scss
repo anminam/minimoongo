@@ -16,6 +16,7 @@
 @import "./buttons.scss";
 @import "./bookPage.scss";
 @import "./nameIsValue.scss";
+@import "./input.scss";
 
 @import "./Events/index.scss";
 
@@ -73,17 +74,17 @@ dl {
 }
 
 dl {
-  dd + dd {
+  dd+dd {
     display: block;
   }
 }
 
 .multi-dl {
-  > dt {
+  >dt {
     float: left;
   }
 
-  > dd {
+  >dd {
     display: inline-block;
   }
 }

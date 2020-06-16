@@ -1,20 +1,25 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCoffee } from "@fortawesome/free-solid-svg-icons";
-import Mini from "Core/Mini";
+import { mini } from "Core/Mini";
 
 const Login = () => {
-  console.log(Mini.getAge());
+  console.log(mini.getAge(), mini.utils.getBook("9788965422785"));
 
   return (
-    <div>
+    <div className="input mini">
       <div className="box">
         <div className="container-1">
           <span className="icon">
             <FontAwesomeIcon icon={faCoffee} />
-            <FontAwesomeIcon icon={["fab", "apple"]} />
-            <FontAwesomeIcon icon={["fab", "microsoft"]} />
-            <FontAwesomeIcon icon={["fab", "google"]} />
+          </span>
+          <input type="search" id="search" placeholder="Search..." />
+        </div>
+      </div>
+      <div className="box">
+        <div className="container-2">
+          <span className="icon">
+            <FontAwesomeIcon icon={faCoffee} />
           </span>
           <input type="search" id="search" placeholder="Search..." />
         </div>
@@ -23,4 +28,7 @@ const Login = () => {
   );
 };
 
+{
+  /* <FontAwesomeIcon icon={["fab", "google"]} /> */
+}
 export default Login;
