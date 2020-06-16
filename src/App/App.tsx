@@ -13,8 +13,8 @@ function App() {
   return (
     <div className="App">
       <TopBannerContainer />
-      <TopInfoBar />
       <Router>
+        <TopInfoBar />
         <Header />
         <Main />
         <Footer />

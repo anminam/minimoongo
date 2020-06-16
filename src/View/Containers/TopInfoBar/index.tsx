@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 const TopInfoBar = () => {
   return (
@@ -20,7 +21,7 @@ const TopInfoBar = () => {
         <div className="my-info">
           <ul className="stick-list">
             <li>
-              <a href="/">로그인</a>
+              <Link to="Login">로그인</Link>
             </li>
             <li>
               <a href="/">회원가입</a>

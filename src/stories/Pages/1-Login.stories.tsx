@@ -1,15 +1,15 @@
 import React from "react";
 import "Styles/index.scss";
 import { CustomProvider } from "CustomProvider";
-import BookTop from "View/Containers/Products/Book/BookTop";
+import { Login } from "Pages";
 
 export default {
-  title: "Pages/BookTop",
-  component: BookTop,
+  title: "Pages/Login",
+  component: Login,
 };
 
 export const Main = () => {
   return CustomProvider(() => {
-    return <BookTop id={"9791190382175"} />;
+    return <Login />;
   });
 };
