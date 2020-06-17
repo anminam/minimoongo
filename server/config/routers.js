@@ -15,5 +15,7 @@ module.exports = (app, isProduction) => {
     });
   }
 
+  app.use("/api/events", require("../api/events"));
+
   app.use(router);
 };
