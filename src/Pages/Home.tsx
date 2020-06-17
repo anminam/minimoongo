@@ -5,6 +5,8 @@ import { connect } from "react-redux";
 import { IGoods } from "Interfaces/IGoods";
 import { event1, eventPicks } from "Core/events/data";
 import BoxWelcomePicks from "View/Containers/Boxes/BoxWelcomePicks";
+import Welcome2 from "View/Containers/Welcomes/Welcome2";
+import Welcome3 from "View/Containers/Welcomes/Welcome3";
 
 interface IHome {
   list: IGoods[];
@@ -13,6 +15,8 @@ const Home = ({ list }: IHome) => {
   return (
     <div>
       <Welcome1 />
+      <Welcome2 />
+      <Welcome3 />
       <BoxWelcome1 eventObj={event1} />
       <BoxWelcomePicks eventObj={eventPicks} />
     </div>

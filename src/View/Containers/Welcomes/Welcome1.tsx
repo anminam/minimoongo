@@ -3,6 +3,9 @@ import WelcomeMainEvent from "./WelcomeMainEvent";
 import { mainEventList } from "Core/data";
 import BookCastBanner from "../Banners/BookCastBanner";
 
+/**
+ * 메인에 슬라이더
+ */
 const Welcome1 = () => {
   const [backgroundColor, setBackgroundColor] = useState<string>("white");
 

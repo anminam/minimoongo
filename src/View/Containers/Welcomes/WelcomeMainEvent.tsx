@@ -8,6 +8,10 @@ interface IWelcomeMainEvent {
   onChangeColor?: (color: string | undefined) => void;
 }
 
+/**
+ * welcom1안에 포함되어있는데 WelcomeMainEvent 네이밍을 슬라이드 컨테이너등으로 바꿔야함
+ * @param param0
+ */
 const WelcomeMainEvent = ({ list, onChangeColor }: IWelcomeMainEvent) => {
   const [nowList] = useState<IEventListItem[]>(list);
   const [item, setItem] = useState<IEventListItem>(list[0]);

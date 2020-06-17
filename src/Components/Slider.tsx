@@ -8,7 +8,7 @@ interface ISlider {
   onHandleColor?: (color: string | undefined) => void;
 }
 const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
-  const imgPath = "assets/events/welcomeMain/images/";
+  const imgPath = "assets/events/welcomes/welcome1/images/";
   const [onItem, setOnItem] = useState<ILink | null>();
   const [viewIndex, setViewIndex] = useState<number>(0);
   const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(false);
