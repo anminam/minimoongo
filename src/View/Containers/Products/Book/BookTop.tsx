@@ -271,7 +271,7 @@ const BookTop = ({ id }: IBookTop) => {
         <div className="wapper-contianer">
           <div className="container">
             <dl>
-              <dt>주문수량</dt>
+              <dt style={{ lineHeight: "30px" }}>주문수량</dt>
               <dd>
                 <InputAndButton />
               </dd>
