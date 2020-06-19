@@ -3,10 +3,6 @@ import React, { useEffect, useState } from "react";
 type TInputType = "number" | "text";
 type TInputStyleType = "none";
 
-interface iii {
-  value: number;
-}
-
 interface IInput<T> {
   value?: T;
   type?: TInputType;
@@ -23,6 +19,7 @@ interface IInput<T> {
   readonly?: boolean;
   onClick?: (event: React.MouseEvent<HTMLInputElement, MouseEvent>) => void;
   onChange?: (event: React.ChangeEvent<HTMLInputElement>) => void;
+  onChangeValue?: (event: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 function Input<T extends number>({
@@ -41,6 +38,7 @@ function Input<T extends number>({
   readonly,
   onClick,
   onChange,
+  onChangeValue,
 }: IInput<T>) {
   const style = {
     color: color || "#000",
@@ -59,11 +57,11 @@ function Input<T extends number>({
   ${floatLeft ? "floatLeft" : ""}
   `;
 
-  const [inputValue, setInputValue] = useState<T>();
+  // const [inputValue, setInputValue] = useState<T>();
 
-  useEffect(() => {
-    setInputValue(value);
-  }, [value]);
+  // useEffect(() => {
+  //   setInputValue(value);
+  // }, [value]);
 
   return (
     <input
@@ -71,8 +69,8 @@ function Input<T extends number>({
       style={style}
       className={classNames}
       onClick={onClick}
-      value={inputValue}
-      onChange={onChange}
+      value={value}
+      onChange={onChangeValue}
     />
   );
 }

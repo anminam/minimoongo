@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useState } from "react";
 import Input from "Components/Input";
 import Button from "Components/Button";
 import { useSelector, useDispatch } from "react-redux";
@@ -9,9 +9,17 @@ const InputAndButton = () => {
   const lineHeight = "30px";
   const dispatch = useDispatch();
 
+  // const [inputValue, setInputValue] = useState<number>();
+
   const count = useSelector((state: TRootState) => {
     return state.product.count;
   });
+
+  const handleInputChangeValue = (
+    event: React.ChangeEvent<HTMLInputElement>
+  ): void => {
+    dispatch(ProductActions.changeValue(4));
+  };
 
   const handleOnAdd = useCallback(
     (event: React.MouseEvent<HTMLButtonElement, MouseEvent>) => {
@@ -25,6 +33,7 @@ const InputAndButton = () => {
     },
     [dispatch]
   );
+
   return (
     <>
       <Input
@@ -32,6 +41,7 @@ const InputAndButton = () => {
         value={count}
         width={`80px`}
         height={lineHeight}
+        onChangeValue={handleInputChangeValue}
       />
       <Button
         type="add"

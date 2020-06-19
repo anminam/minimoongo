@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState, useRef } from "react";
 
 type TInputType = "number" | "text" | "password";
 type TInputStyleType = "none";
@@ -61,6 +61,7 @@ function Input1<T extends number>({
 
   const [inputValue, setInputValue] = useState<string>();
   const [isOnFoucs, setIsOnFoucs] = useState<boolean>(false);
+  const inputRef = useRef<HTMLInputElement>(null);
 
   const handleOnFocus = (isOn: boolean): void => {
     setIsOnFoucs(isOn);
@@ -71,6 +72,10 @@ function Input1<T extends number>({
     setInputValue(value);
   };
 
+  const labelClick = () => {
+    inputRef.current?.focus();
+  };
+
   return (
     <div className="wapper-input mini" style={style}>
       {label && (
@@ -79,7 +84,7 @@ function Input1<T extends number>({
           ${isOnFoucs ? "on" : ""}
           ${inputValue?.toString() ? "onvalue" : ""}`}
         >
-          <label>{label}</label>
+          <label onClick={() => labelClick()}>{label}</label>
         </div>
       )}
       <div
@@ -89,6 +94,7 @@ function Input1<T extends number>({
       >
         <input
           type={type}
+          ref={inputRef}
           className={classNames}
           onClick={onClick}
           onChange={handleOnChange}
