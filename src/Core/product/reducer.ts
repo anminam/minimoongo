@@ -17,6 +17,8 @@ export const productReducer = (
       return state.set("count", state.count + 1);
     case ProductActions.REMOVE:
       return state.set("count", state.count - 1);
+    case ProductActions.CHANGE_VALUE:
+      return state.set("count", action.payload);
     default:
       return state;
   }

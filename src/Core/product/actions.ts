@@ -1,6 +1,7 @@
 export const ProductActions = {
-  ADD: "ADD",
-  REMOVE: "REMOVE",
+  ADD: "product/ADD" as const,
+  REMOVE: "product/REMOVE" as const,
+  CHANGE_VALUE: "product/CHANGE_VALUE" as const,
 
   add: () => ({
     type: ProductActions.ADD,
@@ -8,5 +9,10 @@ export const ProductActions = {
 
   remove: () => ({
     type: ProductActions.REMOVE,
+  }),
+
+  changeValue: (value: number) => ({
+    type: ProductActions.CHANGE_VALUE,
+    payload: value,
   }),
 };
