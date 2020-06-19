@@ -16,6 +16,7 @@ module.exports = (app, isProduction) => {
   }
 
   app.use("/api/events", require("../api/events"));
+  app.use("/api/books", require("../api/books"));
 
   app.use(router);
 };
