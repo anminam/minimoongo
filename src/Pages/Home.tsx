@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Welcome1 from "View/Containers/Welcomes/Welcome1";
 import BoxWelcome1 from "View/Containers/Boxes/BoxWelcome1";
 import { connect } from "react-redux";
@@ -12,6 +12,7 @@ interface IHome {
   list: IGoods[];
 }
 const Home = ({ list }: IHome) => {
+  useEffect(() => {}, [list]);
   return (
     <div>
       <Welcome1 />

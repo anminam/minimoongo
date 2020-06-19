@@ -5,6 +5,8 @@ import { IEvent1 } from "Interfaces/IEventList";
 import { Utils } from "Core/Utils";
 import { NavUtils } from "Core/nav/utils";
 import ListNormal from "../Lists/ListNormal";
+import { useSelector } from "react-redux";
+import { TRootState } from "Core/reducers";
 
 interface IBoxWelcome1 {
   eventObj: IEvent1;
@@ -23,6 +25,10 @@ const BoxWelcome1 = ({ eventObj }: IBoxWelcome1) => {
   const [index, setIndex] = useState<number>(0);
 
   const [eventItemList, setEventItemList] = useState<IEventItem[]>();
+
+  const bookList = useSelector((state: TRootState) => {
+    return state.goods.bookList;
+  });
 
   useEffect(() => {
     const list = eventObj.list;
@@ -48,7 +54,7 @@ const BoxWelcome1 = ({ eventObj }: IBoxWelcome1) => {
     });
 
     setEventItemList(newList);
-  }, [eventObj]);
+  }, [eventObj, bookList]);
 
   const handleMouseOver = (index: number) => {
     setIndex(index);

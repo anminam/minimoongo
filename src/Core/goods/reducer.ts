@@ -9,7 +9,7 @@ interface IGoodsReducer {
 }
 
 export const initState: IGoodsReducer = {
-  bookList: undefined,
+  bookList: bookData, // 이부분 서버일때랑 분기해야함
 };
 type goodsActions = ActionType<typeof goodsActions>;
 
