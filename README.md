@@ -21,14 +21,22 @@
 ## Todo
 
 1. immutable 오브젝트 생성과 옵셔널 값에대한 처리
+2. 서버에서 데이터 주기
 
 ## Stack
 
+### front-end
 - React (Create-React-App)
 - React-Router
 - StoryBook
 - redux
 - typescript
 
+### back-end
+- node.js
+
+
+
+## install
 prettier & eslint config
 npm i prettier eslint-config-prettier eslint-plugin-prettier -D

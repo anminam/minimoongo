@@ -31,8 +31,12 @@ export class Utils {
 
   public static getBook = (id: string): IBook | undefined => {
     const { bookList } = configureStore().getState().goods;
-    const obj = Utils.findObject(bookList, id);
-    return obj;
+    if (bookList) {
+      const obj = Utils.findObject(bookList, id);
+      return obj;
+    } else {
+      return undefined;
+    }
   };
 
   public static getListMaxLength = (

@@ -1,18 +1,13 @@
 export const goodsActions = {
-    LALLALALAL: 'LALLALALAL',
-    LALLALALAL1: 'LALLALALAL1',
+  INIT: "goods/INIT" as const,
+  INIT_ASYNC: "goods/INIT_ASYNC" as const,
 
-    mediaQueryChanged: (results:any) => ({
-        type: goodsActions.LALLALALAL,
-        payload: {
-            results
-        }
-    }),
-    
-    mediaQueryChanged1: (results:any) => ({
-        type: goodsActions.LALLALALAL1,
-        payload: {
-            results
-        }
-    })
-}
+  initData: (data: any) => ({
+    type: goodsActions.INIT,
+    payload: data,
+  }),
+
+  initAsync: () => ({
+    type: goodsActions.INIT_ASYNC,
+  }),
+};
