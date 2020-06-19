@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import "../Styles/index.scss";
 
 import Main from "../View/Containers/Main";
@@ -8,8 +8,15 @@ import { HashRouter as Router } from "react-router-dom";
 import TopBannerContainer from "Components/TopBannerContainer";
 import Footer from "View/Containers/Footer";
 import TopInfoBar from "View/Containers/TopInfoBar";
+import { useDispatch } from "react-redux";
+import { goodsActions } from "Core/goods/actions";
 
 function App() {
+  const dispatch = useDispatch();
+  useEffect(() => {
+    dispatch(goodsActions.initAsync());
+  }, []);
+
   return (
     <div className="App">
       <TopBannerContainer />
