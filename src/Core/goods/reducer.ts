@@ -18,10 +18,8 @@ export const goodsReducer = (state = initState, action: goodsActions) => {
     case goodsActions.INIT:
       return {
         ...state,
-        bookList: action.payload,
+        bookList: action.payload.slice(0),
       };
-
-      break;
     default:
       return state;
   }

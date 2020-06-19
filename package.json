@@ -44,7 +44,7 @@
     "storybook": "NODE_PATH=src/ start-storybook -p 9009 -s public",
     "build-storybook": "build-storybook -s public",
     "homepage": "https://anminam.github.io/minimoongo/",
-    "server": "npm run ./server/main.js"
+    "server": "node server/app.js"
   },
   "eslintConfig": {
     "extends": "react-app"

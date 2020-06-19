@@ -32,7 +32,7 @@ export class Utils {
   public static getBook = (id: string): IBook | undefined => {
     const { bookList } = configureStore().getState().goods;
     if (bookList) {
-      const obj = Utils.findObject(bookList, id);
+      const obj = Utils.findObject(bookList, id) as IBook;
       return obj;
     } else {
       return undefined;
