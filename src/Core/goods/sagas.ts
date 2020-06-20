@@ -1,10 +1,10 @@
 import { takeEvery, put, call } from "redux-saga/effects";
 import { goodsActions } from "./actions";
 import axios from "axios";
+import { API_BOOKS_URL } from "Core/constans";
 
-const a = "http://localhost:3003/api/books";
 function getApi() {
-  return axios.get(a);
+  return axios.get(API_BOOKS_URL);
 }
 function* fetchData(action: any) {
   try {
