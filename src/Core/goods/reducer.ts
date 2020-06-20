@@ -20,6 +20,11 @@ export const goodsReducer = (state = initState, action: goodsActions) => {
         ...state,
         bookList: action.payload.slice(0),
       };
+    case goodsActions.INIT_FAIL:
+      return {
+        ...state,
+        bookList: bookData,
+      };
     default:
       return state;
   }

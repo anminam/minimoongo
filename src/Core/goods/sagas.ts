@@ -7,9 +7,13 @@ function getApi() {
   return axios.get(a);
 }
 function* fetchData(action: any) {
-  const response = yield call(getApi);
-  // 이거에대한 에러처리
-  yield put({ type: goodsActions.INIT, payload: response.data.books });
+  try {
+    const response = yield call(getApi);
+    // 이거에대한 에러처리
+    yield put({ type: goodsActions.INIT, payload: response.data.books });
+  } catch (error) {
+    yield put({ type: goodsActions.INIT_FAIL, error });
+  }
 }
 
 function* watchInit() {
