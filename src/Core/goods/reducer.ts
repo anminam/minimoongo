@@ -1,4 +1,3 @@
-import { Record } from "immutable";
 import { ActionType } from "typesafe-actions";
 import { IBook } from "Interfaces/IGoods";
 import { goodsActions } from "./actions";
