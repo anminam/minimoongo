@@ -5,6 +5,7 @@ import { connect } from "react-redux";
 import { NavUtils } from "Core/nav/utils";
 import { Utils } from "Core/Utils";
 import { categoryUtils } from "Core/category/utils";
+import { Link } from "react-router-dom";
 
 interface INavCategory {
   // title?: string;
@@ -44,14 +45,15 @@ const NavCategory = ({ categoryData, navCategoryId }: INavCategory) => {
           return (
             <ul key={i} className="category">
               {item.list.map((iitem, ii) => {
+                debugger;
                 return (
                   <li key={ii}>
-                    <a
-                      href={iitem.id}
+                    <Link
+                      to={iitem.id}
                       className={`${iitem.isBig ? "bold" : ""}`}
                     >
                       {iitem.displayName}
-                    </a>
+                    </Link>
                   </li>
                 );
               })}

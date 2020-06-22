@@ -8,32 +8,32 @@ const TopInfoBar = () => {
         <div className="company-info">
           <ul>
             <li>
-              <a href="/">바로콘</a>
+              <Link to="/">바로콘</Link>
             </li>
             <li>
-              <a href="/">매장안내</a>
+              <Link to="/">매장안내</Link>
             </li>
             <li>
-              <a href="/">회원혜택</a>
+              <Link to="/">회원혜택</Link>
             </li>
           </ul>
         </div>
         <div className="my-info">
           <ul className="stick-list">
             <li>
-              <Link to="Login">로그인</Link>
+              <Link to="/Login">로그인</Link>
             </li>
             <li>
-              <a href="/">회원가입</a>
+              <Link to="/">회원가입</Link>
             </li>
             <li>
-              <a href="/">고객센터</a>
+              <Link to="/">고객센터</Link>
             </li>
             <li>
-              <a href="/">주문배송</a>
+              <Link to="/">주문배송</Link>
             </li>
             <li>
-              <a href="/">장바구니</a>
+              <Link to="/">장바구니</Link>
             </li>
           </ul>
         </div>
