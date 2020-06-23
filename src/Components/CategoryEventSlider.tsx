@@ -17,16 +17,8 @@ const CategoryEventSlider = ({
   width = 690,
   isDot = false,
 }: ICategoryEventSlider) => {
-  // const [onItem, setOnItem] = useState<ILink | null>();
   const [viewIndex, setViewIndex] = useState<number>(0);
   const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(false);
-
-  // const [sliderList, setSliderList] = useState<ILink[]>();
-
-  // useEffect(() => {
-  //   const newlist = list.map((item))
-  //   setSliderList()
-  // }, [list]);
 
   // width 구하기
   const [totalWidth, setTotalWidth] = useState<number>();
@@ -47,7 +39,7 @@ const CategoryEventSlider = ({
   }, []);
 
   /**
-   * 다음, 이전
+   * 다음, 이전 버튼
    */
   const handlePrevClick = useCallback(() => {
     if (viewIndex === 0) {
@@ -70,7 +62,7 @@ const CategoryEventSlider = ({
   }, [changeItem, totalSlideLength, onNextItem, viewIndex]);
 
   /**
-   * 슬라이드 위에
+   * 슬라이드 위에 다음이전버튼 보이게하는곳
    */
   const handleViewMouseOver = useCallback(
     (event: React.MouseEvent<HTMLDivElement, MouseEvent>) => {
@@ -109,6 +101,7 @@ const CategoryEventSlider = ({
   const handleSliderListContainerMouseOver = (
     event: React.MouseEvent<HTMLLIElement, MouseEvent>
   ) => {
+    console.log("a");
     event.currentTarget.classList.add("on");
   };
   const handleSliderListContainerMouseLeave = (
@@ -126,14 +119,30 @@ const CategoryEventSlider = ({
   ) => {
     event.currentTarget.classList.add("on");
     const index = event.currentTarget.getAttribute("custom-index");
-
-    setViewIndex(Number(index));
+    changeItem(Number(index));
   };
   const handleSliderListContainerInnerItemMouseLeave = (
     event: React.MouseEvent<HTMLLIElement, MouseEvent>
   ) => {
-    event.currentTarget.classList.remove("on");
+    // event.currentTarget.classList.remove("on");
   };
+  /**
+   * 리스트 타이틀 선택
+   * @param event
+   */
+  const handleSliderListContainerTitleMouseOver = (
+    event: React.MouseEvent<HTMLLIElement, MouseEvent>
+  ) => {
+    const index = event.currentTarget.getAttribute("custom-index");
+    if (Number(index) !== Math.floor(viewIndex / list.length)) {
+      // debugger;
+      const rand = Math.floor(Math.random() * list.length);
+      changeItem(Number(index) * list.length + rand);
+    }
+  };
+  const handleSliderListContainerTitleMouseLeave = (
+    event: React.MouseEvent<HTMLLIElement, MouseEvent>
+  ) => {};
 
   return (
     <div
@@ -168,22 +177,35 @@ const CategoryEventSlider = ({
         <ul>
           {list &&
             list.map((mainItem, index) => {
+              const isIng =
+                index === Math.floor(viewIndex / list.length) ? "ing" : "";
               return (
                 <li
                   key={index}
-                  onMouseOver={handleSliderListContainerMouseOver}
+                  custom-index={index}
+                  className={`${isIng}`}
+                  onMouseMove={handleSliderListContainerMouseOver}
                   onMouseLeave={handleSliderListContainerMouseLeave}
                 >
                   <dl>
-                    <dt>{mainItem.displayName}</dt>
+                    <dt
+                      custom-index={index}
+                      onMouseOver={handleSliderListContainerTitleMouseOver}
+                      onMouseLeave={handleSliderListContainerTitleMouseLeave}
+                    >
+                      {mainItem.displayName}
+                    </dt>
                     <dd>
                       <ul>
                         {mainItem.list &&
                           mainItem.list.map((subItem, subIndex) => {
+                            const customIndex = index * list.length + subIndex;
+                            const isOn = customIndex === viewIndex ? "on" : "";
                             return (
                               <li
                                 key={subIndex}
-                                custom-index={index * list.length + subIndex}
+                                className={isOn}
+                                custom-index={customIndex}
                                 onMouseOver={
                                   handleSliderListContainerInnerItemMouseOver
                                 }

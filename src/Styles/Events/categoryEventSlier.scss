@@ -91,6 +91,13 @@ $border-box: 1px solid $color-border-main;
 
                 }
 
+                &.on,
+                &.ing {
+                    dt {
+                        color: #fb3947;
+                    }
+                }
+
                 &.on {
                     dd {
                         display: block;
