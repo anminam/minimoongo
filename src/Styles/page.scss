@@ -4,13 +4,14 @@
     min-height: 800px;
 
     .category-page {
+        display: flex;
+
         &__category {
             border: 1px solid #9eadca;
-            float: left;
+            // float: left;
             width: 170px;
         }
-        &__contents {
-    
-        }
+
+        &__contents {}
     }
 }

@@ -1,0 +1,124 @@
+@import '../colors.scss';
+
+$border-box: 1px solid $color-border-main;
+
+.category-event-slider {
+
+    $button-height: 25px;
+
+    position: relative;
+
+    .view-container {
+        height: 260px;
+        overflow: hidden;
+    }
+
+    .slider-container {
+        height: 100%;
+
+        ul {
+            display: flex;
+            height: 100%;
+        }
+
+        li {
+            img {
+                height: 100%;
+            }
+        }
+    }
+
+    .slider-list-container {
+        border-top: 1px solid #fb3947;
+
+        >ul {
+            display: flex;
+            border: $border-box;
+
+            >li {
+                flex: 1;
+                text-align: center;
+                position: relative;
+                cursor: pointer;
+
+                border-left: $border-box;
+
+                &:first-child {
+                    border-left: 0;
+                }
+
+                dt {
+                    width: 100%;
+                    line-height: $button-height;
+                    color: #333;
+                    font-weight: bold;
+                    font-size: 12px;
+
+                    &::after {
+                        content: '';
+                    }
+                }
+
+                width: 100%;
+
+                dd {
+                    width: 100%;
+                    display: none;
+
+                    ul {
+                        background-color: #fff;
+                        position: absolute;
+                        width: 100%;
+                        left: 0;
+                        bottom: $button-height;
+                        border: $border-box;
+
+                        li {
+                            font-size: 11px;
+                            border-bottom: $border-box;
+
+                            &:last-child {
+                                border-bottom: 0;
+                            }
+
+                            &.on {
+                                color: #fff;
+                                background-color: #fb3947;
+                                border-color: #fb3947;
+                            }
+                        }
+                    }
+
+                }
+
+                &.on {
+                    dd {
+                        display: block;
+                    }
+                }
+            }
+
+        }
+    }
+
+    button {
+        $button-height: 50px;
+
+        position: absolute;
+        background-color: grey;
+        opacity: 0.2;
+        transition: all 0.3s;
+        width: 36px;
+        height: $button-height;
+        top: calc(50% - (#{$button-height}/ 2));
+        cursor: pointer;
+
+        &.next {
+            right: 0;
+        }
+
+        &.invisible {
+            opacity: 0;
+        }
+    }
+}
