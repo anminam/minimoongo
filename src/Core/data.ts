@@ -1,5 +1,6 @@
 import { IEventListItem } from "Interfaces/IEventList";
 import { ICategories } from "Interfaces/ICategory";
+import { korbook } from "stories/Containers/7-AllCategoryMenuSub.stories";
 
 export const mainEventList: IEventListItem[] = [
   {
@@ -261,6 +262,131 @@ export const bookCategories: ICategories[] = [
       // {categoryIndex: '1',        id:"c6a",   displayName: "일본신간잡지" },
       // {categoryIndex: '1',        id:"XXA",   displayName: "일본잡지 정기구독" },
       // {categoryIndex: '1',        id:"rqe",   displayName: "이벤트 마당" },
+    ],
+  },
+];
+export const bookKorbookEvents: IEventListItem[] = [
+  {
+    id: "1",
+    displayName: "어린이/학습",
+    list: [
+      {
+        id: "s20",
+        displayName: "상반기유아동 Top100",
+        href: "/",
+        src: "bnL_01.jpg",
+      },
+      {
+        id: "s21",
+        displayName: "유아어린이 세트 1위는?",
+        href: "/",
+        src: "bnL_02.jpg",
+      },
+      {
+        id: "s22",
+        displayName: "총 300만원 상당의경품",
+        href: "/",
+        src: "bnF_01.jpg",
+      },
+      {
+        id: "s23",
+        displayName: "흔한남매 X 하루한장",
+        href: "/",
+        src: "bnYY_22.jpg",
+      },
+    ],
+  },
+  {
+    id: "1",
+
+    displayName: "문학/실용",
+    list: [
+      {
+        id: "s30",
+        displayName: "교보문고x그린 블리스",
+        href: "/",
+        src: "bnE_01.jpg",
+      },
+      {
+        id: "s31",
+        displayName: "스타작가 100 대 1",
+        href: "/",
+        src: "bnC_01.jpg",
+      },
+      {
+        id: "s32",
+        displayName: "에세이 1위, 스프링노트",
+        href: "/",
+        src: "bnN_01.jpg",
+      },
+      {
+        id: "s33",
+        displayName: "쌍갑포차 이벤트",
+        href: "/",
+        src: "bnC_02.jpg",
+      },
+    ],
+  },
+  {
+    id: "1",
+
+    displayName: "인문/교양",
+    list: [
+      {
+        id: "s40",
+        displayName: "인문교양 읽는 맛",
+        href: "/",
+        src: "bnG_01.jpg",
+      },
+      {
+        id: "s41",
+        displayName: "뇌과학, 통찰과 질문",
+        href: "/",
+        src: "bnF_02.jpg",
+      },
+      {
+        id: "s42",
+        displayName: "실크로드X데스크매트",
+        href: "/",
+        src: "bnN_02.jpg",
+      },
+      {
+        id: "s43",
+        displayName: "백상 젊은연극상 모티브",
+        href: "/",
+        src: "bnA_01.jpg",
+      },
+    ],
+  },
+  {
+    id: "1",
+
+    displayName: "비즈/수험",
+    list: [
+      {
+        id: "s50",
+        displayName: "인플루엔셜 단독 브랜드전",
+        href: "/",
+        src: "bnV_01.jpg",
+      },
+      {
+        id: "s51",
+        displayName: "한빛미디어 단독 브랜드전",
+        href: "/",
+        src: "bnG_02.jpg",
+      },
+      {
+        id: "s52",
+        displayName: "파고다 브랜드전",
+        href: "/",
+        src: "bnN_03.jpg",
+      },
+      {
+        id: "s53",
+        displayName: "교보단독 선택증정",
+        href: "/",
+        src: "bnL_03.jpg",
+      },
     ],
   },
 ];
