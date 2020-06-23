@@ -14,7 +14,7 @@ const HeaderNav = ({ list }: IHeaderNav) => {
   };
 
   return (
-    <ul className="header__navbar">
+    <ul className="header__navbar__nav">
       {list &&
         navlist.map((item) => {
           return (
