@@ -45,7 +45,6 @@ const NavCategory = ({ categoryData, navCategoryId }: INavCategory) => {
           return (
             <ul key={i} className="category">
               {item.list.map((iitem, ii) => {
-                debugger;
                 return (
                   <li key={ii}>
                     <Link

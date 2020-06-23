@@ -7,6 +7,7 @@ interface ISlider {
   onPrevItem?: () => void;
   onHandleColor?: (color: string | undefined) => void;
 }
+
 const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
   const imgPath = "assets/events/welcomes/welcome1/images/";
   const [onItem, setOnItem] = useState<ILink | null>();
