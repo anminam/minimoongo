@@ -10,7 +10,7 @@ interface ISlider {
 
 const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
   const imgPath = "assets/events/welcomes/welcome1/images/";
-  const [onItem, setOnItem] = useState<ILink | null>();
+  // const [onItem, setOnItem] = useState<ILink | null>();
   const [viewIndex, setViewIndex] = useState<number>(0);
   const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(false);
 
@@ -32,19 +32,17 @@ const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
   const handleMouseOver = (
     event: React.MouseEvent<HTMLLIElement, MouseEvent>
   ) => {
-    const target = event.target as Element;
-    const { id } = target;
-
-    const obj = list?.find((item, index) => {
-      if (item.id === id) {
-        changeItem(index);
-        return true;
-      }
-    });
-
-    if (obj) {
-      setOnItem(obj);
-    }
+    // const target = event.target as Element;
+    // const { id } = target;
+    // const obj = list?.find((item, index) => {
+    //   if (item.id === id) {
+    //     changeItem(index);
+    //     return true;
+    //   }
+    // });
+    // if (obj) {
+    //   setOnItem(obj);
+    // }
   };
 
   const handlePrevClick = useCallback(() => {

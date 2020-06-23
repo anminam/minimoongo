@@ -1,6 +1,5 @@
 import { IEventListItem } from "Interfaces/IEventList";
 import { ICategories } from "Interfaces/ICategory";
-import { korbook } from "stories/Containers/7-AllCategoryMenuSub.stories";
 
 export const mainEventList: IEventListItem[] = [
   {

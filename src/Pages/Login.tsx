@@ -28,7 +28,6 @@ const Login = () => {
   );
 };
 
-{
-  /* <FontAwesomeIcon icon={["fab", "google"]} /> */
-}
 export default Login;
+
+/* <FontAwesomeIcon icon={["fab", "google"]} /> */

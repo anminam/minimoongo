@@ -7,7 +7,7 @@ class Mini {
 
   public utils = Utils;
 
-  constructor() {}
+  // constructor() {}
 
   public static getInstance(): Mini {
     if (!Mini._instance) {

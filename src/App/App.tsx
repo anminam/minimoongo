@@ -15,7 +15,7 @@ function App() {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(goodsActions.initAsync());
-  }, []);
+  }, [dispatch]);
 
   return (
     <div className="App">

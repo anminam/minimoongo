@@ -37,7 +37,7 @@ const CategoryEventSlider = ({
     list.forEach((item) => (length = length + item.list.length));
     setTotalSlideLength(length);
     setTotalWidth(width * length);
-  }, [list.length, width]);
+  }, [list, width]);
 
   /**
    * 아이템 변경
@@ -93,16 +93,14 @@ const CategoryEventSlider = ({
   const handleMouseOver = (
     event: React.MouseEvent<HTMLLIElement, MouseEvent>
   ) => {
-    const target = event.target as Element;
-    const { id } = target;
-
-    const obj = list?.find((item, index) => {
-      if (item.id === id) {
-        changeItem(index);
-        return true;
-      }
-    });
-
+    // const target = event.target as Element;
+    // const { id } = target;
+    // const obj = list?.find((item, index) => {
+    //   if (item.id === id) {
+    //     changeItem(index);
+    //     return true;
+    //   }
+    // });
     // if (obj) {
     //   setOnItem(obj);
     // }
