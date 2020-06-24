@@ -2,20 +2,18 @@
 @import "./colors.scss";
 
 $header-navbar-background-color: #606d9a;
+$navbar-height: 50px;
+
+#container_header {
+  // height: 155px;
+}
 
 .wapper-header__navbar {
   background-color: $header-navbar-background-color;
-
-  &.stiky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    z-index: 1;
-  }
 }
 
 .header__navbar {
-  height: 50px;
+  height: $navbar-height;
   display: flex;
   background-color: $header-navbar-background-color;
 
