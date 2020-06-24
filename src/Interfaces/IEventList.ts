@@ -4,6 +4,7 @@ import { IMainCategoryId } from "./ICategory";
 export interface IEventListItem {
   id: string;
   displayName: string;
+  imagePath?: string;
   list: ILink[];
 }
 

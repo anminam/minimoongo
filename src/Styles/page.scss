@@ -4,14 +4,21 @@
     min-height: 800px;
 
     .category-page {
-        display: flex;
+        // display: flex;
 
         &__category {
             border: 1px solid #9eadca;
-            // float: left;
+            float: left;
             width: 170px;
         }
 
-        &__contents {}
+        &__contents {
+            float: right;
+            width: 770px;
+        }
+    }
+
+    .wapper-content {
+        margin-top: 10px;
     }
 }

@@ -3,6 +3,8 @@ import NavCategory from "Components/NavCategory";
 import { IMainCategoryId } from "Interfaces/ICategory";
 import CategoryEventSlider from "Components/CategoryEventSlider";
 import { bookKorbookEvents } from "Core/data";
+import { korbookSimpleEvent } from "Core/events/data";
+import Welcome2 from "View/Containers/Welcomes/Welcome2";
 
 const KorBook = () => {
   const [categoryId] = useState<IMainCategoryId>("korbook");
@@ -20,8 +22,11 @@ const KorBook = () => {
           <CategoryEventSlider
             list={bookKorbookEvents}
             imgPath={imgPath}
-            width={690}
+            width={770}
           />
+          <div className="wapper-content">
+            <Welcome2 eventObj={korbookSimpleEvent} />
+          </div>
         </div>
       </div>
     </div>

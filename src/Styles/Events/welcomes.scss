@@ -1,6 +1,19 @@
 .welcome2 {
-    background-color: #f9f9f9;
-    border-bottom: 1px solid #dadada;
+
+    .container {
+        &.full {
+            background-color: #f9f9f9;
+            border-bottom: 1px solid #dadada;
+        }
+    }
+
+    .border {
+        border: 1px solid #dadada;
+
+        .item {
+            border-bottom: 0;
+        }
+    }
 
     .item {
         float: left;

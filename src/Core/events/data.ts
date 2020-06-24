@@ -61,3 +61,55 @@ export const bannerTop: IEventListItem = {
     },
   ],
 };
+
+export const mainWelcome2Event: IEventListItem = {
+  id: "bannerTop",
+  displayName: "bannerTop",
+  imagePath: "assets/events/welcomes/welcome2/images/",
+  list: [
+    {
+      id: "01",
+      displayName: "01",
+      href: "/",
+      src: "01.jpg",
+    },
+    {
+      id: "02",
+      displayName: "02",
+      href: "/",
+      src: "02.jpg",
+    },
+    {
+      id: "03",
+      displayName: "03",
+      href: "/",
+      src: "03.jpg",
+    },
+  ],
+};
+
+export const korbookSimpleEvent: IEventListItem = {
+  id: "bannerTop",
+  displayName: "bannerTop",
+  imagePath: "assets/events/welcomes/korbook/",
+  list: [
+    {
+      id: "01",
+      displayName: "01",
+      href: "/",
+      src: "01.jpg",
+    },
+    {
+      id: "02",
+      displayName: "02",
+      href: "/",
+      src: "02.jpg",
+    },
+    {
+      id: "03",
+      displayName: "03",
+      href: "/",
+      src: "03.jpg",
+    },
+  ],
+};
