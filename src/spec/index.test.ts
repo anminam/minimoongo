@@ -1,5 +1,26 @@
-describe("첫테스트 입니다", () => {
-  test("1 = 1", () => {
-    expect(1).toBe(1);
+export {};
+
+const getUser = ({
+  name,
+  age,
+}: {
+  name: string;
+  age: number;
+}): { name: string; age: number } => {
+  return {
+    name: name,
+    age: age,
+  };
+};
+test("return a user obj", () => {
+  expect(getUser({ name: "미니", age: 123 })).toEqual({
+    name: "미니",
+    age: 123,
   });
+});
+
+test("이것은 참인가", () => {
+  expect(1).toBeTruthy();
+  // expect(-1).toBeFalsy();
+  expect(-1).toBeTruthy();
 });
