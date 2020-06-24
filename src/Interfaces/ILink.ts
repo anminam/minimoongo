@@ -4,4 +4,5 @@ export interface ILink {
   href: string;
   src?: string;
   color?: string;
+  path?: string;
 }

@@ -1,0 +1,14 @@
+.slideBook {}
+
+.event-book-card {
+    &__cover {
+
+        width: 100px;
+        height: 150px;
+        background: no-repeat url('/assets/images/book_cover.png');
+        background-size: contain;
+
+
+        img {}
+    }
+}
