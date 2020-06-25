@@ -5,7 +5,7 @@ import Slider from "Components/Slider";
 import { mainEventList } from "Core/data";
 
 export default {
-  title: "containers/Slider",
+  title: "containers/slider/Slider",
   component: Slider,
 };
 
