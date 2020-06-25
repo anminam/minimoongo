@@ -1,3 +1,6 @@
+interface ISubImageList {
+  src: string;
+}
 export interface ILink {
   id: string;
   displayName: string;
@@ -5,4 +8,5 @@ export interface ILink {
   src?: string;
   color?: string;
   path?: string;
+  subImageList?: ISubImageList[];
 }
