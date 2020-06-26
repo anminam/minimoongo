@@ -21,7 +21,7 @@ $navbar-height: 50px;
     display: flex;
 
     a {
-      width: 80px;
+      min-width: 80px;
       display: flex;
       padding: 0 10px;
       height: 100%;
@@ -58,7 +58,8 @@ $navbar-height: 50px;
       @include menu_x(white);
     }
 
-    &.on {}
+    &.on {
+    }
   }
 }
 
@@ -118,7 +119,8 @@ $navbar-height: 50px;
     }
   }
 
-  &__sub-list {}
+  &__sub-list {
+  }
 }
 
 .sub-category {

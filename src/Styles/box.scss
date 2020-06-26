@@ -145,4 +145,29 @@
       width: 50%;
     }
   }
+  .footer {
+    position: absolute;
+    width: 100%;
+    background: url("/assets/images/bg/bg_blue01.png");
+    bottom: 0;
+    color: white;
+    .layer {
+      padding: 15px;
+
+      > div {
+        display: inline;
+        vertical-align: middle;
+      }
+      .title {
+        a {
+          color: white;
+        }
+        font-size: 14px;
+      }
+      .author {
+        margin-left: 15px;
+        font-size: 11px;
+      }
+    }
+  }
 }

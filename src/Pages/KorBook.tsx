@@ -3,10 +3,11 @@ import NavCategory from "Components/NavCategory";
 import { IMainCategoryId } from "Interfaces/ICategory";
 import CategoryEventSlider from "Components/CategoryEventSlider";
 import { bookKorbookEvents } from "Core/data";
-import { korbookSimpleEvent } from "Core/events/data";
+import { korbookSimpleEvent, korbookHaveSliderEvent } from "Core/events/data";
 import Welcome2 from "View/Containers/Welcomes/Welcome2";
 import BoxNormal from "View/Containers/Boxes/BoxNormal";
 import { title } from "process";
+import Slider3DController from "View/Containers/Slider/Slider3DController";
 
 const KorBook = () => {
   const [categoryId] = useState<IMainCategoryId>("korbook");
@@ -30,9 +31,7 @@ const KorBook = () => {
             <Welcome2 eventObj={korbookSimpleEvent} />
           </div>
           <div className="wapper-content">
-            <BoxNormal eventObj={{ title: "a", id: "a", href: "/" }}>
-              내용 내용이 길다 내용이 많이길다 길다길다맨
-            </BoxNormal>
+            <Slider3DController obj={korbookHaveSliderEvent} />
           </div>
         </div>
       </div>

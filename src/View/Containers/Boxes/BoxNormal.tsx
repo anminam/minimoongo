@@ -17,7 +17,7 @@ const BoxNormal = ({ children, eventObj }: IBoxNormal) => {
   const [href] = useState<string>(eventObj.href || "/");
 
   return (
-    <div className="box box-normal left-title container_lg">
+    <div className="box box-normal left-title">
       <h3 className="box__title">
         <a href={href}>{title}</a>
       </h3>
