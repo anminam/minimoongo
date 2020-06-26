@@ -16,6 +16,6 @@ const obj = korbookHaveSliderEvent.list[0];
 
 export const Main = () => {
   return CustomProvider(() => {
-    return <BookCardEvent {...obj} />;
+    return <BookCardEvent obj={obj} />;
   });
 };

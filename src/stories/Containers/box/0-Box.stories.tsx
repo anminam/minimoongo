@@ -5,11 +5,11 @@ import { event1, eventPicks } from "Core/events/data";
 import BoxWelcomePicks from "View/Containers/Boxes/BoxWelcomePicks";
 
 export default {
-  title: "containers/Box",
+  title: "containers/box/box",
   component: BoxWelcome1,
 };
 
-export const normarBox = () => {
+export const normalBox = () => {
   return <BoxWelcome1 eventObj={event1} />;
 };
 export const picksBox = () => {
