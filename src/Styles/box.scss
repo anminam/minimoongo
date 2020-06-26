@@ -33,7 +33,10 @@
 .box {
   $padding-height: 10px;
 
-  margin-top: 40px;
+  & + div {
+    margin-top: 40px;
+  }
+
   position: relative;
   height: 346px;
   overflow: hidden;
@@ -106,5 +109,40 @@
   .title a p {
     color: #2ac557;
     display: inline-block;
+  }
+}
+
+.box-normal {
+  $padding-height: 10px;
+
+  & + .box-normal {
+    margin-top: 40px;
+  }
+  position: relative;
+  height: 346px;
+  overflow: hidden;
+
+  .box__title {
+    padding-top: $padding-height;
+    margin-right: 10px;
+    float: left;
+
+    a {
+      @include box-title();
+    }
+  }
+  .box__contents {
+    // position: relative;
+    position: absolute;
+    top: 40px;
+    width: 100%;
+  }
+
+  .left-right {
+    overflow: hidden;
+    > div {
+      float: left;
+      width: 50%;
+    }
   }
 }
