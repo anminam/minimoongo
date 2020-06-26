@@ -8,6 +8,7 @@ import { mini } from "Core/Mini";
 
 interface ISlider3D {
   list: ILink[];
+  onSelectedItemChanged?: (index: number) => void;
 }
 
 interface ISlideItem {
@@ -33,10 +34,11 @@ const SlideItem = styled.li`
   }
 `;
 
-const Slider3D = ({ list }: ISlider3D) => {
+const Slider3D = ({ list, onSelectedItemChanged }: ISlider3D) => {
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
   const handleItemClick = ({ index }: { index: number }) => {
     setSelectedIndex(index);
+    onSelectedItemChanged && onSelectedItemChanged(index);
   };
   return (
     <div className="slider3d">

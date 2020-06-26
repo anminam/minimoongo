@@ -5,6 +5,7 @@ export interface IEventListItem {
   id: string;
   displayName: string;
   imagePath?: string;
+  href?: string;
   list: ILink[];
 }
 

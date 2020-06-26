@@ -116,7 +116,7 @@ export const korbookSimpleEvent: IEventListItem = {
 
 export const korbookHaveSliderEvent: IEventListItem = {
   id: "korbookHaveSliderEvent",
-  displayName: "a",
+  displayName: "오늘의 책",
   imagePath: "",
   list: [
     {
