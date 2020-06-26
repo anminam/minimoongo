@@ -25,6 +25,12 @@
                 transform: rotateY(-27deg) skew(0deg, 5deg) translateX(-6px) translateY(5px); // transform: skew(0deg, 5deg);
             }
 
+            &.not_open {
+                &:hover {
+                    transform: none;
+                }
+            }
+
         }
     }
 }

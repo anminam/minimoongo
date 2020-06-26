@@ -78,4 +78,24 @@ export class Utils {
       korDay,
     };
   };
+
+  /**
+   * 기준점 대비 현재 인덱스 갯수 가져오기
+   * @param max 최대 Length
+   * @param selectIndex 기준점
+   * @param index 현재 인덱스
+   */
+  public static nextNumberCount = (
+    max: number,
+    selectIndex: number,
+    index: number
+  ) => {
+    let count = 0;
+    while (selectIndex !== index) {
+      count++;
+      selectIndex = selectIndex === max - 1 ? 0 : selectIndex + 1;
+    }
+
+    return count;
+  };
 }
