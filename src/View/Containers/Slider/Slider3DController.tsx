@@ -35,7 +35,10 @@ const Slider3DController = ({ obj }: ISlider3DController) => {
             />
           </div>
           <div className="right">
-            <Slider list={list[selectedIndex].subImageList as ILink[]} />
+            <Slider
+              list={list[selectedIndex].subImageList as ILink[]}
+              height={"200px"}
+            />
           </div>
         </div>
         <ControllFooter

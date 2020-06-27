@@ -3,13 +3,21 @@ import { ILink } from "Interfaces/ILink";
 
 interface ISlider {
   list: ILink[];
+  imagePath?: string;
   onNextItem?: () => void;
   onPrevItem?: () => void;
   onHandleColor?: (color: string | undefined) => void;
+  height?: string;
 }
 
-const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
-  const imgPath = "assets/events/welcomes/welcome1/images/";
+const Slider = ({
+  list,
+  imagePath = "",
+  onNextItem,
+  onPrevItem,
+  onHandleColor,
+  height,
+}: ISlider) => {
   // const [onItem, setOnItem] = useState<ILink | null>();
   const [viewIndex, setViewIndex] = useState<number>(0);
   const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(false);
@@ -79,11 +87,16 @@ const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
     []
   );
 
+  const mainStyle = {
+    height,
+  };
+
   return (
     <div
       className="slider"
       onMouseOver={handleViewMouseOver}
       onMouseLeave={handleViewMouseLeave}
+      style={mainStyle}
     >
       <div className="view-container" style={{ width: 690 * list.length }}>
         <ul style={{ marginLeft: -(690 * viewIndex) }}>
@@ -93,7 +106,7 @@ const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
                 <li key={index}>
                   {subItem.src && (
                     <img
-                      src={imgPath + subItem.src}
+                      src={imagePath + subItem.src}
                       alt={subItem.displayName}
                     />
                   )}
