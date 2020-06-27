@@ -5,15 +5,18 @@ import { Link } from "react-router-dom";
 
 interface IBookCardEvent {
   obj: ILink;
-  isNotOpen?: boolean;
+  isNotOpen?: boolean; // style 옵션 책이 열리는 모션
+  isLink?: boolean; // 링크 이벤트여부
 }
-const BookCardEvent = ({ obj, isNotOpen }: IBookCardEvent) => {
+const BookCardEvent = ({ obj, isNotOpen, isLink = true }: IBookCardEvent) => {
   const { id, src, path, displayName } = obj;
 
   const link = Utils.getLinkOfProduct(id);
 
   const handleCardClick = (event: React.MouseEvent<HTMLDivElement>) => {
-    window.location.href = link;
+    if (isLink) {
+      window.location.href = link;
+    }
   };
 
   const imgPath = `${path || ""}${src}`;
@@ -21,7 +24,7 @@ const BookCardEvent = ({ obj, isNotOpen }: IBookCardEvent) => {
   return (
     <div className="event-book-card" onClick={handleCardClick}>
       <div className="event-book-card__cover">
-        <Link to={path || "/"}>
+        <Link to={path || "#"}>
           <img
             src={imgPath}
             alt={displayName}

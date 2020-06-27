@@ -8,5 +8,5 @@ export interface ILink {
   src?: string;
   color?: string;
   path?: string;
-  subImageList?: ISubImageList[];
+  subImageList?: ILink[];
 }

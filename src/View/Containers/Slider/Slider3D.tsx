@@ -57,7 +57,11 @@ const Slider3D = ({ list, onSelectedItemChanged }: ISlider3D) => {
                   className="item"
                   onClick={() => handleItemClick({ index })}
                 >
-                  <BookCardEvent obj={item} isNotOpen={!isSelected} />
+                  <BookCardEvent
+                    obj={item}
+                    isNotOpen={!isSelected}
+                    isLink={false}
+                  />
                 </SlideItem>
               );
             })}

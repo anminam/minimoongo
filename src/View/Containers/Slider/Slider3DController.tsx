@@ -1,13 +1,10 @@
 import React, { useState } from "react";
-import { IEventPicks, IEventListItem } from "Interfaces/IEventList";
-import { ILink } from "Interfaces/ILink";
-import BookCardEvent from "../Cards/BookCardEvent";
-import styled from "styled-components";
+import { IEventListItem } from "Interfaces/IEventList";
 import _ from "lodash";
-import { mini } from "Core/Mini";
 import Slider3D from "./Slider3D";
-import { korbookHaveSliderEvent } from "Core/events/data";
 import BoxNormal from "../Boxes/BoxNormal";
+import Slider from "Components/Slider";
+import { ILink } from "Interfaces/ILink";
 
 interface ISlider3DController {
   obj: IEventListItem;
@@ -25,6 +22,8 @@ const Slider3DController = ({ obj }: ISlider3DController) => {
     setSelectedIndex(index);
   };
 
+  console.log(list[selectedIndex].subImageList);
+
   return (
     <div className="slider3d-controller">
       <BoxNormal eventObj={{ title: displayName, id: id, href: href }}>
@@ -35,24 +34,44 @@ const Slider3DController = ({ obj }: ISlider3DController) => {
               onSelectedItemChanged={handleSelectedItemChanged}
             />
           </div>
-          <div className="right">asdfasdf</div>
-        </div>
-        <div className="footer">
-          <div className="layer">
-            <div className="title">
-              <a
-                href="http://www.kyobobook.co.kr/product/detailViewKor.laf?mallGb=KOR&amp;ejkGb=KOR&amp;barcode=9791189809256"
-                title="1950"
-              >
-                1950
-              </a>
-            </div>
-            <div className="author">
-              존 리치 <span className="line">|</span> 서울셀렉션
-            </div>
+          <div className="right">
+            <Slider list={list[selectedIndex].subImageList as ILink[]} />
           </div>
         </div>
+        <ControllFooter
+          href={list[selectedIndex].href}
+          title={list[selectedIndex].displayName}
+          // author={}
+          // company={""}
+        />
       </BoxNormal>
+    </div>
+  );
+};
+
+const ControllFooter = ({
+  href,
+  title,
+  author = "무제",
+  company = "미니컴퍼니",
+}: {
+  href: string;
+  title: string;
+  author?: string;
+  company?: string;
+}): JSX.Element => {
+  return (
+    <div className="footer">
+      <div className="layer">
+        <div className="title">
+          <a href={href} title={title}>
+            {title}
+          </a>
+        </div>
+        <div className="author">
+          {author} <span className="line">|</span> {company}
+        </div>
+      </div>
     </div>
   );
 };

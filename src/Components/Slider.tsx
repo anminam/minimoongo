@@ -88,9 +88,9 @@ const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
       <div className="view-container" style={{ width: 690 * list.length }}>
         <ul style={{ marginLeft: -(690 * viewIndex) }}>
           {list &&
-            list.map((subItem) => {
+            list.map((subItem, index) => {
               return (
-                <li key={subItem.id}>
+                <li key={index}>
                   {subItem.src && (
                     <img
                       src={imgPath + subItem.src}
@@ -111,7 +111,7 @@ const Slider = ({ list, onNextItem, onPrevItem, onHandleColor }: ISlider) => {
               list.map((subItem, index) => {
                 return (
                   <li
-                    key={subItem.id}
+                    key={index}
                     id={subItem.id}
                     className={index === viewIndex ? "on" : ""}
                     onMouseOver={handleMouseOver}

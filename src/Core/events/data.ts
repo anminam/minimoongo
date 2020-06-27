@@ -126,62 +126,107 @@ export const korbookHaveSliderEvent: IEventListItem = {
       displayName: "언니, 나랑 결혼할래요?",
       subImageList: [
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97911969975401.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97911969975402.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97911969975403.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97911969975404.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97911969975405.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97911969975406.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97911969975407.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97911969975408.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97911969975409.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/979119699754010.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/979119699754011.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/979119699754012.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/979119699754013.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/979119699754014.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/979119699754015.jpg",
         },
@@ -196,42 +241,72 @@ export const korbookHaveSliderEvent: IEventListItem = {
       displayName: "쏘팟의 하나만 빼고 다 먹는 다이어트",
       subImageList: [
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9788950988845_01.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9788950988845_02.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9788950988845_03.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9788950988845_04.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9788950988845_05.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9788950988845_06.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9788950988845_07.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9788950988845_08.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9788950988845_09.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9788950988845_10.jpg",
         },
@@ -246,42 +321,72 @@ export const korbookHaveSliderEvent: IEventListItem = {
       displayName: "1950",
       subImageList: [
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791189809256_01.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791189809256_02.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791189809256_03.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791189809256_04.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791189809256_05.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791189809256_06.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791189809256_07.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791189809256_08.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791189809256_09.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791189809256_10.jpg",
         },
@@ -297,42 +402,72 @@ export const korbookHaveSliderEvent: IEventListItem = {
         "철학 VS 실천(강신주의 역사철학 정치철학 1)(양장본 HardCover)",
       subImageList: [
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791190422345_01.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791190422345_02.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791190422345_03.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791190422345_04.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791190422345_05.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791190422345_06.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791190422345_07.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791190422345_08.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791190422345_09.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/9791190422345_10.jpg",
         },
@@ -349,42 +484,72 @@ export const korbookHaveSliderEvent: IEventListItem = {
       displayName: "폭력의 위상학(양장본 HardCover)",
       subImageList: [
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97889349954871.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97889349954872.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97889349954873.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97889349954874.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97889349954875.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97889349954876.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97889349954877.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97889349954878.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/97889349954879.jpg",
         },
         {
+          id: "02",
+          displayName: "02",
+          href: "/",
           src:
             "http://image.kyobobook.co.kr/images/cardnews/978893499548710.jpg",
         },
