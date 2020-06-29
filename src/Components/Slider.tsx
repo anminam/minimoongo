@@ -38,13 +38,13 @@ const Slider = ({
         onHandleColor(list[index]?.color);
       }
     },
-    [list, onHandleColor]
+    [list]
   );
 
   useEffect(() => {
     // setOnItem(list[0]);
     changeItem(0);
-  }, [list]);
+  }, [changeItem]);
 
   const handleMouseOver = (
     event: React.MouseEvent<HTMLLIElement, MouseEvent>

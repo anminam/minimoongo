@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { ILink } from "Interfaces/ILink";
 import BookCardEvent from "../Cards/BookCardEvent";
 import styled from "styled-components";
-import _ from "lodash";
 import { mini } from "Core/Mini";
 import SliderDots from "View/Components/SliderDots";
 

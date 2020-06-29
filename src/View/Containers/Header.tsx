@@ -1,9 +1,8 @@
-import React, { useEffect, useRef, useState } from "react";
+import React from "react";
 import HeaderForm from "./HeaderForm";
 import HeaderLogo from "./HeaderLogo";
 import HeaderNavBar from "./HeaderNavBar";
 import HeaderTopBanner from "View/Components/Events/TopBanner";
-import useSticky from "Core/Hooks/useSticky";
 
 const Header = () => {
   return (

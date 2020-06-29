@@ -5,8 +5,6 @@ import CategoryEventSlider from "Components/CategoryEventSlider";
 import { bookKorbookEvents } from "Core/data";
 import { korbookSimpleEvent, korbookHaveSliderEvent } from "Core/events/data";
 import Welcome2 from "View/Containers/Welcomes/Welcome2";
-import BoxNormal from "View/Containers/Boxes/BoxNormal";
-import { title } from "process";
 import Slider3DController from "View/Containers/Slider/Slider3DController";
 
 const KorBook = () => {
