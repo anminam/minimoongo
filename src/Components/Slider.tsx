@@ -46,9 +46,7 @@ const Slider = ({
     changeItem(0);
   }, [changeItem]);
 
-  const handleMouseOver = (
-    event: React.MouseEvent<HTMLLIElement, MouseEvent>
-  ) => {
+  const handleDotMouseOver = (id: string) => {
     // const target = event.target as Element;
     // const { id } = target;
     // const obj = list?.find((item, index) => {
@@ -133,7 +131,7 @@ const Slider = ({
         <SliderDots
           length={list.length}
           index={viewIndex}
-          onMouseOver={handleMouseOver}
+          onMouseOver={handleDotMouseOver}
           isBottom={isBottom}
         />
       )}

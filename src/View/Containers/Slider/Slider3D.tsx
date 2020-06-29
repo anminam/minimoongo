@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { ILink } from "Interfaces/ILink";
 import BookCardEvent from "../Cards/BookCardEvent";
 import styled from "styled-components";
@@ -7,6 +7,7 @@ import SliderDots from "View/Components/SliderDots";
 
 interface ISlider3D {
   list: ILink[];
+  initIndex?: number;
   onSelectedItemChanged?: (index: number) => void;
 }
 
@@ -33,12 +34,28 @@ const SlideItem = styled.li`
   }
 `;
 
-const Slider3D = ({ list, onSelectedItemChanged }: ISlider3D) => {
-  const [selectedIndex, setSelectedIndex] = useState<number>(0);
+const Slider3D = ({
+  list,
+  initIndex = 0,
+  onSelectedItemChanged,
+}: ISlider3D) => {
+  const [selectedIndex, setSelectedIndex] = useState<number>(initIndex);
   const handleItemClick = ({ index }: { index: number }) => {
     setSelectedIndex(index);
-    onSelectedItemChanged && onSelectedItemChanged(index);
+    if (onSelectedItemChanged) {
+      onSelectedItemChanged(index);
+    }
   };
+
+  const handleDotMouseOver = (index: string) => {
+    if (onSelectedItemChanged) {
+      onSelectedItemChanged(Number(index));
+    }
+  };
+
+  useEffect(() => {
+    setSelectedIndex(initIndex);
+  }, [initIndex]);
   return (
     <div className="slider3d">
       <div className="container">
@@ -66,7 +83,11 @@ const Slider3D = ({ list, onSelectedItemChanged }: ISlider3D) => {
             })}
         </ul>
       </div>
-      <SliderDots length={list.length} index={selectedIndex} />
+      <SliderDots
+        length={list.length}
+        index={selectedIndex}
+        onMouseOver={handleDotMouseOver}
+      />
     </div>
   );
 };

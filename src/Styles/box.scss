@@ -137,6 +137,7 @@
     position: absolute;
     top: 40px;
     width: 100%;
+    border: 1px solid #8885a0;
   }
 
   .left-right {
@@ -147,6 +148,10 @@
     >div {
       float: left;
       width: 50%;
+    }
+
+    .right {
+      border-left: 1px solid #8885a0;
     }
   }
 

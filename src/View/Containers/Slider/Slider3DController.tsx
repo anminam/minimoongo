@@ -21,8 +21,6 @@ const Slider3DController = ({ obj }: ISlider3DController) => {
     setSelectedIndex(index);
   };
 
-  console.log(list[selectedIndex].subImageList);
-
   return (
     <div className="slider3d-controller">
       <BoxNormal eventObj={{ title: displayName, id: id, href: href }}>
@@ -30,6 +28,7 @@ const Slider3DController = ({ obj }: ISlider3DController) => {
           <div className="left w60">
             <Slider3D
               list={list}
+              initIndex={selectedIndex}
               onSelectedItemChanged={handleSelectedItemChanged}
             />
           </div>

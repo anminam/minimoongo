@@ -4,7 +4,7 @@ import "Styles/index.scss";
 interface IDots {
   length: number;
   index: number;
-  onMouseOver?: (event: React.MouseEvent<HTMLLIElement, MouseEvent>) => void;
+  onMouseOver?: (id: string) => void;
   isBottom?: boolean;
 }
 
@@ -17,12 +17,13 @@ const SliderDots = ({ length, index, onMouseOver, isBottom }: IDots) => {
           {length &&
             length > 1 &&
             [...Array(length)].map((number, i) => {
+              const id = i.toString();
               return (
                 <li
                   key={i}
-                  id={i.toString()}
+                  id={id}
                   className={i === index ? "on" : ""}
-                  onMouseOver={onMouseOver}
+                  onMouseOver={() => onMouseOver && onMouseOver(id)}
                 >
                   1
                 </li>
