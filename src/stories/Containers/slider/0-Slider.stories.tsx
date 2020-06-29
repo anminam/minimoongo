@@ -11,6 +11,6 @@ export default {
 
 export const Main = () => {
   return CustomProvider(() => {
-    return <Slider list={mainEventList[1].list} />;
+    return <Slider list={mainEventList[1].list} isDot={true} />;
   });
 };

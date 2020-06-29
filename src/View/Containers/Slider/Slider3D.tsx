@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import { IEventPicks } from "Interfaces/IEventList";
 import { ILink } from "Interfaces/ILink";
 import BookCardEvent from "../Cards/BookCardEvent";
 import styled from "styled-components";
 import _ from "lodash";
 import { mini } from "Core/Mini";
+import SliderDots from "View/Components/SliderDots";
 
 interface ISlider3D {
   list: ILink[];
@@ -67,6 +67,7 @@ const Slider3D = ({ list, onSelectedItemChanged }: ISlider3D) => {
             })}
         </ul>
       </div>
+      <SliderDots length={list.length} index={selectedIndex} />
     </div>
   );
 };

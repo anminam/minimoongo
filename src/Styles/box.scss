@@ -33,7 +33,7 @@
 .box {
   $padding-height: 10px;
 
-  & + div {
+  &+div {
     margin-top: 40px;
   }
 
@@ -102,8 +102,7 @@
   }
 }
 
-.box-welcome1 {
-}
+.box-welcome1 {}
 
 .box-welcome-picks {
   .title a p {
@@ -115,9 +114,10 @@
 .box-normal {
   $padding-height: 10px;
 
-  & + .box-normal {
+  &+.box-normal {
     margin-top: 40px;
   }
+
   position: relative;
   height: 346px;
   overflow: hidden;
@@ -131,6 +131,7 @@
       @include box-title();
     }
   }
+
   .box__contents {
     // position: relative;
     position: absolute;
@@ -140,31 +141,38 @@
 
   .left-right {
     overflow: hidden;
-    margin-bottom: 70px;
-    > div {
+    display: flex;
+    align-items: center;
+
+    >div {
       float: left;
       width: 50%;
     }
   }
+
   .footer {
     position: absolute;
     width: 100%;
     background: url("/assets/images/bg/bg_blue01.png");
     bottom: 0;
     color: white;
+
     .layer {
       padding: 15px;
 
-      > div {
+      >div {
         display: inline;
         vertical-align: middle;
       }
+
       .title {
         a {
           color: white;
         }
+
         font-size: 14px;
       }
+
       .author {
         margin-left: 15px;
         font-size: 11px;

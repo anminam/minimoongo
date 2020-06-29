@@ -28,17 +28,21 @@ const Slider3DController = ({ obj }: ISlider3DController) => {
     <div className="slider3d-controller">
       <BoxNormal eventObj={{ title: displayName, id: id, href: href }}>
         <div className="left-right">
-          <div className="left">
+          <div className="left w60">
             <Slider3D
               list={list}
               onSelectedItemChanged={handleSelectedItemChanged}
             />
           </div>
-          <div className="right">
-            <Slider
-              list={list[selectedIndex].subImageList as ILink[]}
-              height={"200px"}
-            />
+          <div className="right w40">
+            <div className="wapper-slider" style={{ width: "300px" }}>
+              <Slider
+                list={list[selectedIndex].subImageList as ILink[]}
+                height={280}
+                width={320}
+                isDot={false}
+              />
+            </div>
           </div>
         </div>
         <ControllFooter

@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from "react";
 import { ILink } from "Interfaces/ILink";
+import SliderDots from "View/Components/SliderDots";
 
 interface ISlider {
   list: ILink[];
@@ -7,7 +8,10 @@ interface ISlider {
   onNextItem?: () => void;
   onPrevItem?: () => void;
   onHandleColor?: (color: string | undefined) => void;
-  height?: string;
+  height?: number;
+  width?: number;
+  isDot?: boolean;
+  isBottom?: boolean;
 }
 
 const Slider = ({
@@ -17,10 +21,15 @@ const Slider = ({
   onPrevItem,
   onHandleColor,
   height,
+  width,
+  isDot = false,
+  isBottom = false,
 }: ISlider) => {
   // const [onItem, setOnItem] = useState<ILink | null>();
   const [viewIndex, setViewIndex] = useState<number>(0);
   const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(false);
+
+  const sWidth = width || 690;
 
   const changeItem = useCallback(
     (index: number) => {
@@ -91,6 +100,10 @@ const Slider = ({
     height,
   };
 
+  const slideItemStyle = {
+    width: sWidth,
+  };
+
   return (
     <div
       className="slider"
@@ -98,12 +111,12 @@ const Slider = ({
       onMouseLeave={handleViewMouseLeave}
       style={mainStyle}
     >
-      <div className="view-container" style={{ width: 690 * list.length }}>
-        <ul style={{ marginLeft: -(690 * viewIndex) }}>
+      <div className="view-container" style={{ width: sWidth * list.length }}>
+        <ul style={{ marginLeft: -(sWidth * viewIndex) }}>
           {list &&
             list.map((subItem, index) => {
               return (
-                <li key={index}>
+                <li key={index} style={slideItemStyle}>
                   {subItem.src && (
                     <img
                       src={imagePath + subItem.src}
@@ -116,26 +129,14 @@ const Slider = ({
             })}
         </ul>
       </div>
-      <div className="dots">
-        <div className="dots-wapper">
-          <ul className="bullet">
-            {list &&
-              list.length > 1 &&
-              list.map((subItem, index) => {
-                return (
-                  <li
-                    key={index}
-                    id={subItem.id}
-                    className={index === viewIndex ? "on" : ""}
-                    onMouseOver={handleMouseOver}
-                  >
-                    {subItem.displayName}
-                  </li>
-                );
-              })}
-          </ul>
-        </div>
-      </div>
+      {isDot && (
+        <SliderDots
+          length={list.length}
+          index={viewIndex}
+          onMouseOver={handleMouseOver}
+          isBottom={isBottom}
+        />
+      )}
       <button
         className={`prev ${
           !isVisibleButton ? "invisible" : ""

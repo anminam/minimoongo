@@ -56,6 +56,8 @@ const WelcomeMainEvent = ({ list, onChangeColor }: IWelcomeMainEvent) => {
     <div className="welcome-main-event">
       <Slider
         list={item.list}
+        isDot={true}
+        isBottom={true}
         imagePath={"assets/events/welcomes/welcome1/images/"}
         onNextItem={handleNextItem}
         onPrevItem={handlePrevItem}

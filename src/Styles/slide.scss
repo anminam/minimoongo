@@ -7,27 +7,12 @@
   height: 330px;
   position: relative;
 
-  .dots {
-    position: absolute;
-    bottom: 10px;
-    width: 100%;
-    text-align: center;
-
-    .dots-wapper {
-      display: inline-block;
-    }
-
-    ul {
-      margin: 0 auto;
-    }
-  }
 
   .view-container {
     height: 100%;
 
     ul {
       transition: 0.6s;
-      height: 90%;
       display: flex;
     }
 
@@ -49,27 +34,7 @@
     }
   }
 
-  ul.bullet {
-    $dot-size: 12px;
-    $dot-color: gray;
-    display: flex;
 
-    li {
-      margin: 0 3px;
-      content: "";
-      font-size: 0;
-      width: $dot-size;
-      height: $dot-size;
-      border: 2px solid $dot-color;
-      border-radius: 50%;
-      cursor: pointer;
-
-      &:hover,
-      &.on {
-        background-color: $dot-color;
-      }
-    }
-  }
 
   button {
     $button-height: 50px;
@@ -89,6 +54,45 @@
 
     &.invisible {
       opacity: 0;
+    }
+  }
+}
+
+.slider-dots {
+
+  &.bottom {
+    position: absolute;
+    bottom: 10px;
+  }
+
+  margin: 10px 0;
+  width: 100%;
+  text-align: center;
+
+  &__container {
+    display: inline-block;
+  }
+
+  ul.bullet {
+    $dot-size: 12px;
+    $dot-color: gray;
+    display: flex;
+    margin: 0 auto;
+
+    li {
+      margin: 0 3px;
+      content: "";
+      font-size: 0;
+      width: $dot-size;
+      height: $dot-size;
+      border: 2px solid $dot-color;
+      border-radius: 50%;
+      cursor: pointer;
+
+      &:hover,
+      &.on {
+        background-color: $dot-color;
+      }
     }
   }
 }

@@ -1,4 +1,6 @@
 .slider3d {
+  position: relative;
+
   .container {
     min-width: 400px;
     height: 150px;
@@ -42,4 +44,5 @@
     //   transform: translate3d(-50%, 0, -100px);
     // }
   }
+
 }
