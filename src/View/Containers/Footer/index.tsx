@@ -1,5 +1,6 @@
 import React from "react";
 import Logo from "Components/Logo";
+import { Link } from "react-router-dom";
 
 const Footer = () => {
   return (
@@ -41,30 +42,29 @@ const Footer = () => {
             <Logo />
           </div>
           <address>
-            ㈜ 미니문고 &nbsp; 서울시 은평구 은평터널로 1004 &nbsp; 대표이사 :
+            서울시 은평구 은평터널로 1004 &nbsp; ㈜ 미니문고 &nbsp; 대표이사 :
             안미남
-            <br />
-            사업자등록번호 : 를 못받았습니다
-            <br />
+          </address>
+          <div className="company">
+            <p>사업자등록번호 : 를 못받았습니다</p>
             <strong className="big">
               대표전화 : 는 없습니다 (발신자 부담전화)
-            </strong>{" "}
+            </strong>
             &nbsp; 팩스 : 도 없습니다 (지역번호공통)
-            <br />
-            서울특별시 통신판매업신고번호 : 제 없습니다 호 ▶
-            <a
-              href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1028111670"
-              target="blank"
-              title="새 창 열림"
-            >
-              사업자정보확인
-            </a>
-            <br />
-            <div className="copy">
-              COPYRIGHT(C) <strong>MINI BOOK CENTRE</strong> ALL RIGHTS
-              RESERVED.
-            </div>
-          </address>
+            <p>
+              서울특별시 통신판매업신고번호 : 제 없습니다 호 ▶
+              <a
+                href="http://www.ftc.go.kr/info/bizinfo/communicationViewPopup.jsp?wrkr_no=1028111670"
+                target="blank"
+                title="새 창 열림"
+              >
+                사업자정보확인
+              </a>
+            </p>
+          </div>
+          <p className="copyright">
+            COPYRIGHT(C) <strong>MINI BOOK CENTRE</strong> ALL RIGHTS RESERVED.
+          </p>
           <div className="lg_area">
             <p>
               LG U+ 구매안전서비스 &nbsp; ▶
@@ -81,13 +81,7 @@ const Footer = () => {
             </p>
           </div>
           <div className="mark_isms">
-            <a
-              href="/#"
-              // onclick="window.open(this.href,'mark_isms','width=600,height=855');return false;"
-            >
-              정보보호관리체계
-              <br /> ISMS 인증획득
-            </a>
+            <Link to="/">정보보호관리체계 ISMS 인증획득하지 못함</Link>
           </div>
         </div>
       </div>

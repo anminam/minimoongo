@@ -13,13 +13,15 @@ interface ISlider3DController {
  * 3D slider 를 사용하기위한 컨트롤러
  * @param param0
  */
-const Slider3DController = ({ obj }: ISlider3DController) => {
+const Slider3DController = React.memo(({ obj }: ISlider3DController) => {
   const { list, displayName, id, href = "/" } = obj;
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   const handleSelectedItemChanged = (index: number) => {
     setSelectedIndex(index);
   };
+
+  console.log(obj);
 
   return (
     <div className="slider3d-controller">
@@ -52,7 +54,7 @@ const Slider3DController = ({ obj }: ISlider3DController) => {
       </BoxNormal>
     </div>
   );
-};
+});
 
 const ControllFooter = ({
   href,

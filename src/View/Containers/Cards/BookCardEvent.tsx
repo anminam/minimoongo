@@ -24,13 +24,13 @@ const BookCardEvent = ({ obj, isNotOpen, isLink = true }: IBookCardEvent) => {
   return (
     <div className="event-book-card" onClick={handleCardClick}>
       <div className="event-book-card__cover">
-        <Link to={path || "#"}>
-          <img
-            src={imgPath}
-            alt={displayName}
-            className={`${isNotOpen === true ? "not_open" : ""}`}
-          />
-        </Link>
+        {/* <Link to={path || "#"}> */}
+        <img
+          src={imgPath}
+          alt={displayName}
+          className={`${isNotOpen === true ? "not_open" : ""}`}
+        />
+        {/* </Link> */}
       </div>
     </div>
   );
