@@ -4,22 +4,38 @@
     // 자세한 내용을 보려면 https://go.microsoft.com/fwlink/?linkid=830387을(를) 방문하세요.
     "version": "0.2.0",
     "configurations": [{
+            "name": "크롤링",
+            "program": "${workspaceFolder}/craw/main.js",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**"],
+            "type": "pwa-node"
+        },
+        {
+            "name": "크롤링셀레니움",
+            "program": "${workspaceFolder}/craw/mainSelenium.js",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**"],
+            "type": "pwa-node"
+        },
+        {
+            "name": "craw-nightmare",
+            "program": "${workspaceFolder}/craw/mainNightmare.js",
+            "request": "launch",
+            "skipFiles": ["<node_internals>/**"],
+            "type": "pwa-node"
+        },
+        {
             "name": "Launch Program",
             "program": "${workspaceFolder}/server/app.js",
             "request": "launch",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
+            "skipFiles": ["<node_internals>/**"],
             "type": "pwa-node"
         },
         {
             "type": "node",
             "name": "vscode-jest-tests",
             "request": "launch",
-            "args": [
-                "test",
-                "--runInBand"
-            ],
+            "args": ["test", "--runInBand"],
             "cwd": "${workspaceFolder}",
             "console": "integratedTerminal",
             "internalConsoleOptions": "neverOpen",
@@ -31,9 +47,7 @@
             "type": "node",
             "request": "launch",
             "name": "프로그램 시작",
-            "skipFiles": [
-                "<node_internals>/**"
-            ],
+            "skipFiles": ["<node_internals>/**"],
             "program": "${workspaceFolder}/start"
         }
     ]
