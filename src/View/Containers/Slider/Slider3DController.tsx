@@ -35,7 +35,7 @@ const Slider3DController = React.memo(({ obj }: ISlider3DController) => {
             />
           </div>
           <div className="right w40">
-            <div className="wapper-slider" style={{ width: "300px" }}>
+            <div className="wapper-slider" style={{ width: "307px" }}>
               <Slider
                 list={list[selectedIndex].subImageList as ILink[]}
                 height={280}

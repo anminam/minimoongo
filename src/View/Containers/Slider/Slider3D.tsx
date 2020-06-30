@@ -103,7 +103,7 @@ const get3DPosition = (
   let grade = 0;
 
   if (selectedIndex !== index) {
-    const BOUND_3D = [60, 0, 200];
+    const BOUND_3D = [80, 0, 200];
     const count = mini.utils.nextNumberCount(len, selectedIndex, index);
     const gradeCount = Math.floor(len / 2);
 
