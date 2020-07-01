@@ -1,26 +1,38 @@
 /* eslint-disable prettier/prettier */
 
-const cheerio = require("cheerio");
+const file = require('./file');
+const bestSeller = require('./bestSeller');
 
 
 const {
     Builder,
     By,
     Key,
-    until
+    until,
+    WebDriver,
+    Capabilities
 } = require('selenium-webdriver');
 const BASE_URL = "http://www.kyobobook.co.kr/"
 const BESTSELLER_URL = BASE_URL + "bestSellerNew/bestseller.laf";
 
-(async function example() {
-    let driver = await new Builder().forBrowser('chrome').build();
+// 숨기기
+const chromeCapablities = Capabilities.chrome();
+// const chromeOptions = {
+//     "args": ['--headless', '--no-sandbox']
+// }
+// // chromeCapablities.set('chromeOptions', chromeOptions);
+let driver;
+
+(async () => {
+    driver = new Builder().withCapabilities(chromeCapablities).build();
     try {
-        await driver.get(BESTSELLER_URL);
-        const el = await driver.findElement(By.className("list_type01"));
-        el.findElements('li').then(value => {
-            console.log(value);
-        })
+        const bestSellerList = await bestSeller(driver, BESTSELLER_URL);
+        file.save('fff', bestSellerList);
+
+    } catch (err) {
+        console.log(err);
+
     } finally {
-        await driver.quit();
+        // await driver.quit();
     }
 })();
