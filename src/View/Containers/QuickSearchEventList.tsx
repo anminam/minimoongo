@@ -1,6 +1,6 @@
 import React, { useState, MouseEvent } from "react";
 import { ILink } from "Interfaces/ILink";
-import Button from "Components/Button";
+import Button from "View/Components/Button";
 
 const dummy: ILink[] = [
   {

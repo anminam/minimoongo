@@ -1,5 +1,5 @@
 import React from "react";
-import TopBannerContainer from "Components/TopBannerContainer";
+import TopBannerContainer from "View/Components/TopBannerContainer";
 
 export default {
   title: "containers/TopEvent",

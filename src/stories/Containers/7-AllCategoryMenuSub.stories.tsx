@@ -1,5 +1,5 @@
 import React from "react";
-import AllCategoryMenuSub from "Components/AllCategoryMenuSub";
+import AllCategoryMenuSub from "View/Components/AllCategoryMenuSub";
 import { CustomProvider } from "CustomProvider";
 
 export default {

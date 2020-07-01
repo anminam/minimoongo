@@ -5,7 +5,7 @@ import Main from "../View/Containers/Main";
 
 import Header from "../View/Containers/Header";
 import { HashRouter as Router } from "react-router-dom";
-import TopBannerContainer from "Components/TopBannerContainer";
+import TopBannerContainer from "View/Components/TopBannerContainer";
 import Footer from "View/Containers/Footer";
 import TopInfoBar from "View/Containers/TopInfoBar";
 import { useDispatch } from "react-redux";

@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { IEventListItem } from "Interfaces/IEventList";
 import Slider3D from "./Slider3D";
 import BoxNormal from "../Boxes/BoxNormal";
-import Slider from "Components/Slider";
+import Slider from "View/Components/Slider";
 import { ILink } from "Interfaces/ILink";
 
 interface ISlider3DController {

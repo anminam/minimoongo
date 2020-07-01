@@ -1,5 +1,5 @@
 import React from "react";
-import Input1 from "Components/Input1";
+import Input1 from "View/Components/Input1";
 
 export default {
   title: "components/label",

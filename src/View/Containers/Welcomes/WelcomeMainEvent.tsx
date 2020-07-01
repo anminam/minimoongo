@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { IEventListItem } from "Interfaces/IEventList";
-import Slider from "Components/Slider";
+import Slider from "View/Components/Slider";
 import { Utils } from "Core/Utils";
 
 interface IWelcomeMainEvent {

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import NavCategory from "Components/NavCategory";
+import NavCategory from "View/Components/NavCategory";
 import { IMainCategoryId } from "Interfaces/ICategory";
 
 const OtherBook = () => {

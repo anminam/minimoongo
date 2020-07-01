@@ -1,8 +1,7 @@
 import React from "react";
-import AllCategoryMenu from "Components/AllCategoryMenu";
+import AllCategoryMenu from "View/Components/AllCategoryMenu";
 import { configureStore } from "Core/Store";
-import { HashRouter as Router } from "react-router-dom";
-import { CustomProvider, CustomProvider1 } from "CustomProvider";
+import { CustomProvider1 } from "CustomProvider";
 const { list } = configureStore().getState().nav;
 
 export default {

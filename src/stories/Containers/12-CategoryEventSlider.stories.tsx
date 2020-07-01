@@ -2,7 +2,7 @@ import React from "react";
 import "Styles/index.scss";
 import { CustomProvider } from "CustomProvider";
 import { mainEventList, bookKorbookEvents } from "Core/data";
-import CategoryEventSlider from "Components/CategoryEventSlider";
+import CategoryEventSlider from "View/Components/CategoryEventSlider";
 
 export default {
   title: "containers/CategoryEventSlider",

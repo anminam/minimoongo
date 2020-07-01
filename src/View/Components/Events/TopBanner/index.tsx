@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { bannerTop } from "Core/events/data";
-import Button from "Components/Button";
 import { ILink } from "Interfaces/ILink";
+import Button from "View/Components/Button";
 
 const HeaderTopBanner = () => {
   const imgPath = "assets/events/topbanners/images/";

@@ -1,7 +1,7 @@
 import React from "react";
 import "Styles/index.scss";
 import { CustomProvider } from "CustomProvider";
-import Slider from "Components/Slider";
+import Slider from "View/Components/Slider";
 import { mainEventList } from "Core/data";
 
 export default {

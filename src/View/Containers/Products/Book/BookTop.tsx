@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { Utils } from "Core/Utils";
-import Button from "Components/Button";
+import Button from "View/Components/Button";
 import { IDate } from "Interfaces/IDate";
 import InputAndButton from "View/Containers/InputAndButton";
 import BookBuyButtons from "View/Containers/BookBuyButtons";

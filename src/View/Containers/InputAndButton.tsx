@@ -1,9 +1,9 @@
 import React, { useCallback } from "react";
-import Input from "Components/Input";
-import Button from "Components/Button";
+import Input from "View/Components/Input";
 import { useSelector, useDispatch } from "react-redux";
 import { TRootState } from "Core/reducers";
 import { ProductActions } from "Core/product/actions";
+import Button from "View/Components/Button";
 
 const InputAndButton = () => {
   const lineHeight = "30px";
