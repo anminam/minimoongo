@@ -31,7 +31,7 @@ const BoxEvent = ({ eventObj, isBorder = false }: IBoxEvent) => {
   };
 
   return (
-    <div className="box box-welcome1 left-title container_lg">
+    <div className="box box-welcome1 left-title">
       <h3 className="title">
         <a href={href}>{title}</a>
       </h3>

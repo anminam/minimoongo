@@ -21,11 +21,14 @@ interface IHome {
 const Home = ({ list }: IHome) => {
   useEffect(() => {}, [list]);
   return (
-    <div>
+    <div className="page">
       <Welcome1 />
       <Welcome2 eventObj={mainWelcome2Event} isFull={true} />
-      <BoxEvent eventObj={mainTodayBookSliderEvent} isBorder={true} />
       <Welcome3 />
+      <div className="wapper-content container_lg">
+        <BoxEvent eventObj={mainTodayBookSliderEvent} isBorder={true} />
+      </div>
+
       <BoxWelcome1 eventObj={event1} />
       <BoxWelcomePicks eventObj={eventPicks} />
     </div>
