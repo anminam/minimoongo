@@ -1,14 +1,6 @@
 import { ILink } from "./ILink";
 import { IMainCategoryId } from "./ICategory";
 
-export interface IEventListItem {
-  id: string;
-  displayName: string;
-  imagePath?: string;
-  href?: string;
-  list: ILink[];
-}
-
 export interface IEvent1 {
   title: string;
   href: string;
@@ -24,6 +16,24 @@ export interface IEventPicks {
   likeAuthor: string;
   cicleOfReading: number;
   rankOfReading: number;
+}
+
+export interface IEventItem {}
+
+export interface IEvent {
+  id: string;
+  displayName: string;
+  href?: string;
+  list: IEventListItem[];
+}
+
+export interface IEventListItem {
+  id: string;
+  displayName: string;
+  src?: string;
+  imagePath?: string;
+  href?: string;
+  list: ILink[];
 }
 
 // export interface IPickItem {

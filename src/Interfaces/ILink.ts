@@ -4,7 +4,7 @@ interface ISubImageList {
 export interface ILink {
   id: string;
   displayName: string;
-  href: string;
+  href?: string;
   src?: string;
   color?: string;
   path?: string;

@@ -3,7 +3,7 @@ import NavCategory from "View/Components/NavCategory";
 import { IMainCategoryId } from "Interfaces/ICategory";
 import CategoryEventSlider from "View/Components/CategoryEventSlider";
 import { bookKorbookEvents } from "Core/data";
-import { korbookSimpleEvent, korbookHaveSliderEvent } from "Core/events/data";
+import { korbookSimpleEvent, korTodayBookSliderEvent } from "Core/events/data";
 import Welcome2 from "View/Containers/Welcomes/Welcome2";
 import Slider3DController from "View/Containers/Slider/Slider3DController";
 
@@ -29,7 +29,7 @@ const KorBook = () => {
             <Welcome2 eventObj={korbookSimpleEvent} />
           </div>
           <div className="wapper-content">
-            <Slider3DController obj={korbookHaveSliderEvent} />
+            <Slider3DController obj={korTodayBookSliderEvent} />
           </div>
         </div>
       </div>

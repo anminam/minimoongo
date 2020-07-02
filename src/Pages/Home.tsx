@@ -3,10 +3,17 @@ import Welcome1 from "View/Containers/Welcomes/Welcome1";
 import BoxWelcome1 from "View/Containers/Boxes/BoxWelcome1";
 import { connect } from "react-redux";
 import { IGoods } from "Interfaces/IGoods";
-import { event1, eventPicks, mainWelcome2Event } from "Core/events/data";
+import {
+  event1,
+  eventPicks,
+  mainWelcome2Event,
+  korTodayBookSliderEvent,
+  mainTodayBookSliderEvent,
+} from "Core/events/data";
 import BoxWelcomePicks from "View/Containers/Boxes/BoxWelcomePicks";
 import Welcome2 from "View/Containers/Welcomes/Welcome2";
 import Welcome3 from "View/Containers/Welcomes/Welcome3";
+import BoxEvent from "View/Containers/Boxes/BoxEvent";
 
 interface IHome {
   list: IGoods[];
@@ -17,6 +24,7 @@ const Home = ({ list }: IHome) => {
     <div>
       <Welcome1 />
       <Welcome2 eventObj={mainWelcome2Event} isFull={true} />
+      <BoxEvent eventObj={mainTodayBookSliderEvent} isBorder={true} />
       <Welcome3 />
       <BoxWelcome1 eventObj={event1} />
       <BoxWelcomePicks eventObj={eventPicks} />

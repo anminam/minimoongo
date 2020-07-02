@@ -8,6 +8,9 @@ const {
     WebDriver,
     Capabilities
 } = require('selenium-webdriver');
+const {
+    CRAW_BESTSELLER_PAGE
+} = require("../constant");
 let driver;
 
 /**
@@ -25,8 +28,10 @@ const getBestSellerList = async (d, url, addObj) => {
         // 가져오기
         const pagingUl = await driver.findElement(By.className("list_paging"));
         const pagingLis = await pagingUl.findElements(By.css("li"));
-        const pagingLen = pagingLis.length;
-        // const pagingLen = 1;
+        let pagingLen = pagingLis.length;
+        if (CRAW_BESTSELLER_PAGE) {
+            pagingLen = CRAW_BESTSELLER_PAGE;
+        }
 
         for (let i = 1; i <= pagingLen; i++) {
             console.log(`${i} 번째 크롤링 중`);

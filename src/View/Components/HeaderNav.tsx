@@ -17,9 +17,10 @@ const HeaderNav = ({ list }: IHeaderNav) => {
     <ul className="header__navbar__nav">
       {list &&
         navlist.map((item) => {
+          const href = item.href || "/";
           return (
             <li key={item.id}>
-              <NavLink to={item.href} activeStyle={activeStyle}>
+              <NavLink to={href} activeStyle={activeStyle}>
                 <span>{item.displayName}</span>
               </NavLink>
             </li>

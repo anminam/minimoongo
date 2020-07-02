@@ -23,33 +23,33 @@ const Slider3DController = React.memo(({ obj }: ISlider3DController) => {
 
   return (
     <div className="slider3d-controller">
-      {/* <BoxNormal eventObj={{ title: displayName, id: id, href: href }}> */}
-      <div className="left-right">
-        <div className="left">
-          <Slider3D
-            list={list}
-            initIndex={selectedIndex}
-            onSelectedItemChanged={handleSelectedItemChanged}
-          />
-        </div>
-        <div className="right">
-          <div className="wapper-slider" style={{ width: "360px" }}>
-            <Slider
-              list={list[selectedIndex].subImageList as ILink[]}
-              height={280}
-              width={360}
-              isDot={false}
+      <BoxNormal eventObj={{ title: displayName, id: id, href: href }}>
+        <div className="left-right">
+          <div className="left w60">
+            <Slider3D
+              list={list}
+              initIndex={selectedIndex}
+              onSelectedItemChanged={handleSelectedItemChanged}
             />
           </div>
+          <div className="right w40">
+            <div className="wapper-slider" style={{ width: "307px" }}>
+              <Slider
+                list={list[selectedIndex].subImageList as ILink[]}
+                height={280}
+                width={320}
+                isDot={false}
+              />
+            </div>
+          </div>
         </div>
-      </div>
-      <ControllFooter
-        href={list[selectedIndex].href || "/"}
-        title={list[selectedIndex].displayName}
-        // author={}
-        // company={""}
-      />
-      {/* </BoxNormal> */}
+        <ControllFooter
+          href={list[selectedIndex].href || "/"}
+          title={list[selectedIndex].displayName}
+          // author={}
+          // company={""}
+        />
+      </BoxNormal>
     </div>
   );
 });

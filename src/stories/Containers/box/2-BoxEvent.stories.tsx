@@ -7,16 +7,21 @@ import { CustomProvider } from "CustomProvider";
 import Slider3DController from "View/Containers/Slider/Slider3DController";
 
 export default {
-  title: "containers/box/boxnormal",
+  title: "containers/box/boxevent",
   component: BoxNormal,
 };
 
 export const main = () => {
-  return (
-    <BoxNormal eventObj={{ title: "a", id: "a", href: "/" }}>
-      내용 내용이 길다 내용이 많이길다 길다길다맨
-    </BoxNormal>
-  );
+  const event = korTodayBookSliderEvent;
+  return CustomProvider(() => {
+    return (
+      <BoxNormal
+        eventObj={{ title: event.displayName, id: event.id, href: event.href }}
+      >
+        <Slider3DController obj={korTodayBookSliderEvent.list[0]} />;
+      </BoxNormal>
+    );
+  });
 };
 export const slider3d = () => {
   const { displayName, id, href } = korTodayBookSliderEvent;

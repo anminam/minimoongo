@@ -1,13 +1,30 @@
 /* eslint-disable prettier/prettier */
-const BASE_URL = "http://www.kyobobook.co.kr/";
-const BESTSELLER_URL = BASE_URL + "bestSellerNew/bestseller.laf";
-const BESTSELLER_OTHER_URL = BASE_URL + "bestSellerNew/steadyseller.laf?mallGb=ENG";
 
-const FILE_FOLDER_BASE = './craw/files';
+const BASE_URL = "http://www.kyobobook.co.kr";
+const BESTSELLER_URL = BASE_URL + "/bestSellerNew/bestseller.laf";
+const BESTSELLER_OTHER_URL = BASE_URL + "/bestSellerNew/steadyseller.laf?mallGb:ENG";
+const PAGE_KORBOOK_URL = BASE_URL + "/indexKor.laf";
 
-module.exports = {
+
+
+const main = {
+
     BASE_URL,
     BESTSELLER_URL,
     BESTSELLER_OTHER_URL,
-    FILE_FOLDER_BASE
+    PAGE_KORBOOK_URL,
+
+    FILE_FOLDER_BASE: './craw/files',
+
+    // 크롤링
+    IS_CRAW_BSSTSELLR_KOR: false,
+    IS_CRAW_BSSTSELLR_OTHER: false,
+
+    IS_CRAW_MAINPAGE_SLRIDER: false,
+    IS_CRAW_KORPAGE_SLRIDER: true,
+    // 크롤링 페이지 개수
+    // CRAW_BESTSELLER_PAGE: -1, 
+    CRAW_BESTSELLER_PAGE: 1,
 }
+
+module.exports = main;
