@@ -11,20 +11,6 @@
             "type": "pwa-node"
         },
         {
-            "name": "크롤링셀레니움",
-            "program": "${workspaceFolder}/craw/mainSelenium.js",
-            "request": "launch",
-            "skipFiles": ["<node_internals>/**"],
-            "type": "pwa-node"
-        },
-        {
-            "name": "craw-nightmare",
-            "program": "${workspaceFolder}/craw/mainNightmare.js",
-            "request": "launch",
-            "skipFiles": ["<node_internals>/**"],
-            "type": "pwa-node"
-        },
-        {
             "name": "Launch Program",
             "program": "${workspaceFolder}/server/app.js",
             "request": "launch",

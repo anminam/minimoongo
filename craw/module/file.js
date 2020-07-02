@@ -6,15 +6,17 @@ const fs = require("fs");
  * @param {string} fileName 파일이름 - .json 제외
  * @param {*} target 
  */
-const fileSave = (fileName, target) => {
+const fileSave = (path, fileName, target) => {
     const jsonContent = JSON.stringify(target);
 
-    fs.writeFile(`./${fileName}.json`, jsonContent, "utf8", function (err) {
+    const filePathName = `${path}/${fileName}.json`;
+
+    fs.writeFile(filePathName, jsonContent, "utf8", function (err) {
         if (err) {
-            return console.log(err);
+            return console.log('fs.writeFile', err);
         }
 
-        console.log(`./${fileName}.json 저장 완료`);
+        console.log(`${filePathName} 저장 완료`);
     });
 };
 

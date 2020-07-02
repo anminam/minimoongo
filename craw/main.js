@@ -1,25 +1,50 @@
 /* eslint-disable prettier/prettier */
 
-const cheerio = require("cheerio");
-const request = require('request');
+const file = require('./module/file');
+const bestSeller = require('./module/bestSeller');
 
-const BASE_URL = "http://www.kyobobook.co.kr";
-const BESTSELLER_URL = BASE_URL + "/bestSellerNew/bestseller.laf";
 
-request({
-    method: 'GET',
-    url: BESTSELLER_URL
-}, (err, res, body) => {
+const {
+    Builder,
+    By,
+    Key,
+    until,
+    WebDriver,
+    Capabilities
+} = require('selenium-webdriver');
+const {
+    BESTSELLER_URL,
+    FILE_FOLDER_BASE,
+    BESTSELLER_OTHER_URL
+} = require('./constant');
 
-    if (err) return console.error(err);
 
-    let $ = cheerio.load(body);
+// 숨기기
+const chromeCapablities = Capabilities.chrome();
+// const chromeOptions = {
+//     "args": ['--headless', '--no-sandbox']
+// }
+// // chromeCapablities.set('chromeOptions', chromeOptions);
+let driver;
 
-    let main = $('main');
+(async () => {
+    driver = new Builder().withCapabilities(chromeCapablities).build();
+    try {
+        // kor
+        const bestSellerList = await bestSeller(driver, BESTSELLER_URL, {
+            categoryId: "korbook"
+        });
+        file.save(FILE_FOLDER_BASE, 'korbook', bestSellerList);
+        // other
+        const bestSellerListOther = await bestSeller(driver, BESTSELLER_OTHER_URL, {
+            categoryId: "otherbook"
+        });
+        file.save(FILE_FOLDER_BASE, 'otherbook', bestSellerListOther);
 
-    let fel = main.children().first();
-    let lel = main.children().last();
+    } catch (err) {
+        console.log(err);
 
-    console.log(fel.get(0).tagName);
-    console.log(lel.get(0).tagName);
-});
+    } finally {
+        // await driver.quit();
+    }
+})();
