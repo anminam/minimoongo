@@ -8,6 +8,7 @@ export interface IGoods {
   img: string;
   categoryId: string;
   subCategoryId?: string;
+  rank?: string;
 }
 
 export interface IBook extends IGoods {
@@ -17,5 +18,7 @@ export interface IBook extends IGoods {
   sellPrice: number;
   productDate: string;
   rate?: string;
+  ebookPrice?: number;
+  reviewObj?: { count: number; rate: number };
   // http://image.kyobobook.co.kr/images/book/large/175/l9791190382175.jpg
 }
