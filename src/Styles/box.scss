@@ -41,6 +41,16 @@
   height: 340px;
   overflow: hidden;
 
+  .box__title {
+    padding-top: $padding-height;
+    margin-right: 10px;
+    float: left;
+
+    a {
+      @include box-title();
+    }
+  }
+
   h3 {
     padding-top: $padding-height;
     margin-right: 10px;

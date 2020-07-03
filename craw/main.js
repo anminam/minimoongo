@@ -99,6 +99,24 @@ let driver;
             const bestSellerListOther = await pageTopSlider(driver, paramObj, seleterObj, addObj)
             file.save(con.FILE_FOLDER_BASE, id, bestSellerListOther);
         }
+        // otherPageTopSlider
+        if (con.IS_CRAW_OTHORPAGE_TOP_SLRIDER) {
+            const id = 'otherPageTopSlider';
+            const paramObj = {
+                id: id,
+                title: '이벤트',
+                url: con.PAGE_OTHERBOOK_URL
+            }
+            const seleterObj = {
+                main: '#mainEventDiv',
+                ul: 'ul'
+            }
+            const addObj = {
+                categoryId: id
+            }
+            const bestSellerListOther = await pageTopSlider(driver, paramObj, seleterObj, addObj)
+            file.save(con.FILE_FOLDER_BASE, id, bestSellerListOther);
+        }
 
     } catch (err) {
         console.log(err);

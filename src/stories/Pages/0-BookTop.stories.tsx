@@ -1,6 +1,6 @@
 import React from "react";
 import "Styles/index.scss";
-import { CustomProvider } from "CustomProvider";
+import { CustomProvider, CustomProvider1 } from "CustomProvider";
 import BookTop from "View/Containers/Products/Book/BookTop";
 
 export default {
@@ -9,7 +9,9 @@ export default {
 };
 
 export const Main = () => {
-  return CustomProvider(() => {
-    return <BookTop id={"9791190382175"} />;
-  });
+  return (
+    <CustomProvider1>
+      <BookTop id={"l9791190382175"} />;
+    </CustomProvider1>
+  );
 };

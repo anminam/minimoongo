@@ -1,6 +1,6 @@
 import React from "react";
 import "Styles/index.scss";
-import { CustomProvider } from "CustomProvider";
+import { CustomProvider1 } from "CustomProvider";
 import { Login } from "Pages";
 
 export default {
@@ -9,7 +9,9 @@ export default {
 };
 
 export const Main = () => {
-  return CustomProvider(() => {
-    return <Login />;
-  });
+  return (
+    <CustomProvider1>
+      <Login />
+    </CustomProvider1>
+  );
 };
