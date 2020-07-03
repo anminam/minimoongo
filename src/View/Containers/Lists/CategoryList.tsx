@@ -16,12 +16,13 @@ interface ICategoryList {
 const CategoryList = ({ list, maxLength }: ICategoryList) => {
   const itemLen = maxLength || 4;
   const [viewIndex, setViewIndex] = useState<number>(0);
-  const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(false);
+  const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(true);
   const [isViewButton, setIsViewButton] = useState<Boolean>(false);
 
   useEffect(() => {
     setViewIndex(0);
     const max = Utils.getListMaxLength(list.length, itemLen);
+    console.log(itemLen);
     if (max > 0) {
       setIsViewButton(true);
     }
@@ -61,7 +62,7 @@ const CategoryList = ({ list, maxLength }: ICategoryList) => {
   const handleViewMouseLeave = (
     event: React.MouseEvent<HTMLDivElement, MouseEvent>
   ) => {
-    setIsVisibleButton(false);
+    setIsVisibleButton(true);
   };
 
   return (
@@ -89,15 +90,15 @@ const CategoryList = ({ list, maxLength }: ICategoryList) => {
       {isViewButton && (
         <>
           <button
-            className={`prev ${
+            className={`prev img-button-chevron-left black ${
               !isVisibleButton ? "invisible" : ""
-            } img-button-chevron-left`}
+            } `}
             onClick={handlePrevClick}
           ></button>
           <button
-            className={`next ${
+            className={`next img-button-chevron-right black ${
               !isVisibleButton ? "invisible" : ""
-            } img-button-chevron-right`}
+            }`}
             onClick={handleNextClick}
           ></button>
         </>

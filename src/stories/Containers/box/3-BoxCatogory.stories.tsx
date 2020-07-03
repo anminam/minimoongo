@@ -13,7 +13,7 @@ export default {
 export const main = () => {
   return (
     <CustomProvider1>
-      <BoxCatogory eventObj={korBookBestSeller} isBorder={true} type={"TAB"} />
+      <BoxCatogory eventObj={korBookBestSeller} isBorder={true} type={"tab"} />
     </CustomProvider1>
   );
 };

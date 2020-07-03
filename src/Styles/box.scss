@@ -1,10 +1,7 @@
 @import "./colors.scss";
 
 $title-height: 30px;
-$box-font-family: "Malgun Gothic",
-"Apple SD Neo Gothic",
-"Dotum",
-"Sans-Serif";
+$box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
 
 @mixin box-title() {
   font-size: 16px;
@@ -41,7 +38,7 @@ $box-font-family: "Malgun Gothic",
   height: 340px;
   overflow: hidden;
 
-  &+div {
+  & + div {
     margin-top: 40px;
   }
 
@@ -55,8 +52,8 @@ $box-font-family: "Malgun Gothic",
     }
   }
 
-  // type 
-  &.TAB {
+  // type
+  &.tab {
     .section {
       &__title a {
         border: 1px solid $color-border-main;
@@ -89,7 +86,6 @@ $box-font-family: "Malgun Gothic",
 
     // 섹션
     .section {
-
       // 각 섹션 타이틀
       &__title {
         a {
@@ -164,7 +160,7 @@ $box-font-family: "Malgun Gothic",
         $button-height: 50px;
 
         position: absolute;
-        background-color: grey;
+        // background-color: grey;
         opacity: 0.2;
         transition: all 0.3s;
         width: 36px;
@@ -187,7 +183,6 @@ $box-font-family: "Malgun Gothic",
     }
 
     // end .category-list
-
   }
 
   &.left-title {
@@ -206,7 +201,7 @@ $box-font-family: "Malgun Gothic",
     .layer {
       padding: 15px;
 
-      >div {
+      > div {
         display: inline;
         vertical-align: middle;
       }
@@ -241,7 +236,7 @@ $box-font-family: "Malgun Gothic",
   display: flex;
   align-items: center;
 
-  >div {
+  > div {
     float: left;
     width: 50%;
   }
