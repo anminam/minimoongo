@@ -1,6 +1,6 @@
 import { IEvent } from "./IEventList";
 
-type TBoxType = undefined | "TAB" | "SLRIDER";
+type TBoxType = undefined | "tab" | "slrider";
 export interface IBox {
   eventObj: IEvent;
   isBorder?: boolean;

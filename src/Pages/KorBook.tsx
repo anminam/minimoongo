@@ -7,10 +7,12 @@ import {
   korbookSimpleEvent,
   korTodayBookSliderEvent,
   korKookTopSliderEvent,
+  korBookBestSeller,
 } from "Core/events/data";
 import Welcome2 from "View/Containers/Welcomes/Welcome2";
 import Slider3DController from "View/Containers/Slider/Slider3DController";
 import BoxEvent from "View/Containers/Boxes/BoxEvent";
+import BoxCatogory from "View/Containers/Boxes/BoxCatogory";
 
 const KorBook = () => {
   const [categoryId] = useState<IMainCategoryId>("korbook");
@@ -31,6 +33,13 @@ const KorBook = () => {
           </div>
           <div className="wapper-content">
             <BoxEvent eventObj={korTodayBookSliderEvent} isBorder={true} />
+          </div>
+          <div className="wapper-content">
+            <BoxCatogory
+              eventObj={korBookBestSeller}
+              isBorder={true}
+              type={"tab"}
+            />
           </div>
         </div>
       </div>
