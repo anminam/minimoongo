@@ -1,4 +1,4 @@
-import { IEventListItem } from "Interfaces/IEventList";
+import { IEventListItem, IEvent } from "Interfaces/IEventList";
 import { ICategories } from "Interfaces/ICategory";
 
 export const mainEventList: IEventListItem[] = [
@@ -264,128 +264,114 @@ export const bookCategories: ICategories[] = [
     ],
   },
 ];
-export const bookKorbookEvents: IEventListItem[] = [
-  {
-    id: "1",
-    displayName: "어린이/학습",
-    list: [
-      {
-        id: "s20",
-        displayName: "상반기유아동 Top100",
-        href: "/",
-        src: "bnL_01.jpg",
-      },
-      {
-        id: "s21",
-        displayName: "유아어린이 세트 1위는?",
-        href: "/",
-        src: "bnL_02.jpg",
-      },
-      {
-        id: "s22",
-        displayName: "총 300만원 상당의경품",
-        href: "/",
-        src: "bnF_01.jpg",
-      },
-      {
-        id: "s23",
-        displayName: "흔한남매 X 하루한장",
-        href: "/",
-        src: "bnYY_22.jpg",
-      },
-    ],
-  },
-  {
-    id: "1",
-
-    displayName: "문학/실용",
-    list: [
-      {
-        id: "s30",
-        displayName: "교보문고x그린 블리스",
-        href: "/",
-        src: "bnE_01.jpg",
-      },
-      {
-        id: "s31",
-        displayName: "스타작가 100 대 1",
-        href: "/",
-        src: "bnC_01.jpg",
-      },
-      {
-        id: "s32",
-        displayName: "에세이 1위, 스프링노트",
-        href: "/",
-        src: "bnN_01.jpg",
-      },
-      {
-        id: "s33",
-        displayName: "쌍갑포차 이벤트",
-        href: "/",
-        src: "bnC_02.jpg",
-      },
-    ],
-  },
-  {
-    id: "1",
-
-    displayName: "인문/교양",
-    list: [
-      {
-        id: "s40",
-        displayName: "인문교양 읽는 맛",
-        href: "/",
-        src: "bnG_01.jpg",
-      },
-      {
-        id: "s41",
-        displayName: "뇌과학, 통찰과 질문",
-        href: "/",
-        src: "bnF_02.jpg",
-      },
-      {
-        id: "s42",
-        displayName: "실크로드X데스크매트",
-        href: "/",
-        src: "bnN_02.jpg",
-      },
-      {
-        id: "s43",
-        displayName: "백상 젊은연극상 모티브",
-        href: "/",
-        src: "bnA_01.jpg",
-      },
-    ],
-  },
-  {
-    id: "1",
-
-    displayName: "비즈/수험",
-    list: [
-      {
-        id: "s50",
-        displayName: "인플루엔셜 단독 브랜드전",
-        href: "/",
-        src: "bnV_01.jpg",
-      },
-      {
-        id: "s51",
-        displayName: "한빛미디어 단독 브랜드전",
-        href: "/",
-        src: "bnG_02.jpg",
-      },
-      {
-        id: "s52",
-        displayName: "파고다 브랜드전",
-        href: "/",
-        src: "bnN_03.jpg",
-      },
-      {
-        id: "s53",
-        displayName: "교보단독 선택증정",
-        href: "/",
-        src: "bnL_03.jpg",
-      },
-    ],
-  },
-];
+export const bookKorbookEvents: IEvent = {
+  id: "korbookHaveSliderEvent",
+  displayName: "이벤트 책",
+  list: [
+    {
+      id: "0",
+      displayName: "어린이/학습",
+      list: [
+        {
+          id: "0",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "초중고 여름 특별 이벤트",
+        },
+        {
+          id: "1",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "유아어린이 세트 1위는?",
+        },
+        {
+          id: "2",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "놀이북 TOP 100",
+        },
+        {
+          id: "3",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "슈퍼토끼 X 슈퍼충전",
+        },
+      ],
+    },
+    {
+      id: "1",
+      displayName: "문학/실용",
+      list: [
+        {
+          id: "0",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "교보문고x그린 블리스",
+        },
+        {
+          id: "1",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "스타작가 100 대 1",
+        },
+        {
+          id: "2",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "보통의 산문전",
+        },
+        {
+          id: "3",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "교보문고 시그니처향",
+        },
+      ],
+    },
+    {
+      id: "2",
+      displayName: "인문/교양",
+      list: [
+        {
+          id: "0",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/book/200611_event/bnG_01.jpg",
+          displayName: "인문교양 읽는 맛",
+        },
+        {
+          id: "1",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "뇌과학, 통찰과 질문",
+        },
+        {
+          id: "2",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "실크로드X데스크매트",
+        },
+        {
+          id: "3",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "까치출판사X행성북클립",
+        },
+      ],
+    },
+    {
+      id: "3",
+      displayName: "비즈/수험",
+      list: [
+        {
+          id: "0",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "인플루엔셜 단독 브랜드전",
+        },
+        {
+          id: "1",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "한빛미디어 단독 브랜드전",
+        },
+        {
+          id: "2",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "나의 실전은 7월이다",
+        },
+        {
+          id: "3",
+          src: "http://image.kyobobook.co.kr/ink/images/welcome/blank.gif",
+          displayName: "교보단독 선택증정",
+        },
+      ],
+    },
+  ],
+};

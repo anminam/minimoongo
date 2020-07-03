@@ -942,3 +942,251 @@ export const korTodayBookSliderEvent: IEvent = {
     },
   ],
 };
+
+export const korKookTopSliderEvent: IEvent = {
+  id: "korPageTopSlider",
+  displayName: "이벤트",
+  list: [
+    {
+      id: "0",
+      displayName: "어린이/학습",
+      list: [
+        {
+          id: "0",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/banner/200617/bnH768x290.jpg",
+          displayName: "초중고 여름 특별 이벤트",
+        },
+        {
+          id: "1",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/book/200612_kidsset/bnL_01.jpg",
+          displayName: "유아어린이 세트 1위는?",
+        },
+        {
+          id: "2",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/book/200615_kidsplay100/bnL_01.jpg",
+          displayName: "놀이북 TOP 100",
+        },
+        {
+          id: "3",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/book/200609_rabbit/bnF_01.jpg",
+          displayName: "슈퍼토끼 X 슈퍼충전",
+        },
+      ],
+    },
+    {
+      id: "1",
+      displayName: "문학/실용",
+      list: [
+        {
+          id: "0",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/banner/200612/bnE_01.jpg",
+          displayName: "교보문고x그린 블리스",
+        },
+        {
+          id: "1",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/banner/200617/bnC_01.jpg",
+          displayName: "스타작가 100 대 1",
+        },
+        {
+          id: "2",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200629_normal/banner/bnA_01.jpg",
+          displayName: "보통의 산문전",
+        },
+        {
+          id: "3",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/book/200617_signature/bnG_01.jpg",
+          displayName: "교보문고 시그니처향",
+        },
+      ],
+    },
+    {
+      id: "2",
+      displayName: "인문/교양",
+      list: [
+        {
+          id: "0",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/book/200611_event/bnG_01.jpg",
+          displayName: "인문교양 읽는 맛",
+        },
+        {
+          id: "1",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200611_theme/bnF_01.jpg",
+          displayName: "뇌과학, 통찰과 질문",
+        },
+        {
+          id: "2",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/banner/200615/bnN_01.jpg",
+          displayName: "실크로드X데스크매트",
+        },
+        {
+          id: "3",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200619_kkachi/bnG_01.jpg",
+          displayName: "까치출판사X행성북클립",
+        },
+      ],
+    },
+    {
+      id: "3",
+      displayName: "비즈/수험",
+      list: [
+        {
+          id: "0",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/book/200617_influential/bnV_01.jpg",
+          displayName: "인플루엔셜 단독 브랜드전",
+        },
+        {
+          id: "1",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/book/200529_media/bnG_01.jpg",
+          displayName: "한빛미디어 단독 브랜드전",
+        },
+        {
+          id: "2",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/book/200622_seolzzi/bnV_01.jpg",
+          displayName: "나의 실전은 7월이다",
+        },
+        {
+          id: "3",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/banner/200421/bnL_01.jpg",
+          displayName: "교보단독 선택증정",
+        },
+      ],
+    },
+  ],
+};
+
+export const otherBookTopSliderEvent: IEvent = {
+  id: "otherPageTopSlider",
+  displayName: "이벤트",
+  list: [
+    {
+      id: "0",
+      displayName: "핫이슈",
+      list: [
+        {
+          id: "0",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200625_john/bnG_01.jpg",
+          displayName: "존볼튼 회고록",
+        },
+        {
+          id: "1",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200623_3030eng/bnV_01.jpg",
+          displayName: "3030 잉글리시 무료수강권",
+        },
+        {
+          id: "2",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200604_chai/bnV_01.jpg",
+          displayName: "차이페이",
+        },
+        {
+          id: "3",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200514_eng/bnV_01.jpg",
+          displayName: "직수입원서 꽃다운 할인",
+        },
+      ],
+    },
+    {
+      id: "1",
+      displayName: "영미도서",
+      list: [
+        {
+          id: "0",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200617_flyhigh/bnF_01.jpg",
+          displayName: "원서 외국어/수험서 할인",
+        },
+        {
+          id: "1",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/banner/200608/bnE_05.jpg",
+          displayName: "인간다움에 대하여",
+        },
+        {
+          id: "2",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200612_racism/banner/bnA_01.jpg",
+          displayName: "No Racism",
+        },
+        {
+          id: "3",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200511_yale/bnG_01.jpg",
+          displayName: "Kyobo X Yale",
+        },
+      ],
+    },
+    {
+      id: "2",
+      displayName: "어린이영어",
+      list: [
+        {
+          id: "0",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200701_children/bnF_01.jpg",
+          displayName: "원세 세트 할인",
+        },
+        {
+          id: "1",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/banner/showcase/200617/bnMH_13.jpg",
+          displayName: "노부영 5대 작가",
+        },
+        {
+          id: "2",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200604_efuture/bnG_01.jpg",
+          displayName: "대한민국 영어공식",
+        },
+        {
+          id: "3",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/banner/showcase/200601/bnYY_14.jpg",
+          displayName: "옥스포드 온라인 학습의 세계",
+        },
+      ],
+    },
+    {
+      id: "3",
+      displayName: "일본도서",
+      list: [
+        {
+          id: "0",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2020/book/200406_japan/bnG_01.jpg",
+          displayName: "일본도서 실용서 기획",
+        },
+        {
+          id: "1",
+          src:
+            "http://image.kyobobook.co.kr/ink/images/prom/2017/banner/170703/bnV_015.jpg",
+          displayName: "일본도서 예약도서 12% 할인",
+        },
+        {
+          id: "2",
+          src:
+            "http://image.kyobobook.co.kr//ink/images/prom/2020/banner/200608/bnV_01.jpg",
+          displayName: "일본 잡지 신간",
+        },
+      ],
+    },
+  ],
+};
