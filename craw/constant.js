@@ -4,6 +4,7 @@ const BASE_URL = "http://www.kyobobook.co.kr";
 const BESTSELLER_URL = BASE_URL + "/bestSellerNew/bestseller.laf";
 const BESTSELLER_OTHER_URL = BASE_URL + "/bestSellerNew/steadyseller.laf?mallGb:ENG";
 const PAGE_KORBOOK_URL = BASE_URL + "/indexKor.laf";
+const PAGE_OTHERBOOK_URL = BASE_URL + "/indexEng.laf";
 
 
 
@@ -13,6 +14,7 @@ const main = {
     BESTSELLER_URL,
     BESTSELLER_OTHER_URL,
     PAGE_KORBOOK_URL,
+    PAGE_OTHERBOOK_URL,
 
     FILE_FOLDER_BASE: './craw/files',
 
@@ -21,7 +23,10 @@ const main = {
     IS_CRAW_BSSTSELLR_OTHER: false,
 
     IS_CRAW_MAINPAGE_SLRIDER: false,
-    IS_CRAW_KORPAGE_SLRIDER: true,
+    IS_CRAW_KORPAGE_SLRIDER: false,
+
+    IS_CRAW_KORPAGE_TOP_SLRIDER: true,
+    IS_CRAW_OTHORPAGE_TOP_SLRIDER: false,
     // 크롤링 페이지 개수
     // CRAW_BESTSELLER_PAGE: -1, 
     CRAW_BESTSELLER_PAGE: 1,
