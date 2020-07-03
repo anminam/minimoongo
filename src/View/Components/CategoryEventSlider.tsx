@@ -1,19 +1,19 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { IEventListItem } from "Interfaces/IEventList";
+import { IEventListItem, IEvent } from "Interfaces/IEventList";
 
 interface ICategoryEventSlider {
-  list: IEventListItem[];
-  imgPath: string;
+  obj: IEvent;
+  imgPath?: string;
   isDot?: boolean;
   width?: number;
   onNextItem?: () => void;
   onPrevItem?: () => void;
 }
 const CategoryEventSlider = ({
-  list,
+  obj,
   onNextItem,
   onPrevItem,
-  imgPath,
+  imgPath = "",
   width = 690,
   isDot = false,
 }: ICategoryEventSlider) => {
@@ -26,10 +26,10 @@ const CategoryEventSlider = ({
 
   useEffect(() => {
     let length = 0;
-    list.forEach((item) => (length = length + item.list.length));
+    obj.list.forEach((item) => (length = length + item.list.length));
     setTotalSlideLength(length);
     setTotalWidth(width * length);
-  }, [list, width]);
+  }, [obj, width]);
 
   /**
    * 아이템 변경
@@ -134,12 +134,14 @@ const CategoryEventSlider = ({
     event: React.MouseEvent<HTMLLIElement, MouseEvent>
   ) => {
     const index = event.currentTarget.getAttribute("custom-index");
-    if (Number(index) !== Math.floor(viewIndex / list.length)) {
+    const len = obj.list.length;
+    if (Number(index) !== Math.floor(viewIndex / len)) {
       // debugger;
-      const rand = Math.floor(Math.random() * list.length);
-      changeItem(Number(index) * list.length + rand);
+      const rand = Math.floor(Math.random() * len);
+      changeItem(Number(index) * len + rand);
     }
   };
+
   const handleSliderListContainerTitleMouseLeave = (
     event: React.MouseEvent<HTMLLIElement, MouseEvent>
   ) => {};
@@ -154,8 +156,8 @@ const CategoryEventSlider = ({
       <div className="view-container">
         <div className="slider-container" style={{ width: totalWidth }}>
           <ul style={{ marginLeft: -(width * viewIndex) }}>
-            {list &&
-              list.map((mainItem) => {
+            {obj.list &&
+              obj.list.map((mainItem) => {
                 return mainItem.list.map((subItem) => {
                   return (
                     <li key={subItem.id} style={{ width }}>
@@ -175,10 +177,10 @@ const CategoryEventSlider = ({
       </div>
       <div className="slider-list-container">
         <ul>
-          {list &&
-            list.map((mainItem, index) => {
+          {obj.list &&
+            obj.list.map((mainItem, index) => {
               const isIng =
-                index === Math.floor(viewIndex / list.length) ? "ing" : "";
+                index === Math.floor(viewIndex / obj.list.length) ? "ing" : "";
               return (
                 <li
                   key={index}
@@ -199,7 +201,8 @@ const CategoryEventSlider = ({
                       <ul>
                         {mainItem.list &&
                           mainItem.list.map((subItem, subIndex) => {
-                            const customIndex = index * list.length + subIndex;
+                            const customIndex =
+                              index * obj.list.length + subIndex;
                             const isOn = customIndex === viewIndex ? "on" : "";
                             return (
                               <li
@@ -229,9 +232,9 @@ const CategoryEventSlider = ({
         <div className="dots">
           <div className="dots-wapper">
             <ul className="bullet">
-              {list &&
-                list.length > 1 &&
-                list.map((subItem, index) => {
+              {obj.list &&
+                obj.list.length > 1 &&
+                obj.list.map((subItem, index) => {
                   return (
                     <li
                       key={subItem.id}

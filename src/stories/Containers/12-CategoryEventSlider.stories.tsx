@@ -1,7 +1,7 @@
 import React from "react";
 import "Styles/index.scss";
 import { CustomProvider } from "CustomProvider";
-import { mainEventList, bookKorbookEvents } from "Core/data";
+import { bookKorbookEvents } from "Core/data";
 import CategoryEventSlider from "View/Components/CategoryEventSlider";
 
 export default {
@@ -14,7 +14,7 @@ export const Main = () => {
   return CustomProvider(() => {
     return (
       <CategoryEventSlider
-        list={bookKorbookEvents}
+        obj={bookKorbookEvents}
         imgPath={imgPath}
         width={690}
       />

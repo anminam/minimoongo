@@ -3,7 +3,11 @@ import NavCategory from "View/Components/NavCategory";
 import { IMainCategoryId } from "Interfaces/ICategory";
 import CategoryEventSlider from "View/Components/CategoryEventSlider";
 import { bookKorbookEvents } from "Core/data";
-import { korbookSimpleEvent, korTodayBookSliderEvent } from "Core/events/data";
+import {
+  korbookSimpleEvent,
+  korTodayBookSliderEvent,
+  korKookTopSliderEvent,
+} from "Core/events/data";
 import Welcome2 from "View/Containers/Welcomes/Welcome2";
 import Slider3DController from "View/Containers/Slider/Slider3DController";
 import BoxEvent from "View/Containers/Boxes/BoxEvent";
@@ -21,11 +25,7 @@ const KorBook = () => {
           <NavCategory navCategoryId={categoryId} />
         </div>
         <div className="category-page__contents">
-          <CategoryEventSlider
-            list={bookKorbookEvents}
-            imgPath={imgPath}
-            width={770}
-          />
+          <CategoryEventSlider obj={korKookTopSliderEvent} width={770} />
           <div className="wapper-content">
             <Welcome2 eventObj={korbookSimpleEvent} />
           </div>

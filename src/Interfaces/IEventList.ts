@@ -18,8 +18,6 @@ export interface IEventPicks {
   rankOfReading: number;
 }
 
-export interface IEventItem {}
-
 export interface IEvent {
   id: string;
   displayName: string;
