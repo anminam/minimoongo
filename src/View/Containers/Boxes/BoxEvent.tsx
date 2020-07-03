@@ -33,16 +33,16 @@ const BoxEvent = ({ eventObj, isBorder = false }: IBoxEvent) => {
   const [isTitleView] = useState<boolean>(eventObj.list.length > 1);
 
   return (
-    <div className="box box-welcome1 left-title">
-      <h3 className="title">
+    <div className="box">
+      <h3 className="box__title">
         <a href={href}>{title}</a>
       </h3>
-      <div className={`contents-container`}>
+      <div className="box__contents">
         {eventObj.list.map((item, i) => {
           return (
             <div className="section" key={i}>
               {isTitleView && (
-                <h3>
+                <h3 className="section__title">
                   <a
                     href={item.href}
                     className={i === index ? "on" : ""}
@@ -53,7 +53,9 @@ const BoxEvent = ({ eventObj, isBorder = false }: IBoxEvent) => {
                 </h3>
               )}
               {i === index && (
-                <div className={`section-contents ${isBorder ? "border" : ""}`}>
+                <div
+                  className={`section__contents ${isBorder ? "border" : ""}`}
+                >
                   <Slider3DController obj={item} />
                 </div>
               )}

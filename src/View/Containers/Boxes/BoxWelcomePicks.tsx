@@ -9,6 +9,7 @@ import { eventPicks } from "Core/events/data";
 
 interface IBoxWelcomePicks {
   eventObj: IEventPicks;
+  isBorder?: boolean;
 }
 
 interface IEventItem {
@@ -18,7 +19,7 @@ interface IEventItem {
   list: TGoods[];
 }
 
-const BoxWelcomePicks = ({ eventObj }: IBoxWelcomePicks) => {
+const BoxWelcomePicks = ({ eventObj, isBorder }: IBoxWelcomePicks) => {
   const [title] = useState<string>(eventObj.title);
   const [href] = useState<string>(eventObj.href);
   const [index] = useState<number>(0);
@@ -68,25 +69,29 @@ const BoxWelcomePicks = ({ eventObj }: IBoxWelcomePicks) => {
   // };
 
   return (
-    <div className="box box-welcome-picks left-title container_lg">
-      <h3 className="title">
+    <div className="box box-welcome-picks container_lg">
+      <h3 className="box__title">
         <a href={href}>
           {personName + title}{" "}
           {!isLogin && <p>[로그인 하고 나만의 AI 맞춤추천 받아보세요]</p>}
         </a>
       </h3>
-      <div className="contents-container">
+      <div className="box__contents">
         {eventItemList &&
           eventItemList.map((item, i) => {
             return (
               <div className="section" key={i}>
-                {i === index && (
-                  <ListPicks
-                    goods={item.list}
-                    pickItem={eventPicks}
-                    itemLength={3}
-                  />
-                )}
+                <div
+                  className={`section__contents ${isBorder ? "border" : ""}`}
+                >
+                  {i === index && (
+                    <ListPicks
+                      goods={item.list}
+                      pickItem={eventPicks}
+                      itemLength={3}
+                    />
+                  )}
+                </div>
               </div>
             );
           })}

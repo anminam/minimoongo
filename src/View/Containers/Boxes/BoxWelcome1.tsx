@@ -10,6 +10,7 @@ import { TRootState } from "Core/reducers";
 
 interface IBoxWelcome1 {
   eventObj: IEvent1;
+  isBorder?: boolean;
 }
 
 interface IEventItem {
@@ -19,7 +20,7 @@ interface IEventItem {
   list: TGoods[];
 }
 
-const BoxWelcome1 = ({ eventObj }: IBoxWelcome1) => {
+const BoxWelcome1 = ({ eventObj, isBorder = false }: IBoxWelcome1) => {
   const [title] = useState<string>(eventObj.title);
   const [href] = useState<string>(eventObj.href);
   const [index, setIndex] = useState<number>(0);
@@ -61,16 +62,16 @@ const BoxWelcome1 = ({ eventObj }: IBoxWelcome1) => {
   };
 
   return (
-    <div className="box box-welcome1 left-title container_lg">
-      <h3 className="title">
+    <div className="box box-welcome1 container_lg">
+      <h3 className="box__title">
         <a href={href}>{title}</a>
       </h3>
-      <div className="contents-container">
+      <div className="box__contents">
         {eventItemList &&
           eventItemList.map((item, i) => {
             return (
               <div className="section" key={i}>
-                <h3>
+                <h3 className="section__title">
                   <a
                     href={item.href}
                     className={i === index ? "on" : ""}
@@ -79,7 +80,11 @@ const BoxWelcome1 = ({ eventObj }: IBoxWelcome1) => {
                     {item.title}
                   </a>
                 </h3>
-                {i === index && <ListNormal goods={item.list} />}
+                <div
+                  className={`section__contents ${isBorder ? "border" : ""}`}
+                >
+                  {i === index && <ListNormal goods={item.list} />}
+                </div>
               </div>
             );
           })}

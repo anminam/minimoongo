@@ -1,13 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "Styles/index.scss";
 import { TGoods } from "Interfaces/IGoods";
-import { IEvent } from "Interfaces/IEventList";
-import Slider3DController from "View/Containers/Slider/Slider3DController";
-
-interface IBoxCatogory {
-  eventObj: IEvent;
-  isBorder?: boolean;
-}
+import { IBox } from "Interfaces/IContainers";
 
 interface IEventItem {
   id: string;
@@ -16,7 +10,7 @@ interface IEventItem {
   list: TGoods[];
 }
 
-const BoxCatogory = ({ eventObj, isBorder = false }: IBoxCatogory) => {
+const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
   const [title] = useState<string>(eventObj.displayName);
   const [href] = useState<string>(eventObj.href || "/");
   const [index, setIndex] = useState<number>(0);
@@ -28,16 +22,16 @@ const BoxCatogory = ({ eventObj, isBorder = false }: IBoxCatogory) => {
   const [isTitleView] = useState<boolean>(eventObj.list.length > 1);
 
   return (
-    <div className="box box-catogory">
-      <h3 className="box__title">
+    <div className={`box box-catogory ${type}`}>
+      <h2 className="box__title">
         <a href={href}>{title}</a>
-      </h3>
-      <div className={`contents-container`}>
+      </h2>
+      <div className="box__contents">
         {eventObj.list.map((item, i) => {
           return (
             <div className="section" key={i}>
               {isTitleView && (
-                <h3>
+                <h3 className="section__title">
                   <a
                     href={item.href}
                     className={i === index ? "on" : ""}
@@ -47,11 +41,9 @@ const BoxCatogory = ({ eventObj, isBorder = false }: IBoxCatogory) => {
                   </a>
                 </h3>
               )}
-              {i === index && (
-                <div className={`section-contents ${isBorder ? "border" : ""}`}>
-                  <Slider3DController obj={item} />
-                </div>
-              )}
+              <div className={`section__contents ${isBorder ? "border" : ""}`}>
+                호엥
+              </div>
             </div>
           );
         })}

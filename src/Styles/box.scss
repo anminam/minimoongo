@@ -1,10 +1,18 @@
+@import "./colors.scss";
+
+$title-height: 30px;
+$box-font-family: "Malgun Gothic",
+"Apple SD Neo Gothic",
+"Dotum",
+"Sans-Serif";
+
 @mixin box-title() {
   font-size: 16px;
   font-weight: bold;
-  line-height: 18px;
-  height: 35px;
+  font-family: $box-font-family;
   color: #000;
-  font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
+  line-height: $title-height;
+  padding-left: 8px;
 
   &:hover {
     color: #3c5fdf;
@@ -14,14 +22,12 @@
 
 @mixin section-title() {
   display: block;
-  // padding: 1px 5px 0;
   font-weight: bold;
-  height: 22px;
-  font-size: 14px;
-  line-height: 18px;
+  font-size: 12px;
+  font-family: $box-font-family;
   color: #555;
-  padding: 2px 4px;
-  font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
+  padding: 0 10px;
+  line-height: $title-height;
 
   &:hover,
   &.on {
@@ -31,19 +37,17 @@
 }
 
 .box {
-  $padding-height: 10px;
+  position: relative;
+  height: 340px;
+  overflow: hidden;
 
   &+div {
     margin-top: 40px;
   }
 
-  position: relative;
-  height: 340px;
-  overflow: hidden;
-
-  .box__title {
-    padding-top: $padding-height;
-    margin-right: 10px;
+  // 박스 타이틀
+  &__title {
+    margin-right: 20px;
     float: left;
 
     a {
@@ -51,44 +55,61 @@
     }
   }
 
-  h3 {
-    padding-top: $padding-height;
-    margin-right: 10px;
-    float: left;
-  }
+  // type 
+  &.TAB {
+    .section {
+      &__title a {
+        border: 1px solid $color-border-main;
+        border-right: 0;
+        line-height: 29px;
 
-  &.left-title {
-    .title a {
-      @include box-title();
+        &:hover,
+        &.on {
+          position: relative;
+          background-color: #fff;
+          color: #3c5fdf;
+          border-bottom: 1px solid #fff;
+          z-index: 1;
+        }
+      }
+
+      &:last-child {
+        .section__title {
+          a {
+            border-right: 1px solid $color-border-main;
+          }
+        }
+      }
     }
   }
 
-  .contents-container {
+  // 박스 컨텐츠
+  &__contents {
     position: relative;
 
-    h3 a {
-      @include section-title();
-    }
+    // 섹션
+    .section {
 
-    // .section-contents {
-    //   position: absolute;
-    //   top: 40px;
-    //   width: 100%;
-    // }
+      // 각 섹션 타이틀
+      &__title {
+        a {
+          float: left;
+          @include section-title();
+        }
+      }
 
-    .section-contents {
-      position: absolute;
-      top: 40px;
-      width: 100%;
+      &__contents {
+        position: absolute;
+        top: $title-height;
+        width: 100%;
 
-      &.border {
-        border: 1px solid #8885a0;
+        &.border {
+          border: 1px solid $color-border-main;
+        }
       }
     }
 
     .list-container {
-      position: absolute;
-      top: 40px;
       width: 100%;
 
       li {
@@ -127,6 +148,12 @@
     }
   }
 
+  &.left-title {
+    .title a {
+      @include box-title();
+    }
+  }
+
   .footer {
     position: absolute;
     width: 100%;
@@ -156,48 +183,16 @@
       }
     }
   }
+
+  &.box-welcome-picks {
+    .box__title a p {
+      color: #2ac557;
+      display: inline-block;
+    }
+  }
 }
 
 // 박스 끝
-
-.box-welcome1 {}
-
-.box-welcome-picks {
-  .title a p {
-    color: #2ac557;
-    display: inline-block;
-  }
-}
-
-.box-normal {
-  $padding-height: 10px;
-
-  &+.box-normal {
-    margin-top: 40px;
-  }
-
-  position: relative;
-  height: 340px;
-  overflow: hidden;
-
-  .box__title {
-    padding-top: $padding-height;
-    margin-right: 10px;
-    float: left;
-
-    a {
-      @include box-title();
-    }
-  }
-
-  .box__contents {
-    // position: relative;
-    position: absolute;
-    top: 40px;
-    width: 100%;
-    border: 1px solid #8885a0;
-  }
-}
 
 .left-right {
   overflow: hidden;
