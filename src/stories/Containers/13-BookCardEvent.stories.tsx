@@ -9,7 +9,7 @@ export default {
   component: BookCardEvent,
 };
 
-const obj = korTodayBookSliderEvent.list[0];
+const obj = korTodayBookSliderEvent.list[0].list[0];
 
 export const Main = () => {
   return CustomProvider(() => {
