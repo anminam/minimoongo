@@ -1,14 +1,7 @@
 import React, { useState } from "react";
 import "Styles/index.scss";
-import { TGoods } from "Interfaces/IGoods";
 import { IBox } from "Interfaces/IContainers";
-
-interface IEventItem {
-  id: string;
-  title: string;
-  href: string;
-  list: TGoods[];
-}
+import CategoryList from "../Lists/CategoryList";
 
 const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
   const [title] = useState<string>(eventObj.displayName);
@@ -41,9 +34,13 @@ const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
                   </a>
                 </h3>
               )}
-              <div className={`section__contents ${isBorder ? "border" : ""}`}>
-                호엥
-              </div>
+              {index === i && (
+                <div
+                  className={`section__contents ${isBorder ? "border" : ""}`}
+                >
+                  <CategoryList list={item.list} />
+                </div>
+              )}
             </div>
           );
         })}

@@ -146,6 +146,48 @@ $box-font-family: "Malgun Gothic",
         }
       }
     }
+
+    .category-list {
+      overflow: hidden;
+      padding: 20px 40px;
+
+      li {
+        margin-right: 23px;
+        float: left;
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      button {
+        $button-height: 50px;
+
+        position: absolute;
+        background-color: grey;
+        opacity: 0.2;
+        transition: all 0.3s;
+        width: 36px;
+        height: $button-height;
+        top: calc(50% - (#{$button-height}/ 2));
+        cursor: pointer;
+
+        &.prev {
+          left: 0;
+        }
+
+        &.next {
+          right: 0;
+        }
+
+        &.invisible {
+          opacity: 0;
+        }
+      }
+    }
+
+    // end .category-list
+
   }
 
   &.left-title {
