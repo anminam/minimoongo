@@ -21,7 +21,7 @@ interface IHome {
 const Home = ({ list }: IHome) => {
   useEffect(() => {}, [list]);
   return (
-    <div className="page">
+    <div className="page homepage">
       <Welcome1 />
       <Welcome2 eventObj={mainWelcome2Event} isFull={true} />
       <Welcome3 />
