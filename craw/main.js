@@ -4,6 +4,7 @@ const file = require('./module/file');
 const bestSeller = require('./module/bestSeller');
 const mainSlider = require('./module/mainSlider');
 const pageTopSlider = require('./module/pageTopSlider');
+const pageNormalBox = require('./module/pageNormalBox');
 
 
 const {
@@ -99,22 +100,22 @@ let driver;
             const bestSellerListOther = await pageTopSlider(driver, paramObj, seleterObj, addObj)
             file.save(con.FILE_FOLDER_BASE, id, bestSellerListOther);
         }
-        // otherPageTopSlider
-        if (con.IS_CRAW_OTHORPAGE_TOP_SLRIDER) {
-            const id = 'otherPageTopSlider';
+        // korPageBestseller
+        if (con.IS_CRAW_KORPAGE_BESTSELLER) {
+            const id = 'korPageBestseller';
             const paramObj = {
                 id: id,
-                title: '이벤트',
-                url: con.PAGE_OTHERBOOK_URL
+                title: '베스트셀러',
+                url: con.PAGE_KORBOOK_URL
             }
             const seleterObj = {
-                main: '#mainEventDiv',
-                ul: 'ul'
+                main: '#bestSeller',
+                ul: '.list_main_best'
             }
             const addObj = {
                 categoryId: id
             }
-            const bestSellerListOther = await pageTopSlider(driver, paramObj, seleterObj, addObj)
+            const bestSellerListOther = await pageNormalBox(driver, paramObj, seleterObj, addObj)
             file.save(con.FILE_FOLDER_BASE, id, bestSellerListOther);
         }
 
