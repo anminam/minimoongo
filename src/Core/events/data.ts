@@ -1341,3 +1341,153 @@ export const korBookBestSeller: IEvent = {
     },
   ],
 };
+export const korBookToday: IEvent = {
+  id: "korPageBestseller",
+  displayName: "오늘의 책",
+  list: [
+    {
+      id: "0",
+      displayName: "문학/인문",
+      list: [
+        {
+          id: "l9788954672221",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/221/l9788954672221.jpg",
+          displayName: "화이트 호스",
+        },
+        {
+          id: "l9791190786355",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/355/l9791190786355.jpg",
+          displayName: "보통의 언어들(나를 숨 쉬게 하는)(양장본 HardCover)",
+        },
+        {
+          id: "l9791164135110",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/110/l9791164135110.jpg",
+          displayName: "석세스 에이징",
+        },
+        {
+          id: "l9791160804317",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/317/l9791160804317.jpg",
+          displayName: "박시백의 조선왕조실록 세트(특별 한정판)(전20권)",
+        },
+      ],
+    },
+    {
+      id: "1",
+      displayName: "경제/교양",
+      list: [
+        {
+          id: "l9791188331796",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/796/l9791188331796.jpg",
+          displayName: "돈의 속성",
+        },
+        {
+          id: "l9791190382175",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/175/l9791190382175.jpg",
+          displayName: "더 해빙(The Having)(양장본 HardCover)",
+        },
+        {
+          id: "l9788954671064",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/064/l9788954671064.jpg",
+          displayName: "자본과 이데올로기(양장본 HardCover)",
+        },
+        {
+          id: "l9788983711892",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/892/l9788983711892.jpg",
+          displayName: "코스모스(보급판)",
+        },
+      ],
+    },
+    {
+      id: "2",
+      displayName: "유아동/실용",
+      list: [
+        {
+          id: "l9791165382674",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/674/l9791165382674.jpg",
+          displayName: "설민석의 한국사 대모험. 14",
+        },
+        {
+          id: "l9791190183208",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/208/l9791190183208.jpg",
+          displayName: "요리조리 열어 보는 직업(Usborne)(플랩북)",
+        },
+        {
+          id: "l9791135482991",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/991/l9791135482991.jpg",
+          displayName: "영양의 비밀",
+        },
+        {
+          id: "l9791165211899",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/899/l9791165211899.jpg",
+          displayName: "초등 엄마 말의 힘",
+        },
+        {
+          id: "l9791189159634",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/634/l9791189159634.jpg",
+          displayName: "백반기행(식객 허영만의)",
+        },
+        {
+          id: "l9791136719607",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/607/l9791136719607.jpg",
+          displayName: "파이브 스타 스토리. 15(개정판)(아이큐 점프 코믹스)",
+        },
+        {
+          id: "l9791185473604",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/604/l9791185473604.jpg",
+          displayName: "오! 이렇게 다양한 오트밀 요리",
+        },
+        {
+          id: "l9791189096144",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/144/l9791189096144.jpg",
+          displayName: "어반라이크(Urbanlike)(No.40)",
+        },
+      ],
+    },
+    {
+      id: "3",
+      displayName: "어학/학습",
+      list: [
+        {
+          id: "l9788960498228",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/228/l9788960498228.jpg",
+          displayName: "영어회화 이디엄(미국적인 너무나 미국적인)",
+        },
+        {
+          id: "l9788954753043",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/043/l9788954753043.jpg",
+          displayName: "고등 영어영역 영어(2020)(2021 수능대비)(EBS 수능완성)",
+        },
+        {
+          id: "l9791162242964",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/964/l9791162242964.jpg",
+          displayName: "핸즈온 머신러닝(2판)",
+        },
+        {
+          id: "l9791188095315",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/315/l9791188095315.jpg",
+          displayName: "PEET Organic Chemistry 솔메 실전문풀 Part. 2(4판)",
+        },
+      ],
+    },
+  ],
+};

@@ -8,6 +8,7 @@ import {
   korTodayBookSliderEvent,
   korKookTopSliderEvent,
   korBookBestSeller,
+  korBookToday,
 } from "Core/events/data";
 import Welcome2 from "View/Containers/Welcomes/Welcome2";
 import Slider3DController from "View/Containers/Slider/Slider3DController";
@@ -40,6 +41,9 @@ const KorBook = () => {
               isBorder={true}
               type={"tab"}
             />
+          </div>
+          <div className="wapper-content">
+            <BoxCatogory eventObj={korBookToday} isBorder={true} type={"tab"} />
           </div>
         </div>
       </div>
