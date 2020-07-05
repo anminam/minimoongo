@@ -94,6 +94,8 @@ const getGoodsList = ($el) => {
                 id,
                 src,
                 displayName: $subEl.find('.title').text().trim(),
+                summaryText: $subEl.find('.summary').text().trim(),
+                subCategoryText: $subEl.find('.category').text().replace(/[[\]]/g, ''),
                 // category: $subEl.find('.category').text().trim(),
                 // list: getSubImageList($subEl)
             })
