@@ -9,4 +9,9 @@ export interface ILink {
   color?: string;
   path?: string;
   subImageList?: ILink[];
+  categoryID?: string;
+  categoryText?: string;
+  subCategoryID?: string;
+  subCategoryText?: string;
+  summaryText?: string;
 }

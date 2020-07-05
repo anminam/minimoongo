@@ -1200,28 +1200,36 @@ export const korBookBestSeller: IEvent = {
       displayName: "문학/인문",
       list: [
         {
-          id: "l9788954672221",
+          id: "l9788952241979",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/221/l9788954672221.jpg",
-          displayName: "화이트 호스",
+            "http://image.kyobobook.co.kr/images/book/large/979/l9788952241979.jpg",
+          displayName: "다 괜찮아요, 천국이 말했다",
+          summaryText: "",
+          subCategoryText: "소설",
         },
         {
           id: "l9791190786355",
           src:
             "http://image.kyobobook.co.kr/images/book/large/355/l9791190786355.jpg",
           displayName: "보통의 언어들(나를 숨 쉬게 하는)(양장본 HardCover)",
+          summaryText: "",
+          subCategoryText: "시/에세이",
         },
         {
-          id: "l9791164135110",
+          id: "l9791190030519",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/110/l9791164135110.jpg",
-          displayName: "석세스 에이징",
+            "http://image.kyobobook.co.kr/images/book/large/519/l9791190030519.jpg",
+          displayName: "사람에 대한 예의",
+          summaryText: "",
+          subCategoryText: "인문",
         },
         {
           id: "l9791160804317",
           src:
             "http://image.kyobobook.co.kr/images/book/large/317/l9791160804317.jpg",
           displayName: "박시백의 조선왕조실록 세트(특별 한정판)(전20권)",
+          summaryText: "",
+          subCategoryText: "역사/문화",
         },
       ],
     },
@@ -1234,24 +1242,32 @@ export const korBookBestSeller: IEvent = {
           src:
             "http://image.kyobobook.co.kr/images/book/large/796/l9791188331796.jpg",
           displayName: "돈의 속성",
+          summaryText: "",
+          subCategoryText: "경제/경영",
         },
         {
-          id: "l9791190382175",
+          id: "l9788901243665",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/175/l9791190382175.jpg",
-          displayName: "더 해빙(The Having)(양장본 HardCover)",
+            "http://image.kyobobook.co.kr/images/book/large/665/l9788901243665.jpg",
+          displayName: "김미경의 리부트",
+          summaryText: "",
+          subCategoryText: "자기계발",
         },
         {
           id: "l9788954671064",
           src:
             "http://image.kyobobook.co.kr/images/book/large/064/l9788954671064.jpg",
           displayName: "자본과 이데올로기(양장본 HardCover)",
+          summaryText: "",
+          subCategoryText: "정치/사회",
         },
         {
           id: "l9788983711892",
           src:
             "http://image.kyobobook.co.kr/images/book/large/892/l9788983711892.jpg",
           displayName: "코스모스(보급판)",
+          summaryText: "",
+          subCategoryText: "과학",
         },
       ],
     },
@@ -1264,48 +1280,64 @@ export const korBookBestSeller: IEvent = {
           src:
             "http://image.kyobobook.co.kr/images/book/large/674/l9791165382674.jpg",
           displayName: "설민석의 한국사 대모험. 14",
+          summaryText: "",
+          subCategoryText: "어린이(초등)",
         },
         {
           id: "l9791190183208",
           src:
             "http://image.kyobobook.co.kr/images/book/large/208/l9791190183208.jpg",
           displayName: "요리조리 열어 보는 직업(Usborne)(플랩북)",
+          summaryText: "",
+          subCategoryText: "유아(0~7세)",
         },
         {
           id: "l9791135482991",
           src:
             "http://image.kyobobook.co.kr/images/book/large/991/l9791135482991.jpg",
           displayName: "영양의 비밀",
+          summaryText: "",
+          subCategoryText: "건강",
         },
         {
           id: "l9791165211899",
           src:
             "http://image.kyobobook.co.kr/images/book/large/899/l9791165211899.jpg",
           displayName: "초등 엄마 말의 힘",
+          summaryText: "",
+          subCategoryText: "가정/육아",
         },
         {
           id: "l9791189159634",
           src:
             "http://image.kyobobook.co.kr/images/book/large/634/l9791189159634.jpg",
           displayName: "백반기행(식객 허영만의)",
+          summaryText: "",
+          subCategoryText: "여행",
         },
         {
           id: "l9791136719607",
           src:
             "http://image.kyobobook.co.kr/images/book/large/607/l9791136719607.jpg",
           displayName: "파이브 스타 스토리. 15(개정판)(아이큐 점프 코믹스)",
+          summaryText: "",
+          subCategoryText: "만화",
         },
         {
           id: "l9791185473604",
           src:
             "http://image.kyobobook.co.kr/images/book/large/604/l9791185473604.jpg",
           displayName: "오! 이렇게 다양한 오트밀 요리",
+          summaryText: "",
+          subCategoryText: "요리",
         },
         {
           id: "l9791189096144",
           src:
             "http://image.kyobobook.co.kr/images/book/large/144/l9791189096144.jpg",
           displayName: "어반라이크(Urbanlike)(No.40)",
+          summaryText: "",
+          subCategoryText: "잡지",
         },
       ],
     },
@@ -1318,31 +1350,39 @@ export const korBookBestSeller: IEvent = {
           src:
             "http://image.kyobobook.co.kr/images/book/large/228/l9788960498228.jpg",
           displayName: "영어회화 이디엄(미국적인 너무나 미국적인)",
+          summaryText: "",
+          subCategoryText: "외국어",
         },
         {
           id: "l9788954753043",
           src:
             "http://image.kyobobook.co.kr/images/book/large/043/l9788954753043.jpg",
           displayName: "고등 영어영역 영어(2020)(2021 수능대비)(EBS 수능완성)",
+          summaryText: "",
+          subCategoryText: "중/고등참고서",
         },
         {
           id: "l9791162242964",
           src:
             "http://image.kyobobook.co.kr/images/book/large/964/l9791162242964.jpg",
           displayName: "핸즈온 머신러닝(2판)",
+          summaryText: "",
+          subCategoryText: "컴퓨터/IT",
         },
         {
           id: "l9791188095315",
           src:
             "http://image.kyobobook.co.kr/images/book/large/315/l9791188095315.jpg",
           displayName: "PEET Organic Chemistry 솔메 실전문풀 Part. 2(4판)",
+          summaryText: "",
+          subCategoryText: "기술/공학",
         },
       ],
     },
   ],
 };
 export const korBookToday: IEvent = {
-  id: "korPageBestseller",
+  id: "korPageToday",
   displayName: "오늘의 책",
   list: [
     {
@@ -1350,28 +1390,36 @@ export const korBookToday: IEvent = {
       displayName: "문학/인문",
       list: [
         {
-          id: "l9788954672221",
+          id: "l9788998791988",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/221/l9788954672221.jpg",
-          displayName: "화이트 호스",
+            "http://image.kyobobook.co.kr/images/book/large/988/l9788998791988.jpg",
+          displayName: "사일런트 브레스: 당신은 어떤 죽음을 준비하고 있습니까?",
+          summaryText: "어떤 죽음을 준비하고 있습니까?",
+          subCategoryText: "소설",
         },
         {
-          id: "l9791190786355",
+          id: "l9788946473324",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/355/l9791190786355.jpg",
-          displayName: "보통의 언어들(나를 숨 쉬게 하는)(양장본 HardCover)",
+            "http://image.kyobobook.co.kr/images/book/large/324/l9788946473324.jpg",
+          displayName: "친구에게(양장본 HardCover)",
+          summaryText: "다정한 글과 따뜻한 그림",
+          subCategoryText: "시/에세이",
         },
         {
-          id: "l9791164135110",
+          id: "l9788961963732",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/110/l9791164135110.jpg",
-          displayName: "석세스 에이징",
+            "http://image.kyobobook.co.kr/images/book/large/732/l9788961963732.jpg",
+          displayName: "집을 짓다",
+          summaryText: "중국인 최초 프리츠커 수상자",
+          subCategoryText: "인문",
         },
         {
-          id: "l9791160804317",
+          id: "l9791162541531",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/317/l9791160804317.jpg",
-          displayName: "박시백의 조선왕조실록 세트(특별 한정판)(전20권)",
+            "http://image.kyobobook.co.kr/images/book/large/531/l9791162541531.jpg",
+          displayName: "전쟁의 미래(양장본 HardCover)",
+          summaryText: "전쟁을 복기하고 예측하다",
+          subCategoryText: "역사/문화",
         },
       ],
     },
@@ -1380,28 +1428,36 @@ export const korBookToday: IEvent = {
       displayName: "경제/교양",
       list: [
         {
-          id: "l9791188331796",
+          id: "l9791187150725",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/796/l9791188331796.jpg",
-          displayName: "돈의 속성",
+            "http://image.kyobobook.co.kr/images/book/large/725/l9791187150725.jpg",
+          displayName: "달러의 부활(양장본 HardCover)",
+          summaryText: "폴 볼커의 역작 국내 최초 발간",
+          subCategoryText: "경제/경영",
         },
         {
-          id: "l9791190382175",
+          id: "l9791162541517",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/175/l9791190382175.jpg",
-          displayName: "더 해빙(The Having)(양장본 HardCover)",
+            "http://image.kyobobook.co.kr/images/book/large/517/l9791162541517.jpg",
+          displayName: "나는 오늘도 나를 믿는다",
+          summaryText: "정샘물의 셀프 인생 메이크업",
+          subCategoryText: "자기계발",
         },
         {
-          id: "l9788954671064",
+          id: "l9791189612702",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/064/l9788954671064.jpg",
-          displayName: "자본과 이데올로기(양장본 HardCover)",
+            "http://image.kyobobook.co.kr/images/book/large/702/l9791189612702.jpg",
+          displayName: "아이패드 감성 드로잉",
+          summaryText: "직접 그리고 굿즈 만들기!",
+          subCategoryText: "예술/대중문화",
         },
         {
-          id: "l9788983711892",
+          id: "l9788964373545",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/892/l9788983711892.jpg",
-          displayName: "코스모스(보급판)",
+            "http://image.kyobobook.co.kr/images/book/large/545/l9788964373545.jpg",
+          displayName: "지배, 그리고 저항의 예술",
+          summaryText: "피지배계급의 생생한 하부정치",
+          subCategoryText: "정치/사회",
         },
       ],
     },
@@ -1410,52 +1466,36 @@ export const korBookToday: IEvent = {
       displayName: "유아동/실용",
       list: [
         {
-          id: "l9791165382674",
+          id: "l9791188867523",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/674/l9791165382674.jpg",
-          displayName: "설민석의 한국사 대모험. 14",
+            "http://image.kyobobook.co.kr/images/book/large/523/l9791188867523.jpg",
+          displayName: "색이 변하는 아이가 있었다(양장본 HardCover)",
+          summaryText: "사랑하는 것들에 물들다",
+          subCategoryText: "유아(0~7세)",
         },
         {
-          id: "l9791190183208",
+          id: "l9791164062270",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/208/l9791190183208.jpg",
-          displayName: "요리조리 열어 보는 직업(Usborne)(플랩북)",
+            "http://image.kyobobook.co.kr/images/book/large/270/l9791164062270.jpg",
+          displayName: "이상한 과자 가게 전천당. 7",
+          summaryText: "교보단독 전천당 동전지갑",
+          subCategoryText: "어린이(초등)",
         },
         {
-          id: "l9791135482991",
+          id: "l9788950988845",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/991/l9791135482991.jpg",
-          displayName: "영양의 비밀",
+            "http://image.kyobobook.co.kr/images/book/large/845/l9788950988845.jpg",
+          displayName: "쏘팟의 하나만 빼고 다 먹는 다이어트",
+          summaryText: "맘껏 먹으면서 평생 날씬하게",
+          subCategoryText: "건강",
         },
         {
-          id: "l9791165211899",
+          id: "l9791197030116",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/899/l9791165211899.jpg",
-          displayName: "초등 엄마 말의 힘",
-        },
-        {
-          id: "l9791189159634",
-          src:
-            "http://image.kyobobook.co.kr/images/book/large/634/l9791189159634.jpg",
-          displayName: "백반기행(식객 허영만의)",
-        },
-        {
-          id: "l9791136719607",
-          src:
-            "http://image.kyobobook.co.kr/images/book/large/607/l9791136719607.jpg",
-          displayName: "파이브 스타 스토리. 15(개정판)(아이큐 점프 코믹스)",
-        },
-        {
-          id: "l9791185473604",
-          src:
-            "http://image.kyobobook.co.kr/images/book/large/604/l9791185473604.jpg",
-          displayName: "오! 이렇게 다양한 오트밀 요리",
-        },
-        {
-          id: "l9791189096144",
-          src:
-            "http://image.kyobobook.co.kr/images/book/large/144/l9791189096144.jpg",
-          displayName: "어반라이크(Urbanlike)(No.40)",
+            "http://image.kyobobook.co.kr/images/book/large/116/l9791197030116.jpg",
+          displayName: "마미오븐의 초간단 집빵 레시피",
+          summaryText: "무작정 따라해도 성공하는 레시피!",
+          subCategoryText: "요리",
         },
       ],
     },
@@ -1464,28 +1504,36 @@ export const korBookToday: IEvent = {
       displayName: "어학/학습",
       list: [
         {
-          id: "l9788960498228",
+          id: "l9791185831978",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/228/l9788960498228.jpg",
-          displayName: "영어회화 이디엄(미국적인 너무나 미국적인)",
+            "http://image.kyobobook.co.kr/images/book/large/978/l9791185831978.jpg",
+          displayName: "Tripful(트립풀) 제주(Tripful 시리즈 18)",
+          summaryText: "제주답게 여행할 수 있도록",
+          subCategoryText: "여행",
         },
         {
-          id: "l9788954753043",
+          id: "l9791190563666",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/043/l9788954753043.jpg",
-          displayName: "고등 영어영역 영어(2020)(2021 수능대비)(EBS 수능완성)",
+            "http://image.kyobobook.co.kr/images/book/large/666/l9791190563666.jpg",
+          displayName: "고등 영어 B 기출문제집(비상 홍민표)(2020)(100발 100중)",
+          summaryText: "내신 만점 필수 교재!",
+          subCategoryText: "중/고등참고서",
         },
         {
-          id: "l9791162242964",
+          id: "l9788978496216",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/964/l9791162242964.jpg",
-          displayName: "핸즈온 머신러닝(2판)",
+            "http://image.kyobobook.co.kr/images/book/large/216/l9788978496216.jpg",
+          displayName: "세가새턴 퍼펙트 카탈로그",
+          summaryText: "세가새턴의 모든 것!",
+          subCategoryText: "취미/실용/스포츠",
         },
         {
-          id: "l9791188095315",
+          id: "l9791162243183",
           src:
-            "http://image.kyobobook.co.kr/images/book/large/315/l9791188095315.jpg",
-          displayName: "PEET Organic Chemistry 솔메 실전문풀 Part. 2(4판)",
+            "http://image.kyobobook.co.kr/images/book/large/183/l9791162243183.jpg",
+          displayName: "클라우드 네이티브",
+          summaryText: "최신 개념과 모범 사례를 배워보자",
+          subCategoryText: "컴퓨터/IT",
         },
       ],
     },

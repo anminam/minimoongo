@@ -29,8 +29,12 @@ const Home = ({ list }: IHome) => {
         <BoxEvent eventObj={mainTodayBookSliderEvent} isBorder={true} />
       </div>
 
-      <BoxWelcome1 eventObj={event1} />
-      <BoxWelcomePicks eventObj={eventPicks} />
+      <div className="wapper-content">
+        <BoxWelcome1 eventObj={event1} />
+      </div>
+      <div className="wapper-content">
+        <BoxWelcomePicks eventObj={eventPicks} />
+      </div>
     </div>
   );
 };
