@@ -145,7 +145,8 @@
     }
 
     &__title {
-      height: 32px;
+      overflow: hidden;
+      height: 36px;
       line-height: 12px;
       text-align: center;
       color: #333;

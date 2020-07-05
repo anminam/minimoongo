@@ -12,7 +12,7 @@ const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
     setIndex(index);
   };
 
-  const [isTitleView] = useState<boolean>(eventObj.list.length > 1);
+  const [isViewSubCategoryTitle] = useState<boolean>(eventObj.list.length > 1);
 
   return (
     <div className={`box box-catogory ${type}`}>
@@ -23,7 +23,7 @@ const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
         {eventObj.list.map((item, i) => {
           return (
             <div className="section" key={i}>
-              {isTitleView && (
+              {isViewSubCategoryTitle && (
                 <h3 className="section__title">
                   <a
                     href={item.href}
@@ -45,6 +45,7 @@ const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
           );
         })}
       </div>
+      <div className="box__more">더보기 +</div>
     </div>
   );
 };

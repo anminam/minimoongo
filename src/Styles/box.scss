@@ -1,7 +1,10 @@
 @import "./colors.scss";
 
 $title-height: 30px;
-$box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
+$box-font-family: "Malgun Gothic",
+"Apple SD Neo Gothic",
+"Dotum",
+"Sans-Serif";
 
 @mixin box-title() {
   font-size: 16px;
@@ -37,10 +40,6 @@ $box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
   position: relative;
   height: 340px;
   overflow: hidden;
-
-  & + div {
-    margin-top: 40px;
-  }
 
   // 박스 타이틀
   &__title {
@@ -86,6 +85,7 @@ $box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
 
     // 섹션
     .section {
+
       // 각 섹션 타이틀
       &__title {
         a {
@@ -148,7 +148,7 @@ $box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
       padding: 20px 40px;
 
       li {
-        margin-right: 23px;
+        margin-left: 11px;
         float: left;
 
         &:last-child {
@@ -182,7 +182,16 @@ $box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
       }
     }
 
+
     // end .category-list
+  }
+
+  &__more {
+    position: absolute;
+    font-size: 11px;
+    color: gray;
+    top: 5px;
+    right: 0;
   }
 
   &.left-title {
@@ -201,7 +210,7 @@ $box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
     .layer {
       padding: 15px;
 
-      > div {
+      >div {
         display: inline;
         vertical-align: middle;
       }
@@ -236,7 +245,7 @@ $box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
   display: flex;
   align-items: center;
 
-  > div {
+  >div {
     float: left;
     width: 50%;
   }

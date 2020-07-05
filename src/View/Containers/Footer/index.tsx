@@ -6,7 +6,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="sitemap-container">
-        <ul className="sitemap-container__list stick-list">
+        <ul className="sitemap-container__list stick-list container_lg">
           <li>
             <a href="/">회사소개</a>
           </li>

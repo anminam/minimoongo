@@ -1,19 +1,25 @@
 import React, { useEffect, useState } from "react";
-import { IGoods, IBook } from "Interfaces/IGoods";
-import { NavUtils } from "Core/nav/utils";
+import { IBook } from "Interfaces/IGoods";
 import { Utils } from "Core/Utils";
 import { ILink } from "Interfaces/ILink";
 
-const CategoryListCard = ({ id, src, displayName }: ILink) => {
+const CategoryListCard = ({
+  id,
+  src,
+  displayName,
+  subCategoryText,
+  summaryText,
+}: ILink) => {
   // const categoryName = NavUtils.getCategoryName(categoryId);
 
   const link = Utils.getLinkOfProduct(id);
   const [item, setItem] = useState<IBook>();
+  const [categoryName] = useState<string>(subCategoryText || "");
 
-  const categoryName = item?.categoryId;
   const summary = item?.subscript;
 
   useEffect(() => {
+    // 책을 받아오는것으로 할까??
     const goods = Utils.getBook(id);
     setItem(goods);
   }, [id]);
@@ -28,11 +34,13 @@ const CategoryListCard = ({ id, src, displayName }: ILink) => {
         {src && <img src={src} alt={displayName} />}
       </div>
       <div className="card1__contents">
-        <div className="card1__contents__category">[{categoryName}]</div>
+        <div className="card1__contents__category">[{subCategoryText}]</div>
         <div className="card1__contents__title">
           <a href={link}>{displayName}</a>
         </div>
-        <div className="card1__contents__summary">{summary}</div>
+        {summaryText && (
+          <div className="card1__contents__summary">{summaryText}</div>
+        )}
         <div className="card1__contents__price">
           <strong>14,400원</strong>
           <span>

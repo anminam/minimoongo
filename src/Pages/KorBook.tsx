@@ -35,7 +35,12 @@ const KorBook = () => {
           <div className="wapper-content">
             <BoxEvent eventObj={korTodayBookSliderEvent} isBorder={true} />
           </div>
-          <div className="wapper-content">
+          <div className="wapper-content r1">
+            <BoxCatogory
+              eventObj={korBookBestSeller}
+              isBorder={true}
+              type={"tab"}
+            />
             <BoxCatogory
               eventObj={korBookBestSeller}
               isBorder={true}

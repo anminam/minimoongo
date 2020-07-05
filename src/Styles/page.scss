@@ -20,6 +20,21 @@
 
     .wapper-content {
         margin-top: 10px;
+
+        // 오른쪽 한개
+        &.r1 {
+            overflow: hidden;
+
+            >div {
+                width: 567px;
+                float: left;
+            }
+
+            >div+div {
+                width: 193px;
+                float: right;
+            }
+        }
     }
 
     &.homepage {
