@@ -1,5 +1,5 @@
-$G-path: '/';
-$G-path-icons: $G-path+'assets/icons/';
+$G-path: "../images/";
+$G-path-icons: $G-path + "icons/";
 
 @mixin icon($fileName) {
   $url: $G-path-icons + $fileName;
@@ -44,7 +44,6 @@ $G-path-icons: $G-path+'assets/icons/';
   -webkit-mask-size: 30px;
   mask-size: 30px;
 }
-
 
 @mixin remove-after($color, $size) {
   &::after {

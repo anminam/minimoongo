@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import "Styles/index.scss";
 import { IBox } from "Interfaces/IContainers";
 import CategoryList from "../Lists/CategoryList";
+import { Link } from "react-router-dom";
 
 const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
   const [title] = useState<string>(eventObj.displayName);
@@ -45,7 +46,9 @@ const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
           );
         })}
       </div>
-      <div className="box__more">더보기 +</div>
+      <div className="box__more">
+        <Link to={"/"}>더보기 +</Link>
+      </div>
     </div>
   );
 };

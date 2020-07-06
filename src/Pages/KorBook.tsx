@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import NavCategory from "View/Components/NavCategory";
 import { IMainCategoryId } from "Interfaces/ICategory";
 import CategoryEventSlider from "View/Components/CategoryEventSlider";
-import { bookKorbookEvents } from "Core/data";
 import {
   korbookSimpleEvent,
   korTodayBookSliderEvent,
@@ -11,15 +10,11 @@ import {
   korBookToday,
 } from "Core/events/data";
 import Welcome2 from "View/Containers/Welcomes/Welcome2";
-import Slider3DController from "View/Containers/Slider/Slider3DController";
 import BoxEvent from "View/Containers/Boxes/BoxEvent";
 import BoxCatogory from "View/Containers/Boxes/BoxCatogory";
 
 const KorBook = () => {
   const [categoryId] = useState<IMainCategoryId>("korbook");
-
-  // 이걸 서버에서 할까??
-  const imgPath = "assets/events/welcomes/categorywelcom/korbook/2020_06_23/";
 
   return (
     <div className="container_lg page">
@@ -47,7 +42,7 @@ const KorBook = () => {
               type={"tab"}
             />
           </div>
-          <div className="wapper-content">
+          <div className="wapper-content r1">
             <BoxCatogory eventObj={korBookToday} isBorder={true} type={"tab"} />
           </div>
         </div>

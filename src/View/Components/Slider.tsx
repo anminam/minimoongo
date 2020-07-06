@@ -47,17 +47,7 @@ const Slider = ({
   }, [changeItem]);
 
   const handleDotMouseOver = (id: string) => {
-    // const target = event.target as Element;
-    // const { id } = target;
-    // const obj = list?.find((item, index) => {
-    //   if (item.id === id) {
-    //     changeItem(index);
-    //     return true;
-    //   }
-    // });
-    // if (obj) {
-    //   setOnItem(obj);
-    // }
+    changeItem(Number(id));
   };
 
   const handlePrevClick = useCallback(() => {
