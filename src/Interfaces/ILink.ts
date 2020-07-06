@@ -14,4 +14,5 @@ export interface ILink {
   subCategoryID?: string;
   subCategoryText?: string;
   summaryText?: string;
+  price?: string;
 }

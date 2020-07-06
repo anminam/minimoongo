@@ -1,5 +1,4 @@
-import React, { useEffect, useState } from "react";
-import { IBook } from "Interfaces/IGoods";
+import React from "react";
 import { Utils } from "Core/Utils";
 import { ILink } from "Interfaces/ILink";
 
@@ -9,20 +8,10 @@ const CategoryListCard = ({
   displayName,
   subCategoryText,
   summaryText,
+  price,
 }: ILink) => {
-  // const categoryName = NavUtils.getCategoryName(categoryId);
-
   const link = Utils.getLinkOfProduct(id);
-  const [item, setItem] = useState<IBook>();
-  const [categoryName] = useState<string>(subCategoryText || "");
-
-  const summary = item?.subscript;
-
-  useEffect(() => {
-    // 책을 받아오는것으로 할까??
-    const goods = Utils.getBook(id);
-    setItem(goods);
-  }, [id]);
+  const _price = Utils.formmatPrice(price || "0");
 
   const handleCardClick = (event: React.MouseEvent<HTMLDivElement>) => {
     window.location.href = link;
@@ -42,7 +31,7 @@ const CategoryListCard = ({
           <div className="card1__contents__summary">{summaryText}</div>
         )}
         <div className="card1__contents__price">
-          <strong>14,400원</strong>
+          <strong>{_price}원</strong>
           <span>
             [10%
             <img

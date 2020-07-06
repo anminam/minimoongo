@@ -1206,6 +1206,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "다 괜찮아요, 천국이 말했다",
           summaryText: "",
           subCategoryText: "소설",
+          price: "12420",
         },
         {
           id: "l9791190786355",
@@ -1214,6 +1215,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "보통의 언어들(나를 숨 쉬게 하는)(양장본 HardCover)",
           summaryText: "",
           subCategoryText: "시/에세이",
+          price: "13050",
         },
         {
           id: "l9791190030519",
@@ -1222,6 +1224,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "사람에 대한 예의",
           summaryText: "",
           subCategoryText: "인문",
+          price: "13500",
         },
         {
           id: "l9791160804317",
@@ -1230,6 +1233,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "박시백의 조선왕조실록 세트(특별 한정판)(전20권)",
           summaryText: "",
           subCategoryText: "역사/문화",
+          price: "99000",
         },
       ],
     },
@@ -1244,6 +1248,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "돈의 속성",
           summaryText: "",
           subCategoryText: "경제/경영",
+          price: "15120",
         },
         {
           id: "l9788901243665",
@@ -1252,6 +1257,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "김미경의 리부트",
           summaryText: "",
           subCategoryText: "자기계발",
+          price: "14400",
         },
         {
           id: "l9788954671064",
@@ -1260,6 +1266,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "자본과 이데올로기(양장본 HardCover)",
           summaryText: "",
           subCategoryText: "정치/사회",
+          price: "34200",
         },
         {
           id: "l9788983711892",
@@ -1268,6 +1275,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "코스모스(보급판)",
           summaryText: "",
           subCategoryText: "과학",
+          price: "16650",
         },
       ],
     },
@@ -1282,6 +1290,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "설민석의 한국사 대모험. 14",
           summaryText: "",
           subCategoryText: "어린이(초등)",
+          price: "10800",
         },
         {
           id: "l9791190183208",
@@ -1290,6 +1299,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "요리조리 열어 보는 직업(Usborne)(플랩북)",
           summaryText: "",
           subCategoryText: "유아(0~7세)",
+          price: "11700",
         },
         {
           id: "l9791135482991",
@@ -1298,6 +1308,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "영양의 비밀",
           summaryText: "",
           subCategoryText: "건강",
+          price: "23220",
         },
         {
           id: "l9791165211899",
@@ -1306,6 +1317,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "초등 엄마 말의 힘",
           summaryText: "",
           subCategoryText: "가정/육아",
+          price: "13500",
         },
         {
           id: "l9791189159634",
@@ -1314,6 +1326,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "백반기행(식객 허영만의)",
           summaryText: "",
           subCategoryText: "여행",
+          price: "15300",
         },
         {
           id: "l9791136719607",
@@ -1322,6 +1335,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "파이브 스타 스토리. 15(개정판)(아이큐 점프 코믹스)",
           summaryText: "",
           subCategoryText: "만화",
+          price: "9000",
         },
         {
           id: "l9791185473604",
@@ -1330,6 +1344,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "오! 이렇게 다양한 오트밀 요리",
           summaryText: "",
           subCategoryText: "요리",
+          price: "12420",
         },
         {
           id: "l9791189096144",
@@ -1338,6 +1353,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "어반라이크(Urbanlike)(No.40)",
           summaryText: "",
           subCategoryText: "잡지",
+          price: "24300",
         },
       ],
     },
@@ -1352,6 +1368,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "영어회화 이디엄(미국적인 너무나 미국적인)",
           summaryText: "",
           subCategoryText: "외국어",
+          price: "13500",
         },
         {
           id: "l9788954753043",
@@ -1360,6 +1377,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "고등 영어영역 영어(2020)(2021 수능대비)(EBS 수능완성)",
           summaryText: "",
           subCategoryText: "중/고등참고서",
+          price: "8820",
         },
         {
           id: "l9791162242964",
@@ -1368,6 +1386,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "핸즈온 머신러닝(2판)",
           summaryText: "",
           subCategoryText: "컴퓨터/IT",
+          price: "49500",
         },
         {
           id: "l9791188095315",
@@ -1376,6 +1395,7 @@ export const korBookBestSeller: IEvent = {
           displayName: "PEET Organic Chemistry 솔메 실전문풀 Part. 2(4판)",
           summaryText: "",
           subCategoryText: "기술/공학",
+          price: "18000",
         },
       ],
     },
@@ -1396,6 +1416,7 @@ export const korBookToday: IEvent = {
           displayName: "사일런트 브레스: 당신은 어떤 죽음을 준비하고 있습니까?",
           summaryText: "어떤 죽음을 준비하고 있습니까?",
           subCategoryText: "소설",
+          price: "13320",
         },
         {
           id: "l9788946473324",
@@ -1404,6 +1425,7 @@ export const korBookToday: IEvent = {
           displayName: "친구에게(양장본 HardCover)",
           summaryText: "다정한 글과 따뜻한 그림",
           subCategoryText: "시/에세이",
+          price: "10800",
         },
         {
           id: "l9788961963732",
@@ -1412,6 +1434,7 @@ export const korBookToday: IEvent = {
           displayName: "집을 짓다",
           summaryText: "중국인 최초 프리츠커 수상자",
           subCategoryText: "인문",
+          price: "19800",
         },
         {
           id: "l9791162541531",
@@ -1420,6 +1443,7 @@ export const korBookToday: IEvent = {
           displayName: "전쟁의 미래(양장본 HardCover)",
           summaryText: "전쟁을 복기하고 예측하다",
           subCategoryText: "역사/문화",
+          price: "25200",
         },
       ],
     },
@@ -1434,6 +1458,7 @@ export const korBookToday: IEvent = {
           displayName: "달러의 부활(양장본 HardCover)",
           summaryText: "폴 볼커의 역작 국내 최초 발간",
           subCategoryText: "경제/경영",
+          price: "29700",
         },
         {
           id: "l9791162541517",
@@ -1442,6 +1467,7 @@ export const korBookToday: IEvent = {
           displayName: "나는 오늘도 나를 믿는다",
           summaryText: "정샘물의 셀프 인생 메이크업",
           subCategoryText: "자기계발",
+          price: "13500",
         },
         {
           id: "l9791189612702",
@@ -1450,6 +1476,7 @@ export const korBookToday: IEvent = {
           displayName: "아이패드 감성 드로잉",
           summaryText: "직접 그리고 굿즈 만들기!",
           subCategoryText: "예술/대중문화",
+          price: "17820",
         },
         {
           id: "l9788964373545",
@@ -1458,6 +1485,7 @@ export const korBookToday: IEvent = {
           displayName: "지배, 그리고 저항의 예술",
           summaryText: "피지배계급의 생생한 하부정치",
           subCategoryText: "정치/사회",
+          price: "22500",
         },
       ],
     },
@@ -1472,6 +1500,7 @@ export const korBookToday: IEvent = {
           displayName: "색이 변하는 아이가 있었다(양장본 HardCover)",
           summaryText: "사랑하는 것들에 물들다",
           subCategoryText: "유아(0~7세)",
+          price: "15300",
         },
         {
           id: "l9791164062270",
@@ -1480,6 +1509,7 @@ export const korBookToday: IEvent = {
           displayName: "이상한 과자 가게 전천당. 7",
           summaryText: "교보단독 전천당 동전지갑",
           subCategoryText: "어린이(초등)",
+          price: "10800",
         },
         {
           id: "l9788950988845",
@@ -1488,6 +1518,7 @@ export const korBookToday: IEvent = {
           displayName: "쏘팟의 하나만 빼고 다 먹는 다이어트",
           summaryText: "맘껏 먹으면서 평생 날씬하게",
           subCategoryText: "건강",
+          price: "14400",
         },
         {
           id: "l9791197030116",
@@ -1496,6 +1527,7 @@ export const korBookToday: IEvent = {
           displayName: "마미오븐의 초간단 집빵 레시피",
           summaryText: "무작정 따라해도 성공하는 레시피!",
           subCategoryText: "요리",
+          price: "14400",
         },
       ],
     },
@@ -1510,6 +1542,7 @@ export const korBookToday: IEvent = {
           displayName: "Tripful(트립풀) 제주(Tripful 시리즈 18)",
           summaryText: "제주답게 여행할 수 있도록",
           subCategoryText: "여행",
+          price: "14400",
         },
         {
           id: "l9791190563666",
@@ -1518,6 +1551,7 @@ export const korBookToday: IEvent = {
           displayName: "고등 영어 B 기출문제집(비상 홍민표)(2020)(100발 100중)",
           summaryText: "내신 만점 필수 교재!",
           subCategoryText: "중/고등참고서",
+          price: "10800",
         },
         {
           id: "l9788978496216",
@@ -1526,6 +1560,7 @@ export const korBookToday: IEvent = {
           displayName: "세가새턴 퍼펙트 카탈로그",
           summaryText: "세가새턴의 모든 것!",
           subCategoryText: "취미/실용/스포츠",
+          price: "18000",
         },
         {
           id: "l9791162243183",
@@ -1534,6 +1569,7 @@ export const korBookToday: IEvent = {
           displayName: "클라우드 네이티브",
           summaryText: "최신 개념과 모범 사례를 배워보자",
           subCategoryText: "컴퓨터/IT",
+          price: "19800",
         },
       ],
     },

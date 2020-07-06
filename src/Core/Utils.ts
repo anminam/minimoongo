@@ -98,4 +98,12 @@ export class Utils {
 
     return count;
   };
+
+  /**
+   * 가격 형식
+   * @param str price
+   */
+  public static formmatPrice = (str: string): string => {
+    return str.replace(/(\d)(?=(\d{3})+(?!\d))/g, "$1,");
+  };
 }

@@ -89,6 +89,7 @@ const getGoodsList = ($el) => {
 
             const src = $subEl.find('.cover img').attr('src');
             const id = utils.getIdFormSrc(src);
+            const price = utils.getRawPrice($subEl.find('.price strong').text());
 
             list.push({
                 id,
@@ -96,6 +97,7 @@ const getGoodsList = ($el) => {
                 displayName: $subEl.find('.title').text().trim(),
                 summaryText: $subEl.find('.summary').text().trim(),
                 subCategoryText: $subEl.find('.category').text().replace(/[[\]]/g, ''),
+                price
                 // category: $subEl.find('.category').text().trim(),
                 // list: getSubImageList($subEl)
             })
