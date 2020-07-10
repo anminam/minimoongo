@@ -1,27 +1,27 @@
 import React, { useState } from "react";
 import "Styles/index.scss";
+import BoxTitle from "./Components/BoxTitle";
+import BoxContents from "./Components/BoxContents";
+import { IEvent } from "Interfaces/IEventList";
 
 interface IBoxNormal {
-  eventObj: IEventItem;
+  eventObj: IEvent;
   children: React.ReactNode;
+  height?: number; // 추후 삭제하는 방향으로...
 }
 
-interface IEventItem {
-  id: string;
-  title: string;
-  href?: string;
-}
-
-const BoxNormal = ({ children, eventObj }: IBoxNormal) => {
-  const [title] = useState<string>(eventObj.title);
+const BoxNormal = ({ children, eventObj, height }: IBoxNormal) => {
+  const [title] = useState<string>(eventObj.displayName);
   const [href] = useState<string>(eventObj.href || "/");
 
+  const style = {
+    height: height || 340,
+  };
+
   return (
-    <div className="box box-normal left-title">
-      <h3 className="box__title">
-        <a href={href}>{title}</a>
-      </h3>
-      <div className="box__contents">{children}</div>
+    <div className="box box-normal" style={style}>
+      <BoxTitle href={href} title={title} />
+      <BoxContents eventObj={eventObj}>{children}</BoxContents>
     </div>
   );
 };

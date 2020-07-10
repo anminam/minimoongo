@@ -82,6 +82,11 @@ $box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
 
     // 섹션
     .section {
+      // :after {
+      //   content: "";
+      //   display: block;
+      //   clear: both;
+      // }
       // 각 섹션 타이틀
       &__title {
         a {
@@ -103,6 +108,21 @@ $box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
 
     .list-container {
       width: 100%;
+
+      &.map {
+        ul {
+          display: flex;
+          flex-wrap: wrap;
+          width: 100%;
+
+          li {
+            border: 1px solid $color-border-main;
+            padding: 10px;
+            margin: 0;
+            width: 25%;
+          }
+        }
+      }
 
       li {
         margin-right: 23px;
@@ -197,7 +217,7 @@ $box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
       @include box-title();
     }
   }
-  &__more_onecol {
+  &__count_buttons {
     position: absolute;
     display: flex;
     font-size: 11px;

@@ -13,7 +13,9 @@ export default {
 
 export const main = () => {
   return (
-    <BoxNormal eventObj={{ title: "a", id: "a", href: "/" }}>
+    <BoxNormal
+      eventObj={{ displayName: "d타이틀", id: "i아이디", href: "/", list: [] }}
+    >
       내용 내용이 길다 내용이 많이길다 길다길다맨
     </BoxNormal>
   );
@@ -22,7 +24,9 @@ export const slider3d = () => {
   const { displayName, id, href } = korTodayBookSliderEvent;
   return CustomProvider(() => {
     return (
-      <BoxNormal eventObj={{ title: displayName, id: id, href: href }}>
+      <BoxNormal
+        eventObj={{ displayName: displayName, id: id, href: href, list: [] }}
+      >
         <Slider3D list={korTodayBookSliderEvent.list[0].list} />
       </BoxNormal>
     );

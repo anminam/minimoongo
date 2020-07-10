@@ -5,14 +5,18 @@ import CategoryList from "../Lists/CategoryList";
 import { Link } from "react-router-dom";
 import Button from "View/Components/Button";
 import useButtonLength from "Core/Hooks/useButtonLength";
+import BoxTitle from "./Components/BoxTitle";
+import BoxSubTitle from "./Components/BoxSubTitle";
+import BoxMoreButton from "./Components/BoxMoreButton";
+import BoxCountButtons from "./Components/BoxCountButtons";
 
 const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
   const [title] = useState<string>(eventObj.displayName);
   const [href] = useState<string>(eventObj.href || "/");
-  const [index, setIndex] = useState<number>(0);
+  const [selectedSectionIndex, setSelectedSectionIndex] = useState<number>(0);
 
   const handleMouseOver = (index: number) => {
-    setIndex(index);
+    setSelectedSectionIndex(index);
   };
 
   const [isViewSubCategoryTitle, setIsViewSubCategoryTitle] = useState<boolean>(
@@ -46,25 +50,23 @@ const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
 
   return (
     <div className={`box box-catogory ${type}`}>
-      <h2 className="box__title">
-        <a href={href}>{title}</a>
-      </h2>
+      <BoxTitle href={href} title={title} />
       <div className="box__contents">
         {eventObj.list.map((item, i) => {
           return (
             <div className="section" key={i}>
+              {/* section title */}
               {isViewSubCategoryTitle && (
-                <h3 className="section__title">
-                  <a
-                    href={item.href}
-                    className={i === index ? "on" : ""}
-                    onMouseOver={() => handleMouseOver(i)}
-                  >
-                    {item.displayName}
-                  </a>
-                </h3>
+                <BoxSubTitle
+                  index={i}
+                  href={item.href || ""}
+                  title={item.displayName}
+                  isSelected={i === selectedSectionIndex}
+                  onMouseOver={handleMouseOver}
+                />
               )}
-              {index === i && (
+              {/* section contents */}
+              {selectedSectionIndex === i && (
                 <div
                   className={`section__contents ${isBorder ? "border" : ""}`}
                 >
@@ -79,20 +81,15 @@ const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
         })}
       </div>
       {/* 더보기 버튼 */}
-      {isMoreButton && (
-        <div className="box__more">
-          <Link to={"/"}>더보기 +</Link>
-        </div>
-      )}
+      {isMoreButton && <BoxMoreButton href={"/"} />}
       {/* 1/4 카운트 버튼 */}
       {type === "oneCol" && (
-        <div className="box__more_onecol">
-          <Button type="bannerPrev" onClick={handleOneColPrevClick} />
-          <span className="page-numbers">
-            {oneColNumber}/{eventObj.list[0].list.length}
-          </span>
-          <Button type="bannerNext" onClick={handleOneColNextClick} />
-        </div>
+        <BoxCountButtons
+          number={oneColNumber}
+          max={eventObj.list[0].list.length}
+          onPrevClick={handleOneColPrevClick}
+          onNextClick={handleOneColNextClick}
+        />
       )}
     </div>
   );

@@ -16,7 +16,12 @@ export const main = () => {
   return CustomProvider(() => {
     return (
       <BoxNormal
-        eventObj={{ title: event.displayName, id: event.id, href: event.href }}
+        eventObj={{
+          displayName: event.displayName,
+          id: event.id,
+          href: event.href,
+          list: [],
+        }}
       >
         <Slider3DController obj={korTodayBookSliderEvent.list[0]} />;
       </BoxNormal>
@@ -27,7 +32,9 @@ export const slider3d = () => {
   const { displayName, id, href } = korTodayBookSliderEvent;
   return CustomProvider(() => {
     return (
-      <BoxNormal eventObj={{ title: displayName, id: id, href: href }}>
+      <BoxNormal
+        eventObj={{ displayName: displayName, id: id, href: href, list: [] }}
+      >
         <Slider3D list={korTodayBookSliderEvent.list[0].list} />
       </BoxNormal>
     );
