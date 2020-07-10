@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useCallback } from "react";
-import { IEventListItem, IEvent } from "Interfaces/IEventList";
+import { IEvent } from "Interfaces/IEventList";
 
 interface ICategoryEventSlider {
   obj: IEvent;
@@ -136,7 +136,6 @@ const CategoryEventSlider = ({
     const index = event.currentTarget.getAttribute("custom-index");
     const len = obj.list.length;
     if (Number(index) !== Math.floor(viewIndex / len)) {
-      // debugger;
       const rand = Math.floor(Math.random() * len);
       changeItem(Number(index) * len + rand);
     }

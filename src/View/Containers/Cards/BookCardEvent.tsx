@@ -1,7 +1,6 @@
 import React from "react";
 import { ILink } from "Interfaces/ILink";
 import { Utils } from "Core/Utils";
-import { Link } from "react-router-dom";
 
 interface IBookCardEvent {
   obj: ILink;

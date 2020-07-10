@@ -7,7 +7,6 @@ import {
   event1,
   eventPicks,
   mainWelcome2Event,
-  korTodayBookSliderEvent,
   mainTodayBookSliderEvent,
 } from "Core/events/data";
 import BoxWelcomePicks from "View/Containers/Boxes/BoxWelcomePicks";

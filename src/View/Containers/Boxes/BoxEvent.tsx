@@ -1,12 +1,7 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import "Styles/index.scss";
 import { TGoods } from "Interfaces/IGoods";
 import { IEvent } from "Interfaces/IEventList";
-import { Utils } from "Core/Utils";
-import { NavUtils } from "Core/nav/utils";
-import ListNormal from "../Lists/ListNormal";
-import { useSelector } from "react-redux";
-import { TRootState } from "Core/reducers";
 import Slider3DController from "View/Containers/Slider/Slider3DController";
 
 interface IBoxEvent {

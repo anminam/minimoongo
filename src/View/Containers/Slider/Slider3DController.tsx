@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import { IEventListItem } from "Interfaces/IEventList";
 import Slider3D from "./Slider3D";
-import BoxNormal from "../Boxes/BoxNormal";
 import Slider from "View/Components/Slider";
 import { ILink } from "Interfaces/ILink";
 
@@ -14,7 +13,8 @@ interface ISlider3DController {
  * @param param0
  */
 const Slider3DController = React.memo(({ obj }: ISlider3DController) => {
-  const { list, displayName, id, href = "/" } = obj;
+  // const { list, displayName, id, href = "/" } = obj;
+  const { list } = obj;
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
 
   const handleSelectedItemChanged = (index: number) => {

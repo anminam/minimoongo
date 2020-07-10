@@ -7,7 +7,6 @@ import {
   otherBookBestSeller,
   otherTodayBookSliderEvent,
 } from "Core/events/data";
-import Welcome2 from "View/Containers/Welcomes/Welcome2";
 import BoxEvent from "View/Containers/Boxes/BoxEvent";
 import BoxCatogory from "View/Containers/Boxes/BoxCatogory";
 

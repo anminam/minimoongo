@@ -15,7 +15,6 @@ import BoxEvent from "View/Containers/Boxes/BoxEvent";
 import BoxCatogory from "View/Containers/Boxes/BoxCatogory";
 import BoxNormal from "View/Containers/Boxes/BoxNormal";
 import ListMap from "View/Containers/Lists/ListMap";
-import BoxContents from "View/Containers/Boxes/Components/BoxContents";
 
 const KorBook = () => {
   const [categoryId] = useState<IMainCategoryId>("korbook");

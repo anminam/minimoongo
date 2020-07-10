@@ -2,8 +2,6 @@ import React, { useState, useEffect } from "react";
 import "Styles/index.scss";
 import { IBox } from "Interfaces/IContainers";
 import CategoryList from "../Lists/CategoryList";
-import { Link } from "react-router-dom";
-import Button from "View/Components/Button";
 import useButtonLength from "Core/Hooks/useButtonLength";
 import BoxTitle from "./Components/BoxTitle";
 import BoxSubTitle from "./Components/BoxSubTitle";
