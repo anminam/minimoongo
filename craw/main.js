@@ -5,6 +5,7 @@ const bestSeller = require("./module/bestSeller");
 const mainSlider = require("./module/mainSlider");
 const pageTopSlider = require("./module/pageTopSlider");
 const pageNormalBox = require("./module/pageNormalBox");
+const pageBoxMap = require("./module/pageBoxMap");
 
 const {
   Builder,
@@ -176,6 +177,42 @@ let driver;
       );
       file.save(con.FILE_FOLDER_BASE, id, bestSellerListOther);
     }
+    // korPageTodayer
+    if (con.IS_CRAW_KORPAGE_ADBOXMAP) {
+      const id = "korPageBoxMap";
+      const paramObj = {
+        id: id,
+        title: "이벤트",
+        url: con.PAGE_KORBOOK_URL,
+      };
+      const seleterObj = {
+        main: ".box_main_banner",
+        ul: ".list_main_banner",
+      };
+      const addObj = {
+        // categoryId: id,
+      };
+      const obj = await pageBoxMap(driver, paramObj, seleterObj, addObj);
+      file.save(con.FILE_FOLDER_BASE, id, obj);
+    }
+    // otherPageBoxMap
+    // if (con.IS_CRAW_OTHERPAGE_ADBOXMAP) {
+    //   const id = "otherPageBoxMap";
+    //   const paramObj = {
+    //     id: id,
+    //     title: "이벤트",
+    //     url: con.PAGE_OTHERBOOK_URL,
+    //   };
+    //   const seleterObj = {
+    //     main: ".box_main_banner",
+    //     ul: ".list_main_banner",
+    //   };
+    //   const addObj = {
+    //     // categoryId: id,
+    //   };
+    //   const obj = await pageBoxMap(driver, paramObj, seleterObj, addObj);
+    //   file.save(con.FILE_FOLDER_BASE, id, obj);
+    // }
   } catch (err) {
     console.log(err);
   } finally {
