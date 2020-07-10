@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "177d9d00439f3e6358e7aaf1d0b37838",
+    "revision": "f76fc77c1fbbc6729913ba69a41ee90d",
     "url": "/minimoongo/index.html"
   },
   {
-    "revision": "402711a0a018def0284c",
-    "url": "/minimoongo/static/css/main.2c6e3632.chunk.css"
+    "revision": "475ffccae69b07b04ee7",
+    "url": "/minimoongo/static/css/main.89b1b818.chunk.css"
   },
   {
     "revision": "45b4488a1cad3b4c4ed8",
@@ -16,7 +16,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/minimoongo/static/js/2.d9971c30.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "402711a0a018def0284c",
+    "revision": "475ffccae69b07b04ee7",
     "url": "/minimoongo/static/js/main.93225565.chunk.js"
   },
   {
