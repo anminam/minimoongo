@@ -1,19 +1,19 @@
 {
   "files": {
-    "main.css": "/minimoongo/static/css/main.4a673d58.chunk.css",
-    "main.js": "/minimoongo/static/js/main.b554e31a.chunk.js",
+    "main.css": "/minimoongo/static/css/main.2c6e3632.chunk.css",
+    "main.js": "/minimoongo/static/js/main.93225565.chunk.js",
     "runtime-main.js": "/minimoongo/static/js/runtime-main.822bae6d.js",
-    "static/js/2.a6848590.chunk.js": "/minimoongo/static/js/2.a6848590.chunk.js",
+    "static/js/2.d9971c30.chunk.js": "/minimoongo/static/js/2.d9971c30.chunk.js",
     "index.html": "/minimoongo/index.html",
-    "precache-manifest.9314e956c51cebfa54657a31d97e8cd3.js": "/minimoongo/precache-manifest.9314e956c51cebfa54657a31d97e8cd3.js",
+    "precache-manifest.714cb2455bc8796e93a719a1450410e3.js": "/minimoongo/precache-manifest.714cb2455bc8796e93a719a1450410e3.js",
     "service-worker.js": "/minimoongo/service-worker.js",
-    "static/js/2.a6848590.chunk.js.LICENSE.txt": "/minimoongo/static/js/2.a6848590.chunk.js.LICENSE.txt",
+    "static/js/2.d9971c30.chunk.js.LICENSE.txt": "/minimoongo/static/js/2.d9971c30.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/minimoongo/static/media/remove.b468d5f4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.822bae6d.js",
-    "static/js/2.a6848590.chunk.js",
-    "static/css/main.4a673d58.chunk.css",
-    "static/js/main.b554e31a.chunk.js"
+    "static/js/2.d9971c30.chunk.js",
+    "static/css/main.2c6e3632.chunk.css",
+    "static/js/main.93225565.chunk.js"
   ]
 }
