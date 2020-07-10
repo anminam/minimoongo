@@ -2,6 +2,7 @@ import React from "react";
 import { IGoods } from "Interfaces/IGoods";
 import { NavUtils } from "Core/nav/utils";
 import { Utils } from "Core/Utils";
+import { Link } from "react-router-dom";
 
 const GoodsCardNormal = ({ name, categoryId, img, id }: IGoods) => {
   const categoryName = NavUtils.getCategoryName(categoryId);
@@ -17,7 +18,7 @@ const GoodsCardNormal = ({ name, categoryId, img, id }: IGoods) => {
       <div className="card__contents">
         <p className="card__contents__category">[{categoryName}]</p>
         <p className="card__contents__title">
-          <a href={link}>{name}</a>
+          <Link to={link}>{name}</Link>
         </p>
       </div>
     </div>

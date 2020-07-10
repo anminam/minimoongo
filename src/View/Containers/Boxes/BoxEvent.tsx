@@ -3,6 +3,7 @@ import "Styles/index.scss";
 import { TGoods } from "Interfaces/IGoods";
 import { IEvent } from "Interfaces/IEventList";
 import Slider3DController from "View/Containers/Slider/Slider3DController";
+import { Link } from "react-router-dom";
 
 interface IBoxEvent {
   eventObj: IEvent;
@@ -30,7 +31,7 @@ const BoxEvent = ({ eventObj, isBorder = false }: IBoxEvent) => {
   return (
     <div className="box">
       <h3 className="box__title">
-        <a href={href}>{title}</a>
+        <Link to={href}>{title}</Link>
       </h3>
       <div className="box__contents">
         {eventObj.list.map((item, i) => {

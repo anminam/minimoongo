@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { bannerTop } from "Core/events/data";
 import { ILink } from "Interfaces/ILink";
 import Button from "View/Components/Button";
+import { Link } from "react-router-dom";
 
 const HeaderTopBanner = () => {
   const imgPath = "assets/events/topbanners/images/";
@@ -42,9 +43,9 @@ const HeaderTopBanner = () => {
           }
           return (
             <li key={i}>
-              <a href={item.href}>
+              <Link to={item.href || "/"}>
                 <img src={imgPath + item.src} alt={item.displayName} />
-              </a>
+              </Link>
             </li>
           );
         })}

@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import "Styles/index.scss";
+import { Link } from "react-router-dom";
 
 const BookCastBanner = () => {
   const [firstTitle, setFirstTitle] = useState<string>();
@@ -29,16 +30,16 @@ const BookCastBanner = () => {
       <div className="other-list">
         <ul>
           <li>
-            <a href="/">[4컷만화] 난 눈이 마주쳤을 뿐</a>
+            <Link to="/">[4컷만화] 난 눈이 마주쳤을 뿐</Link>
           </li>
           <li>
-            <a href="/">즐겁게 시작하는 제로웨이스트</a>
+            <Link to="/">즐겁게 시작하는 제로웨이스트</Link>
           </li>
           <li>
-            <a href="/">잠자기 전 읽어볼까?</a>
+            <Link to="/">잠자기 전 읽어볼까?</Link>
           </li>
           <li>
-            <a href="/">봄을 누리지 못한 당신에게</a>
+            <Link to="/">봄을 누리지 못한 당신에게</Link>
           </li>
         </ul>
       </div>

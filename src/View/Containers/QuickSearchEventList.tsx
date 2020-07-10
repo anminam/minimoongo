@@ -1,6 +1,7 @@
 import React, { useState, MouseEvent } from "react";
 import { ILink } from "Interfaces/ILink";
 import Button from "View/Components/Button";
+import { Link } from "react-router-dom";
 
 const dummy: ILink[] = [
   {
@@ -84,7 +85,7 @@ const QuickSearchEventList = () => {
             }
             return (
               <li key={item.id}>
-                <a href={item.href}>{item.displayName}</a>
+                <Link to={item.href || "/"}>{item.displayName}</Link>
               </li>
             );
           })}

@@ -38,7 +38,7 @@ const NavCategory = ({ categoryData, navCategoryId }: INavCategory) => {
   return (
     <div className="nav_category">
       <h2 className="title">
-        <a href="/">{title}</a>
+        <Link to={"/"}>{title}</Link>
       </h2>
       {displayCategoryList &&
         displayCategoryList.map((item, i) => {

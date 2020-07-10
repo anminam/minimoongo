@@ -2,38 +2,27 @@ import React from "react";
 import Logo from "View/Components/Logo";
 import { Link } from "react-router-dom";
 
+const listData = [
+  { href: "/", title: "회사소개" },
+  { href: "/", title: "이용약관" },
+  { href: "/", title: "개인정보처리방침" },
+  { href: "/", title: "고객센터" },
+  { href: "/", title: "협력사여러분" },
+  { href: "/", title: "제휴·제안" },
+  { href: "/", title: "광고문의" },
+  { href: "/", title: "채용정보" },
+  { href: "/", title: "서비스 전체보기" },
+];
 const Footer = () => {
   return (
     <footer>
       <div className="sitemap-container">
         <ul className="sitemap-container__list stick-list container_lg">
-          <li>
-            <a href="/">회사소개</a>
-          </li>
-          <li>
-            <a href="/">이용약관</a>
-          </li>
-          <li>
-            <a href="/">개인정보처리방침</a>
-          </li>
-          <li>
-            <a href="/">고객센터</a>
-          </li>
-          <li>
-            <a href="/">협력사여러분</a>
-          </li>
-          <li>
-            <a href="/">제휴·제안</a>
-          </li>
-          <li>
-            <a href="/">광고문의</a>
-          </li>
-          <li>
-            <a href="/">채용정보</a>
-          </li>
-          <li>
-            <a href="/">서비스 전체보기</a>
-          </li>
+          {listData.map((item, i) => (
+            <li key={i}>
+              <Link to={item.href}>{item.title}</Link>
+            </li>
+          ))}
         </ul>
       </div>
       <div className="content-container">

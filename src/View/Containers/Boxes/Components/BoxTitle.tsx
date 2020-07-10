@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 interface IBoxTitle {
   href: string;
   title: string;
@@ -6,7 +7,7 @@ interface IBoxTitle {
 const BoxTitle = ({ href, title }: IBoxTitle) => {
   return (
     <h2 className="box__title">
-      <a href={href}>{title}</a>
+      <Link to={href}>{title}</Link>
     </h2>
   );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { IEventPicks } from "Interfaces/IEventList";
+import { Link } from "react-router-dom";
 
 const GoodsCardPicks = ({
   title,
@@ -13,7 +14,7 @@ const GoodsCardPicks = ({
 }: IEventPicks) => {
   return (
     <div className="card picks">
-      <a href="/">
+      <Link to="/">
         <div className="card__title">{className}</div>
         {/* <div className="card__container"> */}
         <img
@@ -30,7 +31,7 @@ const GoodsCardPicks = ({
             <li>&gt; 독서등급 : LV.{rankOfReading}</li>
           </ul>
         </div>
-      </a>
+      </Link>
     </div>
   );
 };

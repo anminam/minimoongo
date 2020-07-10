@@ -5,6 +5,7 @@ import { ICategoryReducer } from "Core/category/data";
 import { Utils } from "Core/Utils";
 import { NavUtils } from "Core/nav/utils";
 import { categoryUtils } from "Core/category/utils";
+import { Link } from "react-router-dom";
 
 interface IAllCategoryMenuSub {
   // title?: string;
@@ -40,7 +41,7 @@ const AllCategoryMenuSub = ({
   return (
     <div className={`sub-category`}>
       <div className="title">
-        <a href={"/"}>{title}</a>
+        <Link to={"/"}>{title}</Link>
       </div>
       <div className={`sub-category__list_container`}>
         {displayCategoryList &&
@@ -50,12 +51,12 @@ const AllCategoryMenuSub = ({
                 {item.list.map((iitem, ii) => {
                   return (
                     <li key={ii}>
-                      <a
-                        href={iitem.id}
+                      <Link
+                        to={iitem.id}
                         className={`${iitem.isBig ? "bold" : ""}`}
                       >
                         {iitem.displayName}
-                      </a>
+                      </Link>
                     </li>
                   );
                 })}

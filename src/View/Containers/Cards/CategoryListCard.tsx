@@ -1,6 +1,7 @@
 import React from "react";
 import { Utils } from "Core/Utils";
 import { ILink } from "Interfaces/ILink";
+import { Link } from "react-router-dom";
 
 const CategoryListCard = ({
   id,
@@ -27,7 +28,7 @@ const CategoryListCard = ({
           <div className="card1__contents__category">[{subCategoryText}]</div>
         )}
         <div className="card1__contents__title">
-          <a href={link}>{displayName}</a>
+          <Link to={link}>{displayName}</Link>
         </div>
         {summaryText && (
           <div className="card1__contents__summary">{summaryText}</div>

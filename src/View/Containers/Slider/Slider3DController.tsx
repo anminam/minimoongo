@@ -3,6 +3,7 @@ import { IEventListItem } from "Interfaces/IEventList";
 import Slider3D from "./Slider3D";
 import Slider from "View/Components/Slider";
 import { ILink } from "Interfaces/ILink";
+import { Link } from "react-router-dom";
 
 interface ISlider3DController {
   obj: IEventListItem;
@@ -69,9 +70,9 @@ const ControllFooter = ({
     <div className="footer">
       <div className="layer">
         <div className="title">
-          <a href={href} title={title}>
+          <Link to={href} title={title}>
             {title}
-          </a>
+          </Link>
         </div>
         <div className="author">
           {author} <span className="line">|</span> {company}

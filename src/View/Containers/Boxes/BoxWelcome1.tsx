@@ -7,6 +7,7 @@ import { NavUtils } from "Core/nav/utils";
 import ListNormal from "../Lists/ListNormal";
 import { useSelector } from "react-redux";
 import { TRootState } from "Core/reducers";
+import { Link } from "react-router-dom";
 
 interface IBoxWelcome1 {
   eventObj: IEvent1;
@@ -64,7 +65,7 @@ const BoxWelcome1 = ({ eventObj, isBorder = false }: IBoxWelcome1) => {
   return (
     <div className="box box-welcome1 container_lg">
       <h3 className="box__title">
-        <a href={href}>{title}</a>
+        <Link to={href}>{title}</Link>
       </h3>
       <div className="box__contents">
         {eventItemList &&

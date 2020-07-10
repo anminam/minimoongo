@@ -4,6 +4,7 @@ import Button from "View/Components/Button";
 import { IDate } from "Interfaces/IDate";
 import InputAndButton from "View/Containers/InputAndButton";
 import BookBuyButtons from "View/Containers/BookBuyButtons";
+import { Link } from "react-router-dom";
 
 interface IBookTop {
   id: string;
@@ -46,14 +47,14 @@ const BookTop = ({ id }: IBookTop) => {
           <div className="book-cover__btn-container">
             <ul className="book-cover__btn-container__list">
               <li>
-                <a href="/#" onClick={() => 0}>
+                <Link to="/" onClick={() => 0}>
                   크게보기
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#" onClick={() => 0}>
+                <Link to="/" onClick={() => 0}>
                   미리보기
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -68,34 +69,34 @@ const BookTop = ({ id }: IBookTop) => {
           <div className="book-keyword__list">
             <ul>
               <li>
-                <a href="/#" onClick={() => 0}>
+                <Link to="/" onClick={() => 0}>
                   구루
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#" onClick={() => 0}>
+                <Link to="/" onClick={() => 0}>
                   심리학
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#" onClick={() => 0}>
+                <Link to="/" onClick={() => 0}>
                   행운
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#" onClick={() => 0}>
+                <Link to="/" onClick={() => 0}>
                   부자
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#" onClick={() => 0}>
+                <Link to="/" onClick={() => 0}>
                   뇌과학
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/#" onClick={() => 0}>
+                <Link to="/" onClick={() => 0}>
                   인공지능
-                </a>
+                </Link>
               </li>
             </ul>
           </div>
@@ -156,14 +157,14 @@ const BookTop = ({ id }: IBookTop) => {
           <div className="rank-container">
             <ul className="stick-list">
               <li>
-                <a href="/bestSellerNew/bestseller.laf?mallGb=KOR&amp;range=0&amp;kind=0&amp;orderClick=JAT">
+                <Link to="/bestSellerNew/bestseller.laf?mallGb=KOR&amp;range=0&amp;kind=0&amp;orderClick=JAT">
                   국내도서 주간베스트 <em>130</em>위
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/bestSellerNew/bestseller.laf?mallGb=KOR&amp;range=0&amp;kind=0&amp;orderClick=JAT">
+                <Link to="/bestSellerNew/bestseller.laf?mallGb=KOR&amp;range=0&amp;kind=0&amp;orderClick=JAT">
                   자기계발 주간베스트 <em>130</em>위
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

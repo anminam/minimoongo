@@ -6,6 +6,7 @@ import { Utils } from "Core/Utils";
 import { NavUtils } from "Core/nav/utils";
 import ListPicks from "../Lists/ListPicks";
 import { eventPicks } from "Core/events/data";
+import { Link } from "react-router-dom";
 
 interface IBoxWelcomePicks {
   eventObj: IEventPicks;
@@ -71,10 +72,10 @@ const BoxWelcomePicks = ({ eventObj, isBorder }: IBoxWelcomePicks) => {
   return (
     <div className="box box-welcome-picks container_lg">
       <h3 className="box__title">
-        <a href={href}>
+        <Link to={href}>
           {personName + title}{" "}
           {!isLogin && <p>[로그인 하고 나만의 AI 맞춤추천 받아보세요]</p>}
-        </a>
+        </Link>
       </h3>
       <div className="box__contents">
         {eventItemList &&
