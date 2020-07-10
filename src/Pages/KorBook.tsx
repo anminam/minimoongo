@@ -39,7 +39,7 @@ const KorBook = () => {
             <BoxCatogory
               eventObj={korBookBestSeller}
               isBorder={true}
-              type={"tab"}
+              type={"oneCol"}
             />
           </div>
           <div className="wapper-content r1">

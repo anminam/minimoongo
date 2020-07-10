@@ -197,6 +197,27 @@ $box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
       @include box-title();
     }
   }
+  &__more_onecol {
+    position: absolute;
+    display: flex;
+    font-size: 11px;
+
+    top: 5px;
+    right: 0;
+    color: gray;
+    a {
+    }
+
+    .page-numbers {
+      padding: 0 4px;
+    }
+  }
+
+  &.left-title {
+    .title a {
+      @include box-title();
+    }
+  }
 
   .footer {
     position: absolute;
