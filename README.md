@@ -1,5 +1,9 @@
 # 미니문고! 😆
 
+## 미리보기
+
+https://anminam.github.io/minimoongo/
+
 ## 용어정리
 
 - navCatogory
@@ -26,6 +30,7 @@
 ## Stack
 
 ### front-end
+
 - React (Create-React-App)
 - React-Router
 - StoryBook
@@ -33,10 +38,10 @@
 - typescript
 
 ### back-end
+
 - node.js
 
-
-
 ## install
+
 prettier & eslint config
 npm i prettier eslint-config-prettier eslint-plugin-prettier -D
