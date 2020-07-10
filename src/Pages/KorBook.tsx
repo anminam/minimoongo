@@ -48,6 +48,11 @@ const KorBook = () => {
           </div>
           <div className="wapper-content r1">
             <BoxCatogory eventObj={korBookToday} isBorder={true} type={"tab"} />
+            <BoxCatogory
+              eventObj={korBookToday}
+              isBorder={true}
+              type={"oneCol"}
+            />
           </div>
           <div className="wapper-content">
             <BoxNormal eventObj={korPageMapEvent} height={404}>

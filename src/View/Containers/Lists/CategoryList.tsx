@@ -1,21 +1,16 @@
 import React, { useState, useEffect } from "react";
-import { TGoods } from "Interfaces/IGoods";
 import { Utils } from "Core/Utils";
-
-import { IEventPicks } from "Interfaces/IEventList";
-import GoodsCardPicks from "../Cards/GoodsCardPicks";
-import GoodsCardNormal from "../Cards/GoodsCardNormal";
 import { ILink } from "Interfaces/ILink";
 import CategoryListCard from "../Cards/CategoryListCard";
 
 interface ICategoryList {
   list: ILink[];
-  maxLength?: number;
+  itemViewLength?: number;
   indexMode?: number;
 }
 
-const CategoryList = ({ list, maxLength, indexMode }: ICategoryList) => {
-  const itemLen = maxLength || 4;
+const CategoryList = ({ list, itemViewLength, indexMode }: ICategoryList) => {
+  const itemLen = itemViewLength || 4;
   const [viewIndex, setViewIndex] = useState<number>(0);
   const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(true);
   const [isViewButton, setIsViewButton] = useState<Boolean>(false);

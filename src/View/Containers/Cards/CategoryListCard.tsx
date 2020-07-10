@@ -23,7 +23,9 @@ const CategoryListCard = ({
         {src && <img src={src} alt={displayName} />}
       </div>
       <div className="card1__contents">
-        <div className="card1__contents__category">[{subCategoryText}]</div>
+        {subCategoryText && (
+          <div className="card1__contents__category">[{subCategoryText}]</div>
+        )}
         <div className="card1__contents__title">
           <a href={link}>{displayName}</a>
         </div>

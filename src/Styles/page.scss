@@ -1,43 +1,46 @@
 .page {
-    margin-top: 10px;
-    overflow: hidden;
-    min-height: 800px;
+  margin-top: 10px;
+  overflow: hidden;
+  min-height: 800px;
 
-    .category-page {
-        // display: flex;
+  .category-page {
+    // display: flex;
 
-        &__category {
-            border: 1px solid #9eadca;
-            float: left;
-            width: 170px;
-        }
-
-        &__contents {
-            float: right;
-            width: 770px;
-        }
+    &__category {
+      border: 1px solid #9eadca;
+      float: left;
+      width: 170px;
     }
 
-    .wapper-content {
-        margin-top: 10px;
-
-        // 오른쪽 한개
-        &.r1 {
-            overflow: hidden;
-
-            >div {
-                width: 567px;
-                float: left;
-            }
-
-            >div+div {
-                width: 193px;
-                float: right;
-            }
-        }
+    &__contents {
+      float: right;
+      width: 770px;
     }
+  }
 
-    &.homepage {
-        margin-top: 0;
+  .wapper-content {
+    &:first-child {
+      margin-top: 0;
     }
+    margin-top: 30px;
+
+    // 오른쪽 한개
+    &.r1 {
+      overflow: hidden;
+
+      > div {
+        width: 567px;
+        float: left;
+      }
+
+      > div + div {
+        width: 193px;
+        float: right;
+      }
+    }
+  }
+
+  &.homepage {
+    margin-top: 0;
+  }
 }

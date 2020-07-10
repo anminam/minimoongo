@@ -46,7 +46,7 @@ const Slider3DController = React.memo(({ obj }: ISlider3DController) => {
       <ControllFooter
         href={list[selectedIndex].href || "/"}
         title={list[selectedIndex].displayName}
-        // author={}
+        // author={""}
         // company={""}
       />
       {/* </BoxNormal> */}

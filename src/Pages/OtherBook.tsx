@@ -2,7 +2,14 @@ import React, { useState } from "react";
 import NavCategory from "View/Components/NavCategory";
 import { IMainCategoryId } from "Interfaces/ICategory";
 import CategoryEventSlider from "View/Components/CategoryEventSlider";
-import { otherBookTopSliderEvent } from "Core/events/data";
+import {
+  otherBookTopSliderEvent,
+  otherBookBestSeller,
+  otherTodayBookSliderEvent,
+} from "Core/events/data";
+import Welcome2 from "View/Containers/Welcomes/Welcome2";
+import BoxEvent from "View/Containers/Boxes/BoxEvent";
+import BoxCatogory from "View/Containers/Boxes/BoxCatogory";
 
 const OtherBook = () => {
   const [categoryId] = useState<IMainCategoryId>("otherbook");
@@ -14,12 +21,19 @@ const OtherBook = () => {
           <NavCategory navCategoryId={categoryId} />
         </div>
         <div className="category-page__contents">
-          <CategoryEventSlider obj={otherBookTopSliderEvent} width={770} />
           <div className="wapper-content">
-            {/* <Welcome2 eventObj={korbookSimpleEvent} /> */}
+            <CategoryEventSlider obj={otherBookTopSliderEvent} width={770} />
           </div>
           <div className="wapper-content">
-            {/* <BoxEvent eventObj={korTodayBookSliderEvent} isBorder={true} /> */}
+            <BoxEvent eventObj={otherTodayBookSliderEvent} isBorder={true} />
+          </div>
+          <div className="wapper-content">
+            <BoxCatogory
+              eventObj={otherBookBestSeller}
+              isBorder={true}
+              type={"tab"}
+              itemViewLength={5}
+            />
           </div>
         </div>
       </div>

@@ -10,7 +10,12 @@ import BoxSubTitle from "./Components/BoxSubTitle";
 import BoxMoreButton from "./Components/BoxMoreButton";
 import BoxCountButtons from "./Components/BoxCountButtons";
 
-const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
+const BoxCatogory = ({
+  eventObj,
+  isBorder = false,
+  type,
+  itemViewLength,
+}: IBox) => {
   const [title] = useState<string>(eventObj.displayName);
   const [href] = useState<string>(eventObj.href || "/");
   const [selectedSectionIndex, setSelectedSectionIndex] = useState<number>(0);
@@ -73,6 +78,7 @@ const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
                   <CategoryList
                     list={item.list}
                     indexMode={type === "oneCol" ? oneColNumber - 1 : undefined}
+                    itemViewLength={itemViewLength}
                   />
                 </div>
               )}

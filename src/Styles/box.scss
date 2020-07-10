@@ -162,13 +162,17 @@ $box-font-family: "Malgun Gothic", "Apple SD Neo Gothic", "Dotum", "Sans-Serif";
     .category-list {
       overflow: hidden;
       padding: 20px 40px;
+      ul {
+        display: flex;
+        justify-content: space-between;
 
-      li {
-        margin-left: 11px;
-        float: left;
+        li {
+          margin-left: 11px;
+          // float: left;
 
-        &:last-child {
-          margin-right: 0;
+          &:last-child {
+            margin-right: 0;
+          }
         }
       }
 

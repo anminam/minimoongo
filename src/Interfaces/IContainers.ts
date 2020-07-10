@@ -5,4 +5,5 @@ export interface IBox {
   eventObj: IEvent;
   isBorder?: boolean;
   type?: TBoxType;
+  itemViewLength?: number;
 }
