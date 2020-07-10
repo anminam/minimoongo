@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/minimoongo/static/css/main.880f50ae.chunk.css",
-    "main.js": "/minimoongo/static/js/main.de49ff73.chunk.js",
-    "main.js.map": "/minimoongo/static/js/main.de49ff73.chunk.js.map",
+    "main.css": "/minimoongo/static/css/main.40a25225.chunk.css",
+    "main.js": "/minimoongo/static/js/main.b554e31a.chunk.js",
+    "main.js.map": "/minimoongo/static/js/main.b554e31a.chunk.js.map",
     "runtime-main.js": "/minimoongo/static/js/runtime-main.822bae6d.js",
     "runtime-main.js.map": "/minimoongo/static/js/runtime-main.822bae6d.js.map",
     "static/js/2.a6848590.chunk.js": "/minimoongo/static/js/2.a6848590.chunk.js",
     "static/js/2.a6848590.chunk.js.map": "/minimoongo/static/js/2.a6848590.chunk.js.map",
     "index.html": "/minimoongo/index.html",
-    "precache-manifest.16f9bb91ed260f077d0166e86899a5cb.js": "/minimoongo/precache-manifest.16f9bb91ed260f077d0166e86899a5cb.js",
+    "precache-manifest.f8a4b50dc8a6c5daeff2d52a07e5d483.js": "/minimoongo/precache-manifest.f8a4b50dc8a6c5daeff2d52a07e5d483.js",
     "service-worker.js": "/minimoongo/service-worker.js",
-    "static/css/main.880f50ae.chunk.css.map": "/minimoongo/static/css/main.880f50ae.chunk.css.map",
+    "static/css/main.40a25225.chunk.css.map": "/minimoongo/static/css/main.40a25225.chunk.css.map",
     "static/js/2.a6848590.chunk.js.LICENSE.txt": "/minimoongo/static/js/2.a6848590.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/minimoongo/static/media/remove.b468d5f4.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.822bae6d.js",
     "static/js/2.a6848590.chunk.js",
-    "static/css/main.880f50ae.chunk.css",
-    "static/js/main.de49ff73.chunk.js"
+    "static/css/main.40a25225.chunk.css",
+    "static/js/main.b554e31a.chunk.js"
   ]
 }
