@@ -38,7 +38,7 @@ const Slider = ({
         onHandleColor(list[index]?.color);
       }
     },
-    [list]
+    [list, onHandleColor]
   );
 
   useEffect(() => {

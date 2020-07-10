@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useCallback } from "react";
 import WelcomeMainEvent from "./WelcomeMainEvent";
 import { mainEventList } from "Core/data";
 import BookCastBanner from "../Banners/BookCastBanner";
@@ -9,11 +9,11 @@ import BookCastBanner from "../Banners/BookCastBanner";
 const Welcome1 = () => {
   const [backgroundColor, setBackgroundColor] = useState<string>("white");
 
-  const handleColor = (color: string | undefined) => {
+  const handleColor = useCallback((color: string | undefined) => {
     if (color) {
       setBackgroundColor(color);
     }
-  };
+  }, []);
 
   return (
     <div
