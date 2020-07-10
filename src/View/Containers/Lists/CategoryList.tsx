@@ -11,9 +11,10 @@ import CategoryListCard from "../Cards/CategoryListCard";
 interface ICategoryList {
   list: ILink[];
   maxLength?: number;
+  indexMode?: number;
 }
 
-const CategoryList = ({ list, maxLength }: ICategoryList) => {
+const CategoryList = ({ list, maxLength, indexMode }: ICategoryList) => {
   const itemLen = maxLength || 4;
   const [viewIndex, setViewIndex] = useState<number>(0);
   const [isVisibleButton, setIsVisibleButton] = useState<Boolean>(true);
@@ -64,7 +65,6 @@ const CategoryList = ({ list, maxLength }: ICategoryList) => {
   ) => {
     setIsVisibleButton(true);
   };
-
   return (
     <div
       className="category-list"
@@ -79,6 +79,12 @@ const CategoryList = ({ list, maxLength }: ICategoryList) => {
 
             if (!(min <= i && i < max)) {
               return false;
+            }
+
+            if (typeof indexMode === "number") {
+              if (i !== indexMode) {
+                return false;
+              }
             }
             return (
               <li key={i}>

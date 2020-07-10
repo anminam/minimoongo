@@ -68,18 +68,23 @@ const BoxCatogory = ({ eventObj, isBorder = false, type }: IBox) => {
                 <div
                   className={`section__contents ${isBorder ? "border" : ""}`}
                 >
-                  <CategoryList list={item.list} />
+                  <CategoryList
+                    list={item.list}
+                    indexMode={type === "oneCol" ? oneColNumber - 1 : undefined}
+                  />
                 </div>
               )}
             </div>
           );
         })}
       </div>
+      {/* 더보기 버튼 */}
       {isMoreButton && (
         <div className="box__more">
           <Link to={"/"}>더보기 +</Link>
         </div>
       )}
+      {/* 1/4 카운트 버튼 */}
       {type === "oneCol" && (
         <div className="box__more_onecol">
           <Button type="bannerPrev" onClick={handleOneColPrevClick} />
