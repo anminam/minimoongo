@@ -1,36 +1,37 @@
-.slideBook {}
+.slideBook {
+}
 
 .event-book-card {
-    &__cover {
-        width: 100px;
-        height: 150px;
-        background: no-repeat url("/assets/images/book_cover.png");
-        background-size: contain;
+  &__cover {
+    width: 100px;
+    height: 150px;
+    background: no-repeat url("../../images/images/book_cover.png");
+    background-size: contain;
 
-        a {
-            display: block;
-            width: 100%;
-            height: 100%;
-        }
-
-        img {
-            width: 100%;
-            height: 100%;
-            padding-top: 4px;
-            transition: transform 0.4s ease-in;
-            position: absolute;
-            transform-style: flat;
-
-            &:hover {
-                transform: rotateY(-27deg) skew(0deg, 5deg) translateX(-6px) translateY(5px); // transform: skew(0deg, 5deg);
-            }
-
-            &.not_open {
-                &:hover {
-                    transform: none;
-                }
-            }
-
-        }
+    a {
+      display: block;
+      width: 100%;
+      height: 100%;
     }
+
+    img {
+      width: 100%;
+      height: 100%;
+      padding-top: 4px;
+      transition: transform 0.4s ease-in;
+      position: absolute;
+      transform-style: flat;
+
+      &:hover {
+        transform: rotateY(-27deg) skew(0deg, 5deg) translateX(-6px)
+          translateY(5px); // transform: skew(0deg, 5deg);
+      }
+
+      &.not_open {
+        &:hover {
+          transform: none;
+        }
+      }
+    }
+  }
 }
