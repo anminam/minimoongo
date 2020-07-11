@@ -1,11 +1,11 @@
 {
   "files": {
-    "main.css": "/minimoongo/static/css/main.89b1b818.chunk.css",
-    "main.js": "/minimoongo/static/js/main.93225565.chunk.js",
+    "main.css": "/minimoongo/static/css/main.7529572b.chunk.css",
+    "main.js": "/minimoongo/static/js/main.f3afc042.chunk.js",
     "runtime-main.js": "/minimoongo/static/js/runtime-main.822bae6d.js",
     "static/js/2.d9971c30.chunk.js": "/minimoongo/static/js/2.d9971c30.chunk.js",
     "index.html": "/minimoongo/index.html",
-    "precache-manifest.da638a60092c4f6516ecbcb30530e634.js": "/minimoongo/precache-manifest.da638a60092c4f6516ecbcb30530e634.js",
+    "precache-manifest.4f84388ee3ab4e5fca921ac8161d7e80.js": "/minimoongo/precache-manifest.4f84388ee3ab4e5fca921ac8161d7e80.js",
     "service-worker.js": "/minimoongo/service-worker.js",
     "static/js/2.d9971c30.chunk.js.LICENSE.txt": "/minimoongo/static/js/2.d9971c30.chunk.js.LICENSE.txt",
     "static/media/index.scss": "/minimoongo/static/media/remove.b468d5f4.svg"
@@ -13,7 +13,7 @@
   "entrypoints": [
     "static/js/runtime-main.822bae6d.js",
     "static/js/2.d9971c30.chunk.js",
-    "static/css/main.89b1b818.chunk.css",
-    "static/js/main.93225565.chunk.js"
+    "static/css/main.7529572b.chunk.css",
+    "static/js/main.f3afc042.chunk.js"
   ]
 }
