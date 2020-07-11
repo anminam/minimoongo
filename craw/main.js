@@ -20,6 +20,7 @@ require("chromedriver");
 var webdriver = require("selenium-webdriver");
 const korPage = require("./pages/korPage");
 const otherPage = require("./pages/otherPage");
+const mainPage = require("./pages/mainPage");
 
 // 숨기기
 const chromeCapablities = Capabilities.chrome();
@@ -36,6 +37,7 @@ let driver;
   try {
     await korPage.start(driver);
     await otherPage.start(driver);
+    await mainPage.start(driver);
 
     if (con.IS_CRAW_BSSTSELLR_KOR) {
       // kor

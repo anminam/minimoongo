@@ -1,0 +1,108 @@
+{
+    "id": "korPageTopSlider",
+    "displayName": "스토리K",
+    "list": [
+        {
+            "id": "0",
+            "displayName": "스토리 : K",
+            "list": [
+                {
+                    "id": "bn_00",
+                    "src": "http://image.kyobobook.co.kr/ink/images/prom/2020/bookcast/07/bn_00.jpg",
+                    "displayName": "잊혀진 책들의 묘지여, 안녕히",
+                    "summaryText": "한 권의 책에서 시작된 미스터리",
+                    "subCategoryText": "북캐스트",
+                    "price": ""
+                },
+                {
+                    "id": "bn_02",
+                    "src": "http://image.kyobobook.co.kr/ink/images/prom/2020/bookcast/07/bn_02.jpg",
+                    "displayName": "부캐와 N잡러 전성시대",
+                    "summaryText": "부캐도 N잡도 꿰어야 부자",
+                    "subCategoryText": "북캐스트",
+                    "price": ""
+                },
+                {
+                    "id": "bn_04",
+                    "src": "http://image.kyobobook.co.kr/ink/images/prom/2020/bookcast/07/bn_04.jpg",
+                    "displayName": "여름 과일, 여름 과일 요리!",
+                    "summaryText": "맛있게, 아름답게 즐기는 방법",
+                    "subCategoryText": "북캐스트",
+                    "price": ""
+                },
+                {
+                    "id": "bn_05",
+                    "src": "http://image.kyobobook.co.kr/ink/images/prom/2020/bookcast/07/bn_05.jpg",
+                    "displayName": "당신에게 소중한건 무엇인가",
+                    "summaryText": "인생의 방향을 바꾸는 그것",
+                    "subCategoryText": "북캐스트",
+                    "price": ""
+                },
+                {
+                    "id": "36E8715FC29C481D95832BA27500119C",
+                    "src": "http://image.kyobobook.co.kr/new_ink/booknews/upload/202007/36E8715FC29C481D95832BA27500119C.jpg",
+                    "displayName": "작가와의 만남",
+                    "summaryText": "『당신이 집에서 논다는 거짓말』정아은",
+                    "subCategoryText": "북뉴스",
+                    "price": ""
+                },
+                {
+                    "id": "6C1B853B22874CFAA85C533E74774090",
+                    "src": "http://image.kyobobook.co.kr/new_ink/booknews/upload/202007/6C1B853B22874CFAA85C533E74774090.jpg",
+                    "displayName": "작가와의 만남",
+                    "summaryText": "『최고의 팀을 만드는 심리적 안전감』김현정",
+                    "subCategoryText": "북뉴스",
+                    "price": ""
+                },
+                {
+                    "id": "07059E74EE684527B0225AA6C2F7D9C1",
+                    "src": "http://image.kyobobook.co.kr/new_ink/booknews/upload/202007/07059E74EE684527B0225AA6C2F7D9C1.jpg",
+                    "displayName": "작가와의 만남",
+                    "summaryText": "철학자 이진경과 함께 읽는 니체",
+                    "subCategoryText": "북뉴스",
+                    "price": ""
+                },
+                {
+                    "id": "2E2C9D8BD0AF45A3B7F1AC1E605FC134",
+                    "src": "http://image.kyobobook.co.kr/new_ink/booknews/upload/202006/2E2C9D8BD0AF45A3B7F1AC1E605FC134.jpg",
+                    "displayName": "작가와의 만남",
+                    "summaryText": "『돈의 속성』김승호",
+                    "subCategoryText": "북뉴스",
+                    "price": ""
+                },
+                {
+                    "id": "ink1_200619",
+                    "src": "http://image.kyobobook.co.kr/dwas/bmnceo/img/main/ink1_200619.jpg",
+                    "displayName": "하버드 비즈니스 강의",
+                    "summaryText": "하버드 출신들은 무엇이 다른가",
+                    "subCategoryText": "북모닝",
+                    "price": ""
+                },
+                {
+                    "id": "ink1_200626",
+                    "src": "http://image.kyobobook.co.kr/dwas/bmnceo/img/main/ink1_200626.jpg",
+                    "displayName": "코로노믹스",
+                    "summaryText": "코로나 쇼크 이후 길",
+                    "subCategoryText": "북모닝",
+                    "price": ""
+                },
+                {
+                    "id": "ink1_200703",
+                    "src": "http://image.kyobobook.co.kr/dwas/bmnceo/img/main/ink1_200703.jpg",
+                    "displayName": "전쟁의 미래",
+                    "summaryText": "인류는 어떻게 다가올 전쟁을 상상했는가",
+                    "subCategoryText": "북모닝",
+                    "price": ""
+                },
+                {
+                    "id": "ink1_200710",
+                    "src": "http://image.kyobobook.co.kr/dwas/bmnceo/img/main/ink1_200710.jpg",
+                    "displayName": "커리어 하이어",
+                    "summaryText": "나의 경력을 빛나게 하는 인지심리학",
+                    "subCategoryText": "북모닝",
+                    "price": ""
+                }
+            ]
+        }
+    ]
+}

@@ -65,7 +65,7 @@ const start = async (driver) => {
     file.save(_c.FILE_FOLDER_BASE, id, resultObj);
   }
 
-  if (true) {
+  if (false) {
     const id = "otherPageYongMi";
     const paramObj = {
       id: id,
