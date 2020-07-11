@@ -39,7 +39,7 @@ const Home = ({ list }: IHome) => {
         <BoxWelcomePicks eventObj={eventPicks} />
       </div>
       <div className="wapper-content container_lg">
-        <BoxNormal eventObj={mainPageStoryK} height={712}>
+        <BoxNormal eventObj={mainPageStoryK} height={760}>
           <ListCircles list={mainPageStoryK.list[0].list} />
         </BoxNormal>
       </div>
