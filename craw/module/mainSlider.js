@@ -25,6 +25,7 @@ const main = async (driver, option, seleterObj, addObj) => {
     id: option.id || "blank",
     displayName: option.title || "blank",
     list: [],
+    isSection: option.isSection || true,
   };
 
   _d = driver;
@@ -34,11 +35,15 @@ const main = async (driver, option, seleterObj, addObj) => {
     await _d.get(option.url);
 
     // 가져오기
-    const mainDiv = await _d.findElement(By.css(_selectorObj.main));
+    const mainDiv = await _d.findElement(By.css(seleterObj.main));
     const html = await mainDiv.getAttribute("innerHTML");
     $ = cheerio.load(html);
 
-    const $sections = $(".section");
+    let $sections = $(".section");
+    if (seleterObj.isSection === false) {
+      $sections = $.root();
+    }
+
     const list = getCategoryList($sections);
 
     obj.list = list;
@@ -58,7 +63,7 @@ const getCategoryList = ($el) => {
       const $subEl = $(el);
       const obj = {
         id: i.toString(),
-        displayName: $subEl.find("h3").text(),
+        displayName: $subEl.find("h3").text() || $subEl.find("h2").text(),
         list: getGoodsList($subEl),
       };
 

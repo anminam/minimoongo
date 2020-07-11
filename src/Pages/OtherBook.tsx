@@ -6,6 +6,7 @@ import {
   otherBookTopSliderEvent,
   otherBookBestSeller,
   otherTodayBookSliderEvent,
+  otherMDSelect,
 } from "Core/events/data";
 import BoxEvent from "View/Containers/Boxes/BoxEvent";
 import BoxCatogory from "View/Containers/Boxes/BoxCatogory";
@@ -29,6 +30,14 @@ const OtherBook = () => {
           <div className="wapper-content">
             <BoxCatogory
               eventObj={otherBookBestSeller}
+              isBorder={true}
+              type={"tab"}
+              itemViewLength={5}
+            />
+          </div>
+          <div className="wapper-content">
+            <BoxCatogory
+              eventObj={otherMDSelect}
               isBorder={true}
               type={"tab"}
               itemViewLength={5}

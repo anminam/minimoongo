@@ -64,6 +64,25 @@ const start = async (driver) => {
     const resultObj = await mainSlider(driver, paramObj, seleterObj, addObj);
     file.save(_c.FILE_FOLDER_BASE, id, resultObj);
   }
+
+  if (true) {
+    const id = "otherPageYongMi";
+    const paramObj = {
+      id: id,
+      title: "영미도서 MD선택",
+      url: pageUrl,
+    };
+    const seleterObj = {
+      main: "#mdChoiceEng",
+      ul: ".content ul.list_main_choice",
+      isSection: false,
+    };
+    const addObj = {
+      categoryId: id,
+    };
+    const resultObj = await mainSlider(driver, paramObj, seleterObj, addObj);
+    file.save(_c.FILE_FOLDER_BASE, id, resultObj);
+  }
 };
 
 module.exports = { start };

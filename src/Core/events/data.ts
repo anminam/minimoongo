@@ -2788,3 +2788,191 @@ export const korPageMapEvent: IEvent = {
     },
   ],
 };
+
+// 영미도서 MD선택
+export const otherMDSelect: IEvent = {
+  id: "otherPageYongMi",
+  displayName: "영미도서 MD선택",
+  list: [
+    {
+      id: "0",
+      displayName: "영미도서 MD선택",
+      list: [
+        {
+          id: "l2909101142303",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/303/l2909101142303.jpg",
+          displayName:
+            "Lego Harry Potter Handbook +  Minifigure 3종 세트 ( Harry Potter + Hermione + Snape )",
+        },
+        {
+          id: "l9781982148034",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/034/l9781982148034.jpg",
+          displayName:
+            "The Room Where It Happened - 백악관 전 국가안보보좌관 '존 볼턴 회고록'",
+        },
+        {
+          id: "l9781250307507",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/507/l9781250307507.jpg",
+          displayName: "The Path Made Clear",
+        },
+        {
+          id: "l9780593189740",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/740/l9780593189740.jpg",
+          displayName: "The Wealthy Gardener",
+        },
+        {
+          id: "l9780316423885",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/885/l9780316423885.jpg",
+          displayName: "Circe",
+        },
+        {
+          id: "l9780593159217",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/217/l9780593159217.jpg",
+          displayName: "The Guardians",
+        },
+        {
+          id: "l9781501121470",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/470/l9781501121470.jpg",
+          displayName: "Prisoners of Geography",
+        },
+        {
+          id: "l9781250225610",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/610/l9781250225610.jpg",
+          displayName: "Loonshots",
+        },
+        {
+          id: "l9781950691623",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/623/l9781950691623.jpg",
+          displayName: "Offerings: A Novel",
+        },
+        {
+          id: "l9780762457458",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/458/l9780762457458.jpg",
+          displayName:
+            "Alice in Wonderland Mad Hatter Tea Party [With Booklet] (Miniature Editions)",
+        },
+        {
+          id: "l9781435167902",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/902/l9781435167902.jpg",
+          displayName:
+            "The Complete Sherlock Holmes (Barnes & Noble Leatherbound Classic Collection)",
+        },
+        {
+          id: "l9780062367143",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/143/l9780062367143.jpg",
+          displayName:
+            "Warriors Box Set: Volumes 1 to 6: The Complete First Series",
+        },
+        {
+          id: "l9780385545440",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/440/l9780385545440.jpg",
+          displayName: "The Nickel Boys",
+        },
+        {
+          id: "l9783899559941",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/941/l9783899559941.jpg",
+          displayName: "Do You Read Me?",
+        },
+        {
+          id: "l9781338635171",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/171/l9781338635171.jpg",
+          displayName:
+            "The Ballad of Songbirds and Snakes (A Hunger Games Novel)",
+        },
+        {
+          id: "l9780241421345",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/345/l9780241421345.jpg",
+          displayName: "Penguin Modern Box Set - 펭귄 모던 박스 세트 (총 50권)",
+        },
+        {
+          id: "l9781999821883",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/883/l9781999821883.jpg",
+          displayName: "Cereal Volume 19 - SS2020 - KOREA",
+        },
+        {
+          id: "l9780062976581",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/581/l9780062976581.jpg",
+          displayName: "The Boy, the Mole, the Fox and the Horse",
+        },
+        {
+          id: "l9781524711481",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/481/l9781524711481.jpg",
+          displayName: "Bad Blood",
+        },
+        {
+          id: "l9781250107817",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/817/l9781250107817.jpg",
+          displayName: "Factfulness",
+        },
+        {
+          id: "l9781847941831",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/831/l9781847941831.jpg",
+          displayName: "Atomic Habits",
+        },
+        {
+          id: "l9781524763138",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/138/l9781524763138.jpg",
+          displayName: "Becoming - 미셸 오바마 자서전",
+        },
+        {
+          id: "l9781984854858",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/858/l9781984854858.jpg",
+          displayName: "Educated: A Memoir",
+        },
+        {
+          id: "l9780345540560",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/560/l9780345540560.jpg",
+          displayName: "왕좌의 게임 Game of Thrones 5-copy",
+        },
+        {
+          id: "l9780500286715",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/715/l9780500286715.jpg",
+          displayName: "Hockneys Picture",
+        },
+        {
+          id: "l9780525542797",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/797/l9780525542797.jpg",
+          displayName: "This Is Marketing",
+        },
+        {
+          id: "l9781405924221",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/221/l9781405924221.jpg",
+          displayName: "Still Me",
+        },
+        {
+          id: "l9780735276796",
+          src:
+            "http://image.kyobobook.co.kr/images/book/large/796/l9780735276796.jpg",
+          displayName: "12 Rules for Life",
+        },
+      ],
+    },
+  ],
+};
