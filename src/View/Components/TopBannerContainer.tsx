@@ -1,13 +1,20 @@
-import React, { useState } from "react";
+import React from "react";
+import { TRootState } from "Core/reducers";
+import { useSelector, useDispatch } from "react-redux";
+import { coreActions } from "Core/core";
 
 const TopBannerContainer = () => {
   const src = "assets/images/top-banner.png";
-  const [isOn, setIsOn] = useState<boolean>(true);
+  const dispatch = useDispatch();
+
+  const isOn = useSelector((state: TRootState) => {
+    return state.core.isVisibleTopBanner;
+  });
 
   const handleCloseClick = (
     event: React.MouseEvent<HTMLButtonElement, MouseEvent>
   ): void => {
-    setIsOn(false);
+    dispatch(coreActions.setIsVisibleTopBanner(false));
   };
 
   return (

@@ -17,7 +17,6 @@ const Slider3DController = React.memo(({ obj }: ISlider3DController) => {
   // const { list, displayName, id, href = "/" } = obj;
   const { list } = obj;
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
-
   const handleSelectedItemChanged = (index: number) => {
     setSelectedIndex(index);
   };
