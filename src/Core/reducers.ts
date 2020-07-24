@@ -4,6 +4,7 @@ import { navReducer } from "./nav";
 import { goodsReducer } from "./goods";
 import { categoryReducer } from "./category";
 import { productReducer } from "./product";
+import { coreReducer } from "./core";
 
 const rootReducer = combineReducers({
   browser: browserReducer,
@@ -11,6 +12,7 @@ const rootReducer = combineReducers({
   goods: goodsReducer,
   category: categoryReducer,
   product: productReducer,
+  core: coreReducer,
 });
 
 export default rootReducer;
