@@ -14,7 +14,7 @@ const Header = () => {
         </div>
         <HeaderForm />
       </div>
-      <div className={`wapper-header__navbar sticky`}>
+      <div className={`wapper-header__navbar`}>
         <HeaderNavBar />
       </div>
     </header>

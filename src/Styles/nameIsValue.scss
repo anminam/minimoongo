@@ -1,21 +1,28 @@
 .flex {
-    display: flex;
+  display: flex;
 }
 
 .inline {
-    display: inline;
+  display: inline;
 }
 
 .inline-block {
-    display: inline-block;
+  display: inline-block;
 }
 
 .floatLeft {
-    float: left;
+  float: left;
 }
 
 .sticky {
-    position: sticky;
-    top: 0;
-    z-index: 1;
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+.fixed {
+  position: fixed;
+  width: 100%;
+  z-index: 1000;
+  top: 0;
 }
